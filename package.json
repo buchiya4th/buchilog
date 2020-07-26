@@ -34,6 +34,7 @@
     "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/eslint-config": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "7.0.0-bridge.0",
@@ -44,10 +45,14 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^9.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "vue-jest": "^3.0.4"
   }
 }
