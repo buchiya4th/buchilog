@@ -44,6 +44,8 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.11",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "vue-jest": "^3.0.4"
