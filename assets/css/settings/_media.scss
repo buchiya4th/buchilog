@@ -1,0 +1,58 @@
+@function media-size($media, $target) {
+  $targetList: map-keys($breakpoints);
+  $targetIndex: index($targetList, $target);
+
+  @if (type-of($target) == "number") {
+    @return $target + "px";
+  }
+
+  @else {
+    @if ($media == "min") {
+      @each $key, $value in map-values($breakpoints) {
+        @return nth(map-values($breakpoints), $targetIndex) + 1 + px;
+      }
+    }
+
+    @else if ($media == "max") {
+      @each $key, $value in map-values($breakpoints) {
+        @return nth(map-values($breakpoints), $targetIndex) + px;
+      }
+    }
+  }
+}
+
+// min - width
+@function media-up($target) {
+  $value: media-size("min", $target);
+
+  @return #{"(min-width: " + $value + ")"};
+}
+
+// max - width
+@function media-less($target) {
+  $value: media-size("max", $target);
+
+  @return #{"(max-width: " + $value + ")"};
+}
+
+// min-width and max-width
+@function media-range($min, $max) {
+  $mediaList: $min, $max;
+  $minValue: media-size("min", $min);
+  $maxValue: media-size("max", $max);
+
+  @return #{"(min-width: " + $minValue + ") and (max-width: " + $maxValue+ ")"};
+}
+
+// usage
+// .myClass {
+//   @media #{media-up(phone)} {
+//     ...
+//   }
+//   @media #{media-less(desktop)} {
+//     ...
+//   }
+//   @media #{media-range(phone-large, tablet)} {
+//     ...
+//   }
+// }
