@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import { GetStaticProps } from 'next'
 import { getSortedPostsData } from '../lib/posts'
-import styles from '../styles/Home.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from '../styles/Home.module.scss'
+import utilStyles from '../styles/utils.module.scss'
 
 type Props = {
   allPostsData: {

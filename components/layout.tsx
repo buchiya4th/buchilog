@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from './layout.module.scss'
+import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
 const name = 'ぶちや'

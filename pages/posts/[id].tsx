@@ -4,7 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
+import utilStyles from '../../styles/utils.module.scss'
 
 type Props = {
   postData: {
