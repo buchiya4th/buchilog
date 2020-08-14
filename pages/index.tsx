@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
@@ -6,15 +7,15 @@ import { getSortedPostsData } from '../lib/posts'
 import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css'
 
-export default function Home({
-  allPostsData
-}: {
+type Props = {
   allPostsData: {
     date: string
     title: string
     id: string
   }[]
-}) {
+}
+
+const Home: React.FC<Props> = (props) => {
   return (
     <Layout home>
       <Head>
@@ -34,7 +35,7 @@ export default function Home({
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
+            {props.allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
                 <Link href="/posts/[id]" as={`/posts/${id}`}>
                   <a>{title}</a>
@@ -63,7 +64,7 @@ export default function Home({
   )
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
   return {
     props: {
@@ -71,3 +72,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
   }
 }
+
+export default Home
