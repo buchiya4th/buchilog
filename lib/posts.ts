@@ -1,12 +1,17 @@
-import fs, { readFileSync } from 'fs'
+import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 
+type Props = {
+  id: string
+  contentHtml: string
+}
+
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData() {
+export function getSortedPostsData(): React.ReactNode {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
@@ -36,7 +41,7 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): React.ReactNode {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
@@ -47,7 +52,7 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<Props> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 

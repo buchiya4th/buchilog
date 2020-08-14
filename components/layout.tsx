@@ -1,18 +1,18 @@
+import React from 'react'
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from './layout.module.scss'
+import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
 const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'
 
-export default function Layout({
-  children,
-  home
-}: {
+type Props = {
   children: React.ReactNode
   home?: boolean
-}) {
+}
+
+const Layout: React.FC<Props> = (props) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -31,7 +31,7 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {props.home ? (
           <>
             <img
               src="/images/profile.jpg"
@@ -59,8 +59,8 @@ export default function Layout({
           </>
         )}
       </header>
-      <main>{children}</main>
-      {!home && (
+      <main>{props.children}</main>
+      {!props.home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
@@ -70,3 +70,5 @@ export default function Layout({
     </div>
   )
 }
+
+export default Layout
