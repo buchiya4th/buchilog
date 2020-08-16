@@ -1,14 +1,28 @@
-html,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 0;
   margin: 0;
+  // font-family: $font;
+  font-size: size(2, px);
+  // line-height: $baseLineHeight;
+  color: color(gray, 900);
+  // letter-spacing: $letterSpacingBase;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "palt", "lnum";
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-* {
-  box-sizing: border-box;
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
 }

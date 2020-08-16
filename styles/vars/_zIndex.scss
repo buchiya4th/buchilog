@@ -1,0 +1,10 @@
+$zIndex: (
+  header-nav: 5000,
+  menu: 6000,
+  modal: 10000,
+  snackbar: 20000
+);
+
+@function z-index($key) {
+  @return map-get($zIndex, $key);
+}
