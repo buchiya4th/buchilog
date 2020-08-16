@@ -41,7 +41,7 @@ export function getSortedPostsData(): React.ReactNode {
   })
 }
 
-export function getAllPostIds(): React.ReactNode {
+export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
