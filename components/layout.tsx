@@ -1,8 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import Header from './single-instance/header'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.scss'
-import Link from 'next/link'
 
 const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'
@@ -30,35 +31,7 @@ const Layout: React.FC<Props> = (props) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {props.home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      <Header />
       <main>{props.children}</main>
       {!props.home && (
         <div className={styles.backToHome}>

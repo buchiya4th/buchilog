@@ -1,3 +1,6 @@
+@import "vendor/normalize";
+@import "common";
+
 *,
 *::before,
 *::after {
@@ -6,11 +9,11 @@
 
 body {
   margin: 0;
-  // font-family: $font;
+  font-family: $font;
   font-size: size(2, px);
-  // line-height: $baseLineHeight;
+  line-height: $baseLineHeight;
   color: color(gray, 900);
-  // letter-spacing: $letterSpacingBase;
+  letter-spacing: $letterSpacingBase;
   font-variant-numeric: lining-nums;
   font-feature-settings: "palt", "lnum";
 }
