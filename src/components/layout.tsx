@@ -1,11 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from './single-instance/header'
-import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.scss'
+import Header from '@/src/components/single-instance/header'
+import styles from '@/src/components/layout.module.scss'
+// import utilStyles from '../styles/utils.module.scss'
 
-const name = 'ぶちや'
+// const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'
 
 type Props = {

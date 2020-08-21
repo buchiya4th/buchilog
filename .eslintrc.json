@@ -9,6 +9,7 @@
       "jsx": true // Allows for the parsing of JSX
     }
   },
+  "ignorePatterns": "next.config.js",
   "rules": {
     "react/prop-types": "off",
     "@typescript-eslint/no-empty-interface": 0

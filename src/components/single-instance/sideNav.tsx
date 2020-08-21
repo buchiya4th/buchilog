@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/components/single-instance/sideNav.module.scss'
+import styles from '@/styles/components/single-instance/sideNav.module.scss'
 
 const SideNav: React.FC = () => {
   return (

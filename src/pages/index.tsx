@@ -1,11 +1,11 @@
 import React from 'react'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
-import { GetStaticProps } from 'next'
-import { getSortedPostsData } from '../lib/posts'
-import styles from '../styles/pages/index.module.scss'
-import utilStyles from '../styles/utils.module.scss'
+import { getSortedPostsData } from '@/lib/posts'
+import Layout, { siteTitle } from '@/src/components/layout'
+import styles from '@/styles/pages/index.module.scss'
+import utilStyles from '@/styles/utils.module.scss'
 
 type Props = {
   allPostsData: {
