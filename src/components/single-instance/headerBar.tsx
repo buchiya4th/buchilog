@@ -8,12 +8,12 @@ const HeaderBar: React.FC = () => {
 
   return (
     <div className={styles.headerBar}>
-      <div className={classnames(styles.navMenu, { 'is-active': isActive })} onClick={() => setActive(!isActive)}>
+      <div className={classnames(styles.navMenu, { [styles['is-active']]: isActive })} onClick={() => setActive(!isActive)}>
         <span className={styles.navMenu_line}></span>
         <span className={styles.navMenu_line}></span>
         <span className={styles.navMenu_line}></span>
       </div>
-      <SideNav />
+      <SideNav activeStatus={isActive} />
     </div>
   )
 }
