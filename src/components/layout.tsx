@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '@/src/components/single-instance/Header'
+import Footer from '@/src/components/single-instance/Footer'
 import styles from '@/src/components/layout.module.scss'
 // import utilStyles from '../styles/utils.module.scss'
 
@@ -40,6 +41,7 @@ const Layout: React.FC<Props> = (props) => {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   )
 }
