@@ -3,8 +3,8 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '@/lib/posts'
-import Layout, { siteTitle } from '@/src/components/layout'
-import styles from '@/styles/pages/index.module.scss'
+import Layout, { siteTitle } from '@/src/components/Layout'
+import styles from '@/src/pages/index.module.scss'
 import utilStyles from '@/styles/utils.module.scss'
 
 type Props = {

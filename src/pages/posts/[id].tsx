@@ -2,8 +2,8 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import { getAllPostIds, getPostData } from '@/lib/posts'
-import Layout from '@/src/components/layout'
-import Date from '@/src/components/date'
+import Layout from '@/src/components/Layout'
+import Date from '@/src/components/Date'
 import utilStyles from '@/styles/utils.module.scss'
 
 type Props = {
