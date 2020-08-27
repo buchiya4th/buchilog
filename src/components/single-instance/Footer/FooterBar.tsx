@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/src/components/single-instance/FooterBar.module.scss'
+import styles from './FooterBar.module.scss'
 
 const FooterBar: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
-import styles from '@/src/components/single-instance/FooterArea.module.scss'
+// import Link from 'next/link'
+import styles from './FooterArea.module.scss'
 
 const FooterArea: React.FC = () => {
   return (
@@ -14,7 +14,8 @@ const FooterArea: React.FC = () => {
         <div className={styles.profileText}>
           <div className={styles.profileLead}>有益な情報より有意義な時間になるよう日々感じたことをお伝えします。 管理人は、IT企業で働きながら子育てや家事をして暮らしてます。</div>
           <div className={styles.profileDetailLink}>
-            <Link href="/about/"> 詳しく見る &gt;</Link>
+            {/* <Link href="/about/"> 詳しく見る &gt;</Link> */}
+            詳しく見る &gt;
           </div>
         </div>
       </div>

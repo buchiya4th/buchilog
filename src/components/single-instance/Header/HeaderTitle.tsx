@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/src/components/single-instance/HeaderTitle.module.scss'
+import styles from './HeaderTitle.module.scss'
 
 const HeaderTitle: React.FC = () => {
   return (

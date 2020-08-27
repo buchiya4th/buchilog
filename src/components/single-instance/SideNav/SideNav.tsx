@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import styles from '@/src/components/single-instance/SideNav.module.scss'
+import styles from './SideNav.module.scss'
 
 type Props = {
   activeStatus?: boolean
