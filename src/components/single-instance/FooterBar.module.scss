@@ -1,0 +1,10 @@
+@import "@/styles/common";
+
+.footerBar {
+  padding-top: size(1.5, px);
+  padding-bottom: size(1.5, px);
+  background: color(gray, darkest);
+  color: color(white);
+  text-align: center;
+  font-size: size(1.75, px);
+}

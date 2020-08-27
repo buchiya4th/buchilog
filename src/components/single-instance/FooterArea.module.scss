@@ -1,0 +1,54 @@
+@import "@/styles/common";
+
+.footerArea {
+  padding: size(4, px) size(2, px);
+  background: url("/img/footerArea_bg.png");
+}
+
+.footerProfile {
+  display: grid;
+  grid-template:
+    "title title" minmax(1em, auto)
+    "icon text" 1fr/
+    48px 1fr;
+  gap: size(3, px);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: size(1.75, px);
+}
+
+.profileTitle {
+  grid-area: title;
+  font-size: size(2.5, px);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.profileIcon {
+  grid-area: icon;
+  text-align: center;
+}
+
+.profileName {
+  margin-top: size(0.5, px);
+}
+
+.profileText {
+  grid-area: text;
+  line-height: 1.85;
+}
+
+.profileDetailLink {
+  margin-top: 1em;
+  text-align: right;
+
+  a {
+    margin-right: 0.2em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

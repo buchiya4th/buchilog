@@ -1,0 +1,60 @@
+@import "@/styles/common";
+
+.headerBar {
+  height: size(7, px);
+  background: #000 url("/img/headerBar_bg.png");
+}
+
+.navMenu {
+  position: relative;
+  z-index: 7000;
+  width: size(3, px);
+  height: size(2.5, px);
+  margin: size(2, px);
+  cursor: pointer;
+
+  &,
+  & .navMenu_line {
+    display: inline-block;
+    transition: all 0.2s;
+    box-sizing: border-box;
+  }
+
+  & .navMenu_line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+
+    &:nth-of-type(1) {
+      top: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 9px;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+
+  &.is-active {
+    .navMenu_line {
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        width: 12px;
+      }
+
+      &:nth-of-type(1) {
+        transform: translate(-1px, 5px) rotate(-45deg);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-1px, -5px) rotate(45deg);
+      }
+    }
+  }
+}

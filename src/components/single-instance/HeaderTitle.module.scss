@@ -1,0 +1,13 @@
+@import "@/styles/common";
+
+.headerTitle {
+  padding: size(6, px) size(2, px);
+  background: #5d2369 url("/img/headerTitle_bg.png");
+  background-blend-mode: darken;
+  color: color(white);
+  text-align: center;
+}
+
+.siteLog {
+  margin: size(1, px);
+}
