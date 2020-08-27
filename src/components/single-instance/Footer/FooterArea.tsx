@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from '@/src/components/single-instance/FooterArea.module.scss'
+import styles from './FooterArea.module.scss'
 
 const FooterArea: React.FC = () => {
   return (

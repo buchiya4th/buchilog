@@ -1,6 +1,6 @@
 import React from 'react'
-import FooterArea from '@/src/components/single-instance/FooterArea'
-import FooterBar from '@/src/components/single-instance/FooterBar'
+import FooterArea from './FooterArea'
+import FooterBar from './FooterBar'
 
 const Footer: React.FC = () => {
   return (

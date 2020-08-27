@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/src/components/single-instance/HeaderFollow.module.scss'
+import styles from './HeaderFollow.module.scss'
 
 const HeaderFollow: React.FC = () => {
   return (
