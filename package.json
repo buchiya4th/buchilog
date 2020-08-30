@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
-    "stylelint": "stylelint '**/*.{scss,css}' --ignore-path .gitignore"
+    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx'"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint",
@@ -26,6 +26,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.3.0",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.46",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
@@ -40,6 +41,7 @@
     "remark-html": "^12.0.0",
     "sass": "^1.26.10",
     "stylelint": "^13.6.1",
+    "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
