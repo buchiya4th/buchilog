@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
-    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx'"
+    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx' --syntax scss"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint",
@@ -37,9 +37,11 @@
     "gray-matter": "^4.0.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
     "sass": "^1.26.10",
+    "styled-jsx-plugin-sass": "^1.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-standard": "^20.0.0",
