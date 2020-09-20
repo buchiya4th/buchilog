@@ -1,7 +1,7 @@
 import React from 'react'
 // import Link from 'next/link'
 import { css } from '@emotion/core'
-import { size } from '@/styles/index'
+import { fonts, size } from '@/styles/index'
 
 const FooterArea: React.FC = () => {
   const footerArea = css({
@@ -22,12 +22,14 @@ const FooterArea: React.FC = () => {
     fontSize: size(1.75),
   })
 
-  const profileTitleStyle = css({
-    gridArea: 'title',
-    fontSize: size(2.5),
-    fontWeight: 'bold',
-    lineHeight: 1,
-  })
+  const profileTitleStyle = css(
+    fonts.fontHeading,
+    {
+      gridArea: 'title',
+      fontSize: size(2.5),
+      lineHeight: 1,
+    }
+  )
 
   const profileIconStyle = css({
     gridArea: 'icon',
@@ -67,7 +69,7 @@ const FooterArea: React.FC = () => {
           <div>有益な情報より有意義な時間になるよう日々感じたことをお伝えします。 管理人は、IT企業で働きながら子育てや家事をして暮らしてます。</div>
           <div css={profileDetailLinkStyle}>
             {/* <Link href="/about/"> 詳しく見る &gt,</Link> */}
-            詳しく見る &gt,
+            詳しく見る &gt;
           </div>
         </div>
       </div>

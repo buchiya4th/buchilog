@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
+import { css } from '@emotion/core'
+import { media, size } from '@/styles/index'
 
 // const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'
@@ -13,8 +15,17 @@ type Props = {
 }
 
 const Layout: React.FC<Props> = (props) => {
+  const mainStyle = css({
+    maxWidth: 720,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    [media.less('phoneLarge')]: {
+      paddingLeft: size(2),
+      paddingRight: size(2),
+    },
+  })
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -32,7 +43,7 @@ const Layout: React.FC<Props> = (props) => {
       </Head>
 
       <Header />
-      <main>{props.children}</main>
+      <main css={mainStyle}>{props.children}</main>
       {!props.home && (
         <div>
           <Link href="/">
@@ -41,7 +52,7 @@ const Layout: React.FC<Props> = (props) => {
         </div>
       )}
       <Footer />
-    </div>
+    </>
   )
 }
 

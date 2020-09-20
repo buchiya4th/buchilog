@@ -21,11 +21,7 @@ const Home: React.FC<Props> = (props) => {
         <title>{siteTitle}</title>
       </Head>
 
-      <main>
-        <section>
-          <ArticleList articleList={props.allPostsData} />
-        </section>
-      </main>
+      <ArticleList articleList={props.allPostsData} />
     </Layout>
   )
 }

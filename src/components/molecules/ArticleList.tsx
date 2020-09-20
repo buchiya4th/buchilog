@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import Date from '@/src/components/atoms/Date'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
-import Date from '@/src/components/atoms/Date'
 
 type Props = {
   articleList: {
@@ -37,7 +37,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
 
   return (
     <>
-      <ul css={articleListStyle}>
+      <ul css={articleListStyle} {...props}>
         {props.articleList.map(({ id, date, title }) => (
           <li css={itemStyle} key={id}>
             <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
