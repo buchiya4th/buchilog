@@ -3,8 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Header from '@/src/components/single-instance/Header/Header'
 import Footer from '@/src/components/single-instance/Footer/Footer'
-import styles from '@/src/components/Layout.module.scss'
-// import utilStyles from '../styles/utils.module.scss'
 
 // const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'
@@ -16,7 +14,7 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -32,10 +30,11 @@ const Layout: React.FC<Props> = (props) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <Header />
       <main>{props.children}</main>
       {!props.home && (
-        <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

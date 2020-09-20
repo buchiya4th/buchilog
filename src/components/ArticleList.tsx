@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import { css } from '@emotion/core'
+import { colors, size, fonts } from '@/styles/index'
 import Date from '@/src/components/Date'
-import styles from './ArticleList.module.scss'
 
 type Props = {
   articleList: {
@@ -13,16 +14,38 @@ type Props = {
 }
 
 const ArticleListItem: React.FC<Props> = (props) => {
+  const articleListStyle = css({
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+  })
+
+  const itemStyle = css({
+    paddingTop: size(3),
+    paddingBottom: size(1),
+    borderBottom: `1px solid ${colors.gray.lighter}`,
+  })
+
+  const titleStyle = css(
+    fonts.fontHeading,
+    {
+      fontSize: size(3),
+      textDecoration: 'none',
+      color: colors.link.main,
+    }
+  )
+
   return (
     <>
-      <ul className={styles.articleList}>
+      <ul css={articleListStyle}>
         {props.articleList.map(({ id, date, title }) => (
-          <li className={styles.item} key={id}>
-            <Link href="/posts/[id]" as={`/posts/${id}`}>
-              <a className={styles.title}>{title}</a>
+          <li css={itemStyle} key={id}>
+            <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+              <a css={titleStyle}>{title}</a>
             </Link>
             <br />
-            <Date dateString={date} />
+            <br />
+            <Date datestring={date} />
           </li>
         ))}
       </ul>
