@@ -2,8 +2,8 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { getSortedPostsData } from '@/lib/posts'
-import Layout, { siteTitle } from '@/src/components/Layout'
-import ArticleList from '@/src/components/ArticleList'
+import Layout, { siteTitle } from '@/src/components/global/Layout'
+import ArticleList from '@/src/components/molecules/ArticleList'
 
 type Props = {
   allPostsData: {

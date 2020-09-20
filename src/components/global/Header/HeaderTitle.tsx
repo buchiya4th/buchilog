@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { css } from '@emotion/core'
 import { colors, size } from '@/styles/index'
 
@@ -18,7 +19,9 @@ const HeaderTitle: React.FC = () => {
   return (
     <div css={headerTitleStyle}>
       <p css={siteLogStyle}>
-        <img src="/img/logo.svg" alt="ぶちろぐ" />
+        <Link href="/">
+          <a><img src="/img/logo.svg" alt="ぶちろぐ" /></a>
+        </Link>
       </p>
       <div>
         このサイトは、Webと音楽を愛する人の提供でお送りします。

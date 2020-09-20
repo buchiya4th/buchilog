@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
-import Date from '@/src/components/Date'
+import Date from '@/src/components/atoms/Date'
 
 type Props = {
   articleList: {
@@ -43,7 +43,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
             <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
               <a css={titleStyle}>{title}</a>
             </Link>
-            <br />
             <br />
             <Date datestring={date} />
           </li>

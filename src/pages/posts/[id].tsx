@@ -2,8 +2,8 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import { getAllPostIds, getPostData } from '@/lib/posts'
-import Layout from '@/src/components/Layout'
-import Date from '@/src/components/Date'
+import Layout, { siteTitle } from '@/src/components/global/Layout'
+import Date from '@/src/components/atoms/Date'
 
 type Props = {
   postData: {
@@ -17,7 +17,7 @@ const Post: React.FC<Props> = (props) => {
   return (
     <Layout>
       <Head>
-        <title>{props.postData.title}</title>
+        <title>{props.postData.title} | {siteTitle}</title>
       </Head>
       <article>
         <h1>{props.postData.title}</h1>
