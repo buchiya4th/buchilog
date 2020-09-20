@@ -39,7 +39,3 @@ export default {
     main: '#52cc52'
   }
 }
-
-// @function color($key, $tone: main) {
-//   @return map-get(map-get($colors, $key}, $tone);
-// }

@@ -1,4 +1,4 @@
-import breakpoints from '@/const/styles/breakpoints'
+import breakpoints from '@/styles/vars/breakpoints'
 
 function mediaSize(media: string, target: string | number) {
   if (typeof target === 'number') {
@@ -33,16 +33,3 @@ export function range(min: string | number, max: string | number): string {
   const maxValue = mediaSize("max", max)
   return `@media (min-width: ${minValue}) and (max-width: ${maxValue})`
 }
-
-// usage
-// .myClass {
-//   #{media.up(phone)} {
-//     ...
-//   }
-//   #{media.less(desktop)} {
-//     ...
-//   }
-//   #{media.range(phoneLarge, tablet)} {
-//     ...
-//   }
-// }

@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { getAllPostIds, getPostData } from '@/lib/posts'
 import Layout from '@/src/components/Layout'
 import Date from '@/src/components/Date'
-import utilStyles from '@/styles/utils.module.scss'
 
 type Props = {
   postData: {
@@ -21,9 +20,9 @@ const Post: React.FC<Props> = (props) => {
         <title>{props.postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{props.postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={props.postData.date} />
+        <h1>{props.postData.title}</h1>
+        <div>
+          <Date datestring={props.postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }} />
       </article>

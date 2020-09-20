@@ -1,23 +1,21 @@
 import React from 'react'
 import { parseISO, format } from 'date-fns'
-// import styles from './Date.module.scss'
+import { css } from '@emotion/core'
+import { colors } from '@/styles/index'
 
 type Props = {
-  dateString: string
+  datestring: string
 }
 
 const Date: React.FC<Props> = (props) => {
-  const date = parseISO(props.dateString)
-  return (
-    <>
-      <time dateTime={props.dateString} className="time">{format(date, 'yyyy年L月d日')}</time>
-      <style jsx>{`
-        .time {
-          font-size: 12px;
-        }
-      `}</style>
-    </>
-  )
+  const date = parseISO(props.datestring)
+
+  const timeStyle = css({
+    fontSize: 12,
+    color: colors.accent.main,
+  })
+
+  return <time dateTime={props.datestring} css={timeStyle} {...props}>{format(date, 'yyyy年L月d日')}</time>
 }
 
 export default Date

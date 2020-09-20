@@ -1,17 +1,34 @@
 import React from 'react'
-import classnames from 'classnames'
-import styles from './SideNav.module.scss'
+import { css } from '@emotion/core'
+import { colors, size } from '@/styles/index'
 
 type Props = {
   activeStatus?: boolean
 }
 
 const SideNav: React.FC<Props> = (props) => {
+  const sideNavStyle = css({
+    position: 'absolute',
+    top: 0,
+    left: `-${size(40)}`,
+    zIndex: 6000,
+    width: size(40),
+    height: '100vh',
+    padding: `${size(7)} ${size(2)} ${size(3)}`,
+    backgroundColor: colors.black.main,
+    color: colors.white.smoke,
+    transition: 'all 0.1s ease',
+  })
+
+  const isActiveStyle = props.activeStatus && css({
+    left: 0,
+  })
+
   return (
-    <div className={classnames(styles.sideNav, { [styles['is-active']]: props.activeStatus })}>
-      <div className={styles.sideNav_searchForm}>search form</div>
-      <div className={styles.sideNav_category}>category</div>
-      <div className={styles.sideNav_tag}>tag</div>
+    <div css={[sideNavStyle, isActiveStyle]}>
+      <div>search form</div>
+      <div>category</div>
+      <div>tag</div>
     </div>
   )
 }
