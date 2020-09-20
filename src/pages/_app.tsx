@@ -21,7 +21,7 @@ export default class App extends NextApp {
         fontFamily: fonts.fontFamily.base,
         fontSize: size(2),
         lineHeight: 1.6,
-        color: colors.gray.dark,
+        color: colors.gray.darker,
         letterSpacing: '0.1em',
         fontVariantNumeric: 'lining-nums',
         fontFeatureSettings: '"palt", "lnum"',
