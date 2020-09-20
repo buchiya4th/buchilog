@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from '@/src/components/single-instance/Header/Header'
-import Footer from '@/src/components/single-instance/Footer/Footer'
+import Header from '@/src/components/global/Header/Header'
+import Footer from '@/src/components/global/Footer/Footer'
 
 // const name = 'ぶちや'
 export const siteTitle = 'ぶちろぐ'

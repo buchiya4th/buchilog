@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { css } from '@emotion/core'
 import { size } from '@/styles/index'
-import SideNav from '@/src/components/single-instance/SideNav/SideNav'
+import SideNav from '@/src/components/global/SideNav/SideNav'
 
 const HeaderBar: React.FC = () => {
   const [isActive, setActive] = useState(false)
