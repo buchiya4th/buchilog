@@ -4,7 +4,7 @@ description: 'CSSにはいろんなスタイルがあり、いろんなスタイ
 date: '2016-10-02'
 category: 'テクノロジー'
 tags: ['コーディング', 'サイト設計']
-image: ''
+image: 'row-layout-markup-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

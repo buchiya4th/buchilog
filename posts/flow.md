@@ -4,7 +4,7 @@ description: ''
 date: '2018-11-11'
 category: 'ライフスタイル'
 tags: ['ライフハック', '法則']
-image: ''
+image: 'flow-featured-img.png'
 ---
 
 専門職で高度な仕事に果敢に挑戦してる意識高い系、ぶちやです。

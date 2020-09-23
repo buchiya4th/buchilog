@@ -4,7 +4,7 @@ description: '楽しく読んで悩みが解決するかもしれない漫画『
 date: '2015-07-26'
 category: '趣味'
 tags: ['漫画', '心理学']
-image: ''
+image: 'psycho_romantica_introduction-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

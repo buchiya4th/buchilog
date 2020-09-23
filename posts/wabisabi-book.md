@@ -4,7 +4,7 @@ description: '日本の魅力の一つ、侘び寂びについてまとめられ
 date: '2017-01-15'
 category: 'ライフスタイル'
 tags: ['書籍', '日本']
-image: ''
+image: 'wabisabi-book-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

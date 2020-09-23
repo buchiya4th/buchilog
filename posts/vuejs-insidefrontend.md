@@ -4,7 +4,7 @@ description: '先日、DIST.14 「事例で見るVue.jsとJavaScript LT」とIns
 date: '2017-03-12'
 category: 'テクノロジー'
 tags: ['勉強会', 'フロントエンド']
-image: ''
+image: 'vuejs-insidefrontend-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

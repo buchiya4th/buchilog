@@ -4,7 +4,7 @@ description: 'zuknowという学習アプリが学習で大切なアウトプッ
 date: '2017-01-09'
 category: 'ライフスタイル'
 tags: ['英語', 'アプリ']
-image: ''
+image: 'zuknow-html-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

@@ -4,7 +4,7 @@ description: '先日、恩師伊藤靖浩さんが主催した「一人芝居ミ
 date: '2017-04-09'
 category: '趣味'
 tags: ['演劇', '感想']
-image: ''
+image: 'one-person-play-vol2-featured-img.png'
 ---
 
 ごきげんよう。ぶちやです。

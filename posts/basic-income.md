@@ -4,7 +4,7 @@ description: '近年、お金を国から無条件で配布する政策が話題
 date: '2018-11-03'
 category: 'ライフスタイル'
 tags: ['生活', 'お金']
-image: ''
+image: 'basic-income-featured-img.png'
 ---
 
 仕事も楽しいけど時間をもっと自由に使いたい。

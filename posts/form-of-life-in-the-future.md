@@ -4,7 +4,7 @@ description: ''
 date: '2018-11-14'
 category: 'ライフスタイル'
 tags: ['テクノロジー', '生活']
-image: ''
+image: 'form-of-life-in-the-future-featured-img.png'
 ---
 
 ここ数年でIT革命がようやく仕事をするようになってきたように感じる今日この頃。

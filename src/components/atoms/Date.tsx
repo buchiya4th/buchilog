@@ -13,7 +13,7 @@ const Date: React.FC<Props> = (props) => {
     fontSize: 12,
   })
 
-  return <time dateTime={props.datestring} css={timeStyle} {...props}>{format(date, 'yyyy年L月d日')}</time>
+  return <time dateTime={props.datestring} css={timeStyle} {...props}>{format(date, 'yyyy/L/d')}</time>
 }
 
 export default Date

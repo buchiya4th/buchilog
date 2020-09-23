@@ -4,7 +4,7 @@ description: '養命酒を初めて飲んでみた乾燥と続ける際に心が
 date: '2016-09-25'
 category: 'ライフスタイル'
 tags: ['健康', '週間']
-image: ''
+image: 'yomeishu-improvement-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。

@@ -4,7 +4,7 @@ description: '先日、Twitterの検索人気ワードで「性格-１６タイ�
 date: '2018-12-08'
 category: 'ライフスタイル'
 tags: ['心理学']
-image: ''
+image: 'personality-diagnosis-mbti-featured-img.png'
 ---
 
 防御力高め系クールな努力家、ぶちやです。

@@ -4,7 +4,7 @@ description: '先日、html5j Webプラットフォーム部 第17回勉強会�
 date: '2017-04-22'
 category: 'テクノロジー'
 tags: ['勉強会', '心理学']
-image: ''
+image: 'html5j-animation-seminor-featured-img.png'
 ---
 
 ごきげんよう。ぶちやです。

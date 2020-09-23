@@ -4,7 +4,7 @@ description: '先日、月曜日にQiitaへ記事を投稿したところ翌週�
 date: '2018-08-07'
 category: 'テクノロジー'
 tags: ['フロントエンド']
-image: ''
+image: 'qiita-mail-ranking-in-featured-img.png'
 ---
 
 ごきげんよう。ぶちやです。
@@ -16,7 +16,7 @@ image: ''
 
 まずは証拠画像をご覧ください。
 
-<a href="http://buchilog.com/wp-content/uploads/2018/08/e41fd6e2c425b5b9e089a2bf4411d49a.png"><img src="http://buchilog.com/wp-content/uploads/2018/08/e41fd6e2c425b5b9e089a2bf4411d49a-151x300.png" alt="" width="151" height="300" class="alignnone size-medium wp-image-267" /></a>
+<a href="/img/posts/qiita-mail-ranking-in-1.png"><img src="/img/posts/qiita-mail-ranking-in-1-thumb.png" alt="" width="151" height="300" class="alignnone size-medium wp-image-267" /></a>
 
 「[フロントエンドの命名や設計の基本と自分の現在の設計](https://qiita.com/buchiya4th/items/127282088f5a9ad56152)」という記事がランキングに載りました。
 Qiitaへ細々と投稿し続け初めて100いいねを超えて嬉しかったです。

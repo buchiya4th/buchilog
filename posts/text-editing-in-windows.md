@@ -4,7 +4,7 @@ description: 'なるべくマウスを使わずテキスト入力・編集に集
 date: '2015-11-07'
 category: 'テクノロジー'
 tags: ['エディタ', 'コーディング', '時短']
-image: ''
+image: 'text-editing-in-windows-featured-img.jpg'
 ---
 
 ごきげんよう。ぶちやです。
