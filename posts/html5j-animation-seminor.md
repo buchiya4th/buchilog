@@ -58,7 +58,7 @@ html5j Webプラットフォーム部 第17回勉強会
 
 #### Web Animations API
 
-```
+```js
 elem.animate(
   [
     { transform: 'scale(1)' },
