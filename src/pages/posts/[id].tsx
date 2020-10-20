@@ -74,6 +74,7 @@ const Post: React.FC<Props> = (props) => {
     },
     'p': {
       lineHeight: 2.2,
+      whiteSpace: 'pre-wrap',
     },
     'ul': {
       paddingLeft: '1em',
@@ -91,6 +92,26 @@ const Post: React.FC<Props> = (props) => {
     },
     'thead > tr > th': {
       borderBottom: `2px solid ${colors.gray.lighter}`,
+    },
+    'blockquote': {
+      position: 'relative',
+      margin: '1em 0',
+      padding: `${size(3)} ${size(2)} ${size(2)}`,
+      backgroundColor: colors.white.smoke,
+      fontStyle: 'italic',
+      '&::before': {
+        position: 'absolute',
+        top: size(2),
+        left: size(2),
+        width: 30,
+        height: 20,
+        background: 'url(/img/icon_quote.svg)',
+        content: '""',
+      },
+      'p': {
+        margin: '1em 0 0',
+        color: colors.gray.dark,
+      }
     }
   })
 
