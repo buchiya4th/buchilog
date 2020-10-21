@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
+import externalLinks from 'remark-external-links'
 
 type Props = {
   id: string
@@ -59,6 +60,7 @@ export async function getPostData(id: string): Promise<Props> {
   const matterResult = matter(fileContents)
 
   const processedContent = await remark()
+    .use(externalLinks, {target: '_blank', rel: ['nofollow']})
     .use(html)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
