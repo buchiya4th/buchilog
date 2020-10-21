@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
 import { css } from '@emotion/core'
@@ -44,13 +43,6 @@ const Layout: React.FC<Props> = (props) => {
 
       <Header />
       <main css={mainStyle}>{props.children}</main>
-      {!props.home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
       <Footer />
     </>
   )

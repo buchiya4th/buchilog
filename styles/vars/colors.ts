@@ -10,7 +10,7 @@ export default {
   gray: {
     darkest: '#222',
     darker: '#4c4c4c',
-    dark: '#808080',
+    dark: '#666',
     main: '#ccc',
     light: '#ddd',
     lighter: '#e5e5e5',
