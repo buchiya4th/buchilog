@@ -14,6 +14,8 @@ image: 'html5j-animation-seminor-featured-img.png'
 今回のテーマは「アニメーション」でアニメーションに関する話を聞いて勉強になりました。
 勉強になった部分をまとめます。
 
+## 目次
+
 ## 勉強会概要
 
 html5j Webプラットフォーム部 第17回勉強会

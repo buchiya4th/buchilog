@@ -15,6 +15,8 @@ image: 'psycho_romantica_introduction-featured-img.jpg'
 マンガボックスにて連載中の漫画『サイコろまんちか』は心理学を題材にした青春ギャグ漫画です。
 あなたの悩みも面白く読んで納得解決？！
 
+## 目次
+
 ## マンガボックスとは？
 
 マンガボックスとは、ネットで無料で読めるマンガアプリです。Google playとApp Store両方あります。

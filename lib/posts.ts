@@ -2,8 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
-import html from 'remark-html'
+import toc from 'remark-toc'
+import slug from 'remark-slug'
+import headings from 'remark-autolink-headings'
 import externalLinks from 'remark-external-links'
+import html from 'remark-html'
 
 type Props = {
   id: string
@@ -60,6 +63,9 @@ export async function getPostData(id: string): Promise<Props> {
   const matterResult = matter(fileContents)
 
   const processedContent = await remark()
+    .use(toc, {heading: '目次', tight: true})
+    .use(slug)
+    .use(headings)
     .use(externalLinks, {target: '_blank', rel: ['nofollow']})
     .use(html)
     .process(matterResult.content)
