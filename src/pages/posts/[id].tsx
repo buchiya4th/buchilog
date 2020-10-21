@@ -80,6 +80,23 @@ const Post: React.FC<Props> = (props) => {
       paddingLeft: '1em',
       lineHeight: 1.8,
     },
+    'ol': {
+      display: 'table',
+      paddingLeft: 0,
+      counterReset: 'li',
+      listStyle: 'none',
+      lineHeight: 1.8,
+      '& > li': {
+        display: 'table-row',
+        counterIncrement: 'li',
+        '&::before': {
+          display: 'table-cell',
+          paddingRight: '0.4em',
+          textAlign: 'right',
+          content: 'counter(li) "."',
+        },
+      },
+    },
     'th, td': {
       padding: size(1),
       borderLeft: `1px solid ${colors.gray.lighter}`,
