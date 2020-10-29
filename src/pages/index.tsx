@@ -2,7 +2,8 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { getSortedPostsData } from '@/lib/posts'
-import Layout, { siteTitle } from '@/src/components/global/Layout'
+import Layout from '@/src/components/global/Layout'
+import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/molecules/ArticleList'
 
 type Props = {
@@ -18,7 +19,9 @@ const Home: React.FC<Props> = (props) => {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{metaData.title}</title>
+        <meta property="og:type" content="website" />
+        <meta name="description" content={metaData.description} />
       </Head>
 
       <ArticleList articleList={props.allPostsData} />
