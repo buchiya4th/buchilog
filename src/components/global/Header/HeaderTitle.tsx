@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
 import { colors, size } from '@/styles/index'
 
@@ -20,12 +21,10 @@ const HeaderTitle: React.FC = () => {
     <div css={headerTitleStyle}>
       <p css={siteLogStyle}>
         <Link href="/">
-          <a><img src="/img/logo.svg" alt="ぶちろぐ" /></a>
+          <a><img src="/img/logo.svg" alt={metaData.title} /></a>
         </Link>
       </p>
-      <div>
-        このサイトは、Webと音楽を愛する人の提供でお送りします。
-      </div>
+      <div>{metaData.description}</div>
     </div>
   )
 }

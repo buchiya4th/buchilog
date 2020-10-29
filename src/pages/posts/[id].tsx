@@ -1,8 +1,10 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { getAllPostIds, getPostData } from '@/lib/posts'
-import Layout, { siteTitle } from '@/src/components/global/Layout'
+import Layout from '@/src/components/global/Layout'
+import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
@@ -10,6 +12,7 @@ import { colors, size, fonts } from '@/styles/index'
 type Props = {
   postData: {
     title: string
+    description: string
     image: string
     date: string
     category: string
@@ -132,10 +135,20 @@ const Post: React.FC<Props> = (props) => {
     }
   })
 
+  const router = useRouter()
+  const DOMAIN = 'http://buchilog.com'
+
   return (
     <Layout>
       <Head>
-        <title>{props.postData.title} | {siteTitle}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
+        <title>{props.postData.title} | {metaData.title}</title>
+        <meta name="description" content={props.postData.description} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${props.postData.title} | ${metaData.title}`} key="og:title" />
+        <meta property="og:description" content={props.postData.description} />
+        <meta property="og:url" content={`${DOMAIN}${router.asPath}`} />
+        <meta property="og:image" content={`${DOMAIN}/img/posts/${props.postData.image}`} />
       </Head>
 
       <article>
@@ -163,6 +176,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params) return {props: {}}
   const postData = await getPostData(params.id as string)
   return {
     props: {
