@@ -1,5 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
 import { extractCritical } from 'emotion-server'
 
 export default class MyDocument extends Document {
@@ -28,6 +29,27 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.1/styles/monokai.min.css" />
           <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
           <script>hljs.initHighlightingOnLoad();</script>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          {existsGaId ? (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GA_TRACKING_ID}', {
+                      page_path: window.location.pathname,
+                    });
+                  `
+                }}
+              />
+            </>
+          ): null}
         </Head>
         <body>
           <Main />
