@@ -1,0 +1,4 @@
+Sitemap: https://buchilog.com/sitemap.xml
+User-agent: *
+Allow: /*
+Disallow: /api/*
