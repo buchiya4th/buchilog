@@ -2,9 +2,10 @@ import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
 import { extractCritical } from 'emotion-server'
+import { AnyCnameRecord } from 'dns'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx)
     const styles = extractCritical(initialProps.html)
     return {
