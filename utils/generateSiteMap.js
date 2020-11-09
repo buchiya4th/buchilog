@@ -18,7 +18,7 @@ async function generateSiteMap() {
     const path = pagePath.replace('src/pages', '').replace('.tsx', '')
     const url = path === '/index'
       ? process.env.DOMAIN + path.replace('.md', '').replace('/index', '')
-      : setDomain(path)
+      : process.env.DOMAIN + path.replace('.md', '')
     return {
       loc: url,
       lastMod: lastModTime
@@ -29,7 +29,7 @@ async function generateSiteMap() {
   const postPaths = await globby(['posts/*.md'])
   const posts = postPaths.map(postPath => {
     const lastModTime = getLastModTime(postPath)
-    const url = setDomain(postPath)
+    const url = process.env.DOMAIN + '/' + postPath.replace('.md', '')
     return {
       loc: url,
       lastMod: lastModTime
@@ -40,10 +40,6 @@ async function generateSiteMap() {
     const stats = fs.statSync(path)
     const lastModTime = format(stats.mtime, 'yyyy-LL-dd')
     return lastModTime
-  }
-
-  function setDomain(path) {
-    return process.env.DOMAIN + '/' + path.replace('.md', '')
   }
 
   const urlSet = pages.concat(posts)
