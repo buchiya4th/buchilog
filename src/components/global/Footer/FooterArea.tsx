@@ -1,5 +1,5 @@
 import React from 'react'
-// import Link from 'next/link'
+import Link from 'next/link'
 import { css } from '@emotion/core'
 import { fonts, size } from '@/styles/index'
 
@@ -68,8 +68,7 @@ const FooterArea: React.FC = () => {
         <div css={profileTextStyle}>
           <div>有益な情報より有意義な時間になるよう日々感じたことをお伝えします。 管理人は、IT企業で働きながら子育てや家事をして暮らしてます。</div>
           <div css={profileDetailLinkStyle}>
-            {/* <Link href="/about/"> 詳しく見る &gt,</Link> */}
-            詳しく見る &gt;
+            <Link href="/about/"><a>詳しく見る &gt;</a></Link>
           </div>
         </div>
       </div>

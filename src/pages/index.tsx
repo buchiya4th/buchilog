@@ -20,8 +20,12 @@ const Home: React.FC<Props> = (props) => {
     <Layout home>
       <Head>
         <title>{metaData.title}</title>
-        <meta property="og:type" content="website" />
         <meta name="description" content={metaData.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${metaData.title}`} key="og:title" />
+        <meta property="og:description" content={metaData.description} />
+        <meta property="og:url" content={`${process.env.DOMAIN}`} />
+        <meta property="og:image" content={`${process.env.DOMAIN}${metaData.ogpImage}`} />
       </Head>
 
       <ArticleList articleList={props.allPostsData} />
