@@ -46,14 +46,12 @@ const HeaderFollow: React.FC = () => {
     paddingLeft: 0,
     listStyle: 'none',
     'li': {
+      overflow: 'hidden',
+      height: 20,
       '&:not(:first-child)': {
         marginLeft: 4,
       }
     }
-  })
-
-  const facebookLikeStyle = css({
-    paddingBottom: 7,
   })
 
   return (
@@ -66,7 +64,7 @@ const HeaderFollow: React.FC = () => {
           <li>
             <a href="https://twitter.com/buchiya4th" className="twitter-follow-button" data-related="" data-show-screen-name="false" data-lang="ja" data-dnt="true" data-show-count="false"></a>
           </li>
-          <li css={facebookLikeStyle}>
+          <li>
             <div id="fb-root"></div>
             <div className="fb-like" data-href="http://buchilog.com" data-width="" data-layout="button" data-action="like" data-size="small" data-share="false"></div>
           </li>
