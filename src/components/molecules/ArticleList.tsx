@@ -56,7 +56,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
 
   return (
     <>
-      <ul css={articleListStyle} {...props}>
+      <ul css={articleListStyle}>
         {props.articleList.map(({ id, date, title, image }) => (
           <li css={itemStyle} key={id}>
             <div css={titleStyle}>
