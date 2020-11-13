@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { getAllPostIds, getPostData } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
 import { css } from '@emotion/core'
@@ -136,7 +138,14 @@ const Post: React.FC<Props> = (props) => {
   })
 
   const router = useRouter()
-  const DOMAIN = 'http://buchilog.com'
+  useEffect(() => {
+    const article = props.postData.contentHtml
+    const hasPre = article.indexOf('<pre><code class="language-') >= 0
+    if (hasPre) {
+      hljs.initHighlighting()
+      hljs.initHighlighting.called = false
+    }
+  })
 
   return (
     <Layout>
@@ -147,11 +156,11 @@ const Post: React.FC<Props> = (props) => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${props.postData.title} | ${metaData.title}`} key="og:title" />
         <meta property="og:description" content={props.postData.description} />
-        <meta property="og:url" content={`${DOMAIN}${router.asPath}`} />
-        <meta property="og:image" content={`${DOMAIN}/img/posts/${props.postData.image}`} />
+        <meta property="og:url" content={`${process.env.DOMAIN}${router.asPath}`} />
+        <meta property="og:image" content={`${process.env.DOMAIN}/img/posts/${props.postData.image}`} />
       </Head>
 
-      <article>
+      <article id="article">
         <div css={dataStyle}>
           <span><Date datestring={props.postData.date} /></span>
           <span>{props.postData.category}</span>

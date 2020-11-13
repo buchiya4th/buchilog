@@ -11,18 +11,6 @@ import '@/styles/globals.scss'
 import { cache } from 'emotion'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
-
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      gtag.pageview(url)
-    }
-    router.events.on("routeChangeComplete", handleRouteChange)
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange)
-    }
-  }, [router.events])
-
   const globalStyle = css({
     '*, *::before, *::after': {
       boxSizing: 'border-box',
@@ -38,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       fontFeatureSettings: '"palt", "lnum"',
     },
     'a': {
+      color: colors.link.main,
       '&:hover': {
         textDecoration: 'none',
       }
@@ -48,6 +37,18 @@ function MyApp({ Component, pageProps }: AppProps) {
       verticalAlign: 'top',
     }
   })
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url)
+    }
+    router.events.on("routeChangeComplete", handleRouteChange)
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <CacheProvider value={cache}>

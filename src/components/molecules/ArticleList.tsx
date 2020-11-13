@@ -10,6 +10,7 @@ type Props = {
     title: string
     id: string
     category: string
+    image: string
   }[]
 }
 
@@ -21,34 +22,55 @@ const ArticleListItem: React.FC<Props> = (props) => {
   })
 
   const itemStyle = css({
-    paddingTop: size(3),
-    paddingBottom: size(1),
+    display: 'grid',
+    gridTemplate:
+      `"title image" auto
+       "data image" auto /
+        1fr ${size(18)}`,
+    paddingTop: size(2),
+    paddingBottom: size(2),
     borderBottom: `1px solid ${colors.gray.lighter}`,
   })
 
   const titleStyle = css(
     fonts.fontHeading,
     {
+      gridArea: 'title',
       fontSize: size(3),
-      textDecoration: 'none',
-      color: colors.link.main,
+      'a': {
+        textDecoration: 'none',
+      }
     }
   )
 
+  const dataStyle = css({
+    gridArea: 'data',
+    alignSelf: 'end',
+  })
+
+  const imageStyle = css({
+    gridArea: 'image',
+    marginLeft: size(1),
+  })
+
   return (
-    <>
-      <ul css={articleListStyle} {...props}>
-        {props.articleList.map(({ id, date, title }) => (
-          <li css={itemStyle} key={id}>
+    <ul css={articleListStyle}>
+      {props.articleList.map(({ id, date, title, image }) => (
+        <li css={itemStyle} key={id}>
+          <div css={titleStyle}>
             <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
-              <a css={titleStyle}>{title}</a>
+              <a>{title}</a>
             </Link>
-            <br />
+          </div>
+          <div css={dataStyle}>
             <Date datestring={date} />
-          </li>
-        ))}
-      </ul>
-    </>
+          </div>
+          <div css={imageStyle}>
+            <img src={`/img/posts/${image}`} alt=""/>
+          </div>
+        </li>
+      ))}
+    </ul>
   )
 }
 

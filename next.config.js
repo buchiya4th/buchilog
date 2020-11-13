@@ -3,6 +3,9 @@ const path = require("path")
 const generateSiteMap = require('./utils/generateSiteMap')
 
 module.exports = {
+  env: {
+    DOMAIN: process.env.DOMAIN
+  },
   webpack: (config, { isServer }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
