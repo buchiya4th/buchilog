@@ -39,7 +39,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
       fontSize: size(3),
       'a': {
         textDecoration: 'none',
-        color: colors.link.main,
       }
     }
   )

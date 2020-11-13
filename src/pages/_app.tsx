@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       fontFeatureSettings: '"palt", "lnum"',
     },
     'a': {
+      color: colors.link.main,
       '&:hover': {
         textDecoration: 'none',
       }
