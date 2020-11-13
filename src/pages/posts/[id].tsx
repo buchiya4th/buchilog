@@ -146,7 +146,6 @@ const Post: React.FC<Props> = (props) => {
       hljs.initHighlighting.called = false
     }
   })
-  const DOMAIN = 'http://buchilog.com'
 
   return (
     <Layout>
@@ -157,8 +156,8 @@ const Post: React.FC<Props> = (props) => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${props.postData.title} | ${metaData.title}`} key="og:title" />
         <meta property="og:description" content={props.postData.description} />
-        <meta property="og:url" content={`${DOMAIN}${router.asPath}`} />
-        <meta property="og:image" content={`${DOMAIN}/img/posts/${props.postData.image}`} />
+        <meta property="og:url" content={`${process.env.DOMAIN}${router.asPath}`} />
+        <meta property="og:image" content={`${process.env.DOMAIN}/img/posts/${props.postData.image}`} />
       </Head>
 
       <article id="article">
