@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
       marginTop: size(20.25),
     }
   })
+
   return (
     <footer css={footerStyle}>
       <FooterArea />

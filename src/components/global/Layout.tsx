@@ -20,6 +20,7 @@ const Layout: React.FC<Props> = (props) => {
       paddingRight: size(2),
     },
   })
+
   useEffect(() => {
     if (window.twttr) {
       window.twttr.widgets.load()
@@ -33,6 +34,7 @@ const Layout: React.FC<Props> = (props) => {
       })
     }
   })
+
   return (
     <>
       <Head>

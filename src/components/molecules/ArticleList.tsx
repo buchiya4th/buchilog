@@ -55,25 +55,23 @@ const ArticleListItem: React.FC<Props> = (props) => {
   })
 
   return (
-    <>
-      <ul css={articleListStyle}>
-        {props.articleList.map(({ id, date, title, image }) => (
-          <li css={itemStyle} key={id}>
-            <div css={titleStyle}>
-              <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
-                <a>{title}</a>
-              </Link>
-            </div>
-            <div css={dataStyle}>
-              <Date datestring={date} />
-            </div>
-            <div css={imageStyle}>
-              <img src={`/img/posts/${image}`} alt=""/>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul css={articleListStyle}>
+      {props.articleList.map(({ id, date, title, image }) => (
+        <li css={itemStyle} key={id}>
+          <div css={titleStyle}>
+            <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+              <a>{title}</a>
+            </Link>
+          </div>
+          <div css={dataStyle}>
+            <Date datestring={date} />
+          </div>
+          <div css={imageStyle}>
+            <img src={`/img/posts/${image}`} alt=""/>
+          </div>
+        </li>
+      ))}
+    </ul>
   )
 }
 

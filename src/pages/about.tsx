@@ -22,7 +22,7 @@ const About: React.FC = () => {
   const bodyStyle = css({
     lineHeight: 2.2,
     whiteSpace: 'pre-wrap',
-})
+  })
 
   const tableStyle = css({
     'th, td': {
@@ -64,6 +64,7 @@ const About: React.FC = () => {
       ]
     }
   }
+
   const router = useRouter()
 
   return (
