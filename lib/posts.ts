@@ -82,6 +82,12 @@ function sortPostsData(data: PostsData) {
   })
 }
 
+export function getTags(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const tags = allPostsData.flatMap(post => post.tags)
+  return tags.filter((x, i, self) => self.indexOf(x) === i)
+}
+
 /**
  * Post page
  */

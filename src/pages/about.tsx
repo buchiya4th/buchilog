@@ -1,14 +1,18 @@
 import React from 'react'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { getTags } from '@/lib/posts'
 import { useRouter } from 'next/router'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
-// type Props = {}
+type Props = {
+  tags: [string]
+}
 
-const About: React.FC = () => {
+const About: React.FC<Props> = (props) => {
   const headingStyle = css({
     marginTop: size(5),
     paddingBottom: 4,
@@ -68,7 +72,7 @@ const About: React.FC = () => {
   const router = useRouter()
 
   return (
-    <Layout>
+    <Layout tags={props.tags}>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
         <title>{state.title} | {metaData.title}</title>
@@ -108,5 +112,15 @@ const About: React.FC = () => {
     </Layout>
   )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const tags = getTags()
+  return {
+    props: {
+      tags,
+    }
+  }
+}
+
 
 export default About

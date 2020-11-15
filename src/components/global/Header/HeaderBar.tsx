@@ -3,7 +3,11 @@ import { css } from '@emotion/core'
 import { size } from '@/styles/index'
 import SideNav from '@/src/components/global/SideNav/SideNav'
 
-const HeaderBar: React.FC = () => {
+type Props = {
+  tags: [string]
+}
+
+const HeaderBar: React.FC<Props> = (props) => {
   const [isActive, setActive] = useState(false)
 
   const headerBarStyle = css({
@@ -63,7 +67,7 @@ const HeaderBar: React.FC = () => {
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
       </div>
-      <SideNav activeStatus={isActive} />
+      <SideNav tags={props.tags} activeStatus={isActive} />
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import { getSortedTagsPostsData } from '@/lib/posts'
+import { getSortedTagsPostsData, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/molecules/ArticleList'
 
 type Props = {
+  tags: [string]
   allPostsData: {
     date: string
     title: string
@@ -20,7 +21,7 @@ type Props = {
 const Tags: React.FC<Props> = (props) => {
   // console.log('tags', props)
   return (
-    <Layout>
+    <Layout tags={props.tags}>
       <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.description} />
@@ -38,9 +39,11 @@ const Tags: React.FC<Props> = (props) => {
 export const getServerSideProps: GetServerSideProps = async ({query}) => {
   const id = query.id
   const allPostsData = getSortedTagsPostsData(id as string)
+  const tags = getTags()
   return {
     props: {
       allPostsData,
+      tags,
       id,
     }
   }

@@ -1,12 +1,13 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { getSortedAllPostsData } from '@/lib/posts'
+import { getSortedAllPostsData, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/molecules/ArticleList'
 
 type Props = {
+  tags: [string]
   allPostsData: {
     date: string
     title: string
@@ -19,7 +20,7 @@ type Props = {
 
 const Home: React.FC<Props> = (props) => {
   return (
-    <Layout home>
+    <Layout tags={props.tags} home>
       <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.description} />
@@ -37,9 +38,11 @@ const Home: React.FC<Props> = (props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedAllPostsData()
+  const tags = getTags()
   return {
     props: {
-      allPostsData
+      allPostsData,
+      tags,
     }
   }
 }
