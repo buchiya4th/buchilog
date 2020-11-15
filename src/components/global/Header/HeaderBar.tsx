@@ -27,6 +27,10 @@ const HeaderBar: React.FC<Props> = (props) => {
     transition: 'all 0.2s',
   })
 
+  const navMenuIsActiveStyle = isActive && css({
+    position: 'fixed',
+  })
+
   const lineStyle = css({
     display: 'inline-block',
     transition: 'all 0.2s',
@@ -62,7 +66,7 @@ const HeaderBar: React.FC<Props> = (props) => {
 
   return (
     <div css={headerBarStyle}>
-      <div css={navMenuStyle} onClick={() => setActive(!isActive)}>
+      <div css={[navMenuStyle, navMenuIsActiveStyle]} onClick={() => setActive(!isActive)}>
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>

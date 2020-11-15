@@ -11,7 +11,7 @@ type Props = {
 
 const SideNav: React.FC<Props> = (props) => {
   const sideNavStyle = css({
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     left: `-${size(40)}`,
     zIndex: 6000,
