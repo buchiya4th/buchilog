@@ -9,6 +9,7 @@ async function generateSiteMap() {
   const pagePaths = await globby([
     'src/pages/**/*.tsx',
     '!src/pages/posts',
+    '!src/pages/tags',
     '!src/pages/_*.tsx',
     '!src/pages/404.tsx',
     '!src/pages/api'
