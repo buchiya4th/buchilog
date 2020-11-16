@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { getAllPostIds, getPostData, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
-import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
@@ -139,14 +138,6 @@ const Post: React.FC<Props> = (props) => {
   })
 
   const router = useRouter()
-  useEffect(() => {
-    const article = props.postData.contentHtml
-    const hasPre = article.indexOf('<pre><code class="language-') >= 0
-    if (hasPre) {
-      hljs.initHighlighting()
-      hljs.initHighlighting.called = false
-    }
-  })
 
   return (
     <Layout tags={props.tags}>

@@ -6,6 +6,7 @@ import toc from 'remark-toc'
 import slug from 'remark-slug'
 import headings from 'remark-autolink-headings'
 import externalLinks from 'remark-external-links'
+import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 
 type Props = {
@@ -113,6 +114,7 @@ export async function getPostData(id: string): Promise<Props> {
     .use(slug)
     .use(headings)
     .use(externalLinks, {target: '_blank', rel: ['nofollow']})
+    .use(highlight)
     .use(html)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
