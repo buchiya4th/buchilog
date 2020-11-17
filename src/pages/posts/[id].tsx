@@ -2,11 +2,13 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import Link from 'next/link'
 import { getAllPostIds, getPostData, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
+import TagIcon from '@/src/components/icon/Tag'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
@@ -45,10 +47,23 @@ const Post: React.FC<Props> = (props) => {
     }
   })
 
-  const tagStyle = css({
-    '&::before': {
-      content: '"#"'
-    }
+  const tagsStyle = css({
+    'span:first-of-type': {
+      marginLeft: size(0.5),
+    },
+    'span + span': {
+      marginLeft: size(1),
+    },
+    'span:not(:last-of-type):after': {
+      content: '","',
+    },
+    'a': {
+      textDecoration: 'none',
+    },
+  })
+
+  const tagIconStyle = css({
+    width: size(1.25),
   })
 
   const bodyStyle = css({
@@ -156,9 +171,16 @@ const Post: React.FC<Props> = (props) => {
         <div css={dataStyle}>
           <span><Date datestring={props.postData.date} /></span>
           <span>{props.postData.category}</span>
-          {props.postData.tags.map((tag, index) => (
-            <span css={tagStyle} key={index}>{tag}</span>
-          ))}
+          <span css={tagsStyle}>
+            <TagIcon styles={tagIconStyle} />
+            {props.postData.tags.map(tag => (
+              <span key={tag}>
+                <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
+                  <a>{tag}</a>
+                </Link>
+              </span>
+            ))}
+          </span>
         </div>
         <h1 css={titleStyle}>{props.postData.title}</h1>
         {props.postData.image && <p><img src={`/img/posts/${props.postData.image}`} /></p>}
