@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Date from '@/src/components/atoms/Date'
+import TagIcon from '@/src/components/icon/Tag'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
@@ -10,6 +11,7 @@ type Props = {
     title: string
     id: string
     category: string
+    tags: [string]
     image: string
   }[]
 }
@@ -48,6 +50,25 @@ const ArticleListItem: React.FC<Props> = (props) => {
     alignSelf: 'end',
   })
 
+  const dateStyle = css({
+    marginRight: size(1),
+  })
+
+  const tagsStyle = css({
+    'span:first-of-type': {
+      marginLeft: size(0.5),
+    },
+    'span + span': {
+      marginLeft: size(1),
+    },
+    'span:not(:last-of-type):after': {
+      content: '","',
+    },
+    'a': {
+      textDecoration: 'none',
+    },
+  })
+
   const imageStyle = css({
     gridArea: 'image',
     marginLeft: size(1),
@@ -55,7 +76,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
 
   return (
     <ul css={articleListStyle}>
-      {props.articleList.map(({ id, date, title, image }) => (
+      {props.articleList.map(({ id, date, title, image, tags }) => (
         <li css={itemStyle} key={id}>
           <div css={titleStyle}>
             <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
@@ -63,7 +84,17 @@ const ArticleListItem: React.FC<Props> = (props) => {
             </Link>
           </div>
           <div css={dataStyle}>
-            <Date datestring={date} />
+            <span css ={dateStyle}><Date datestring={date} /></span>
+            <span css={tagsStyle}>
+              <TagIcon />
+              {tags.map(tag => (
+                <span key={tag}>
+                  <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
+                    <a>{tag}</a>
+                  </Link>
+                </span>
+              ))}
+            </span>
           </div>
           <div css={imageStyle}>
             <img src={`/img/posts/${image}`} alt=""/>

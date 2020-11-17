@@ -1,7 +1,7 @@
 import React from 'react'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import { getSortedAllPostsData, getTags } from '@/lib/posts'
+import { getSortedTagsPostsData, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/molecules/ArticleList'
@@ -18,9 +18,10 @@ type Props = {
   }[]
 }
 
-const Home: React.FC<Props> = (props) => {
+const Tags: React.FC<Props> = (props) => {
+  // console.log('tags', props)
   return (
-    <Layout tags={props.tags} home>
+    <Layout tags={props.tags}>
       <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.description} />
@@ -35,16 +36,17 @@ const Home: React.FC<Props> = (props) => {
     </Layout>
   )
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedAllPostsData()
+export const getServerSideProps: GetServerSideProps = async ({query}) => {
+  const id = query.id
+  const allPostsData = getSortedTagsPostsData(id as string)
   const tags = getTags()
   return {
     props: {
       allPostsData,
       tags,
+      id,
     }
   }
 }
 
-export default Home
+export default Tags

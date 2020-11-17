@@ -3,7 +3,11 @@ import { css } from '@emotion/core'
 import { size } from '@/styles/index'
 import SideNav from '@/src/components/global/SideNav/SideNav'
 
-const HeaderBar: React.FC = () => {
+type Props = {
+  tags: [string]
+}
+
+const HeaderBar: React.FC<Props> = (props) => {
   const [isActive, setActive] = useState(false)
 
   const headerBarStyle = css({
@@ -21,6 +25,10 @@ const HeaderBar: React.FC = () => {
     cursor: 'pointer',
     boxSizing: 'border-box',
     transition: 'all 0.2s',
+  })
+
+  const navMenuIsActiveStyle = isActive && css({
+    position: 'fixed',
   })
 
   const lineStyle = css({
@@ -58,12 +66,12 @@ const HeaderBar: React.FC = () => {
 
   return (
     <div css={headerBarStyle}>
-      <div css={navMenuStyle} onClick={() => setActive(!isActive)}>
+      <div css={[navMenuStyle, navMenuIsActiveStyle]} onClick={() => setActive(!isActive)}>
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
       </div>
-      <SideNav activeStatus={isActive} />
+      <SideNav tags={props.tags} activeStatus={isActive} />
     </div>
   )
 }

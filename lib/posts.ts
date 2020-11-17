@@ -6,6 +6,7 @@ import toc from 'remark-toc'
 import slug from 'remark-slug'
 import headings from 'remark-autolink-headings'
 import externalLinks from 'remark-external-links'
+import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 
 type Props = {
@@ -13,12 +14,23 @@ type Props = {
   contentHtml: string
 }
 
+type PostsData = {
+  id: string
+  date: string
+  title: string
+  category: string
+  tags: [string]
+}[]
+
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData(): React.ReactNode {
+/**
+ * list page
+ */
+function getAllPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.map(fileName => {
+  return fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -32,11 +44,37 @@ export function getSortedPostsData(): React.ReactNode {
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data as { date: string; title: string; category: string }
+      ...matterResult.data as {
+        date: string
+        title: string
+        category: string
+        tags: [string]
+      }
     }
   })
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
+}
+
+/**
+ * index page
+ */
+export function getSortedAllPostsData(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  return sortPostsData(allPostsData)
+}
+
+/**
+ * tags page
+ */
+export function getSortedTagsPostsData(id: string): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const tagsPostsData = allPostsData.filter(postData => {
+    return postData.tags.find(tag => tag === id)
+  })
+  return sortPostsData(tagsPostsData)
+}
+
+function sortPostsData(data: PostsData) {
+  return data.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
@@ -45,6 +83,15 @@ export function getSortedPostsData(): React.ReactNode {
   })
 }
 
+export function getTags(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const tags = allPostsData.flatMap(post => post.tags)
+  return tags.filter((x, i, self) => self.indexOf(x) === i)
+}
+
+/**
+ * Post page
+ */
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
@@ -67,6 +114,7 @@ export async function getPostData(id: string): Promise<Props> {
     .use(slug)
     .use(headings)
     .use(externalLinks, {target: '_blank', rel: ['nofollow']})
+    .use(highlight)
     .use(html)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()

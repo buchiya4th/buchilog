@@ -3,12 +3,17 @@
 const fs = require('fs')
 const globby = require('globby')
 const { format } = require('date-fns')
+const path = require('path')
+const matter = require('gray-matter')
 
 async function generateSiteMap() {
-  // page list
+  /**
+   * Page list
+  */
   const pagePaths = await globby([
     'src/pages/**/*.tsx',
     '!src/pages/posts',
+    '!src/pages/tags',
     '!src/pages/_*.tsx',
     '!src/pages/404.tsx',
     '!src/pages/api'
@@ -19,21 +24,17 @@ async function generateSiteMap() {
     const url = path === '/index'
       ? process.env.DOMAIN + path.replace('.md', '').replace('/index', '')
       : process.env.DOMAIN + path.replace('.md', '')
-    return {
-      loc: url,
-      lastMod: lastModTime
-    }
+    return formatData(url, lastModTime)
   })
 
-  // post list
+  /**
+   * Post list
+   */
   const postPaths = await globby(['posts/*.md'])
   const posts = postPaths.map(postPath => {
     const lastModTime = getLastModTime(postPath)
     const url = process.env.DOMAIN + '/' + postPath.replace('.md', '')
-    return {
-      loc: url,
-      lastMod: lastModTime
-    }
+    return formatData(url, lastModTime)
   })
 
   function getLastModTime(path) {
@@ -42,7 +43,76 @@ async function generateSiteMap() {
     return lastModTime
   }
 
-  const urlSet = pages.concat(posts)
+  function sortData(data) {
+    return data.sort((a, b) => {
+      if (a.date < b.date) {
+        return 1
+      } else {
+        return -1
+      }
+    })
+  }
+
+  /**
+   * Tags page
+   */
+  const postsDirectory = path.join(process.cwd(), 'posts')
+  function getAllPostsData() {
+    const fileNames = fs.readdirSync(postsDirectory)
+    return fileNames.map(fileName => {
+      const id = fileName.replace(/\.md$/, '')
+      const fullPath = path.join(postsDirectory, fileName)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const matterResult = matter(fileContents)
+      return {
+        id,
+        ...matterResult.data
+      }
+    })
+  }
+  const tagsPaths = (() => {
+    const allPostsData = getAllPostsData()
+    const allTags = allPostsData.flatMap(post => {
+      return {
+        date: post.date,
+        tag: post.tags,
+      }
+    })
+    const divideAlltags = allTags.flatMap(post => {
+      return post.tag.map(tag => {
+        return {
+          date: post.date,
+          tag: tag,
+        }
+      })
+    })
+    const sortAllTags = sortData(divideAlltags)
+    return sortAllTags.filter((item, index, array) => {
+      return array.findIndex(item2 => item.tag === item2.tag) === index
+    })
+  })()
+  const tags = tagsPaths.map(post => formatData(
+    `${process.env.DOMAIN}/tags/${post.tag}`,
+    post.date)
+  )
+
+  /**
+   * Common function
+   * @param {string} loc
+   * @param {string} lastMod
+   * @return {Object}
+   */
+  function formatData(loc, lastMod) {
+    return {
+      loc,
+      lastMod,
+    }
+  }
+
+  /**
+   * Array concat and generage sitemap
+   */
+  const urlSet = pages.concat(posts, tags)
 
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>

@@ -29,7 +29,8 @@
     "highlight.js": "^10.3.2",
     "next": "10.0.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "remark-highlight.js": "^6.0.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",

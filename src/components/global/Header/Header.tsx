@@ -3,10 +3,14 @@ import HeaderBar from './HeaderBar'
 import HeaderTitle from './HeaderTitle'
 import HeaderFollow from './HeaderFollow'
 
-const Header: React.FC = (props) => {
+type Props = {
+  tags: [string]
+}
+
+const Header: React.FC<Props> = (props) => {
   return (
     <header {...props}>
-      <HeaderBar />
+      <HeaderBar tags={props.tags} />
       <HeaderTitle />
       <HeaderFollow />
     </header>
