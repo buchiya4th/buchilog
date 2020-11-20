@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { css } from '@emotion/core'
+import CategoryIcon from '@/src/components/icon/Category'
 import TagIcon from '@/src/components/icon/Tag'
 import { colors, size } from '@/styles/index'
 
 type Props = {
+  categories: [string]
   tags: [string]
   activeStatus?: boolean
 }
@@ -27,14 +29,52 @@ const SideNav: React.FC<Props> = (props) => {
     left: 0,
   })
 
+  const categoryStyle = css({
+    paddingLeft: size(2.25),
+    textIndent: `-${size(2.25)}`,
+    fontSize: size(1.75),
+    lineHeight: 2,
+    'a': {
+      paddingBottom: 1,
+      color: colors.gray.lighter,
+      textDecoration: 'none',
+      transition: 'all 0.1s ease',
+      '&:hover': {
+        borderBottom: '1px solid #fff',
+      }
+    },
+    'span': {
+      display: 'inline-block',
+      textIndent: 0,
+      marginRight: size(1),
+    },
+    'span:last-child': {
+      marginRight: 0,
+    },
+  })
+
+  const categoryIconStyle = css({
+    display: 'inline-block',
+    width: size(1.25),
+    marginRight: size(1),
+    'path': {
+      fill: colors.gray.lighter,
+    }
+  })
+
   const tagsStyle = css({
     paddingLeft: size(2.25),
     textIndent: `-${size(2.25)}`,
     fontSize: size(1.75),
     lineHeight: 2,
     'a': {
+      paddingBottom: 1,
       color: colors.gray.lighter,
       textDecoration: 'none',
+      transition: 'all 0.1s ease',
+      '&:hover': {
+        borderBottom: '1px solid #fff',
+      }
     },
     'span': {
       display: 'inline-block',
@@ -58,7 +98,16 @@ const SideNav: React.FC<Props> = (props) => {
   return (
     <div css={[sideNavStyle, isActiveStyle]}>
       <div>search form</div>
-      <div>category</div>
+      <div css={categoryStyle}>
+        <CategoryIcon styles={categoryIconStyle} />
+        {props.categories.map(category => (
+          <span key={category}>
+            <Link href="/categories/[id]" as={`/categories/${category}`} passHref>
+              <a>{category}</a>
+            </Link>
+          </span>
+        ))}
+      </div>
       <div css={tagsStyle}>
         <TagIcon styles={tagIconStyle} />
         {props.tags.map(tag => (

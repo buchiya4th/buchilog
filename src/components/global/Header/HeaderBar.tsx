@@ -4,6 +4,7 @@ import { size } from '@/styles/index'
 import SideNav from '@/src/components/global/SideNav/SideNav'
 
 type Props = {
+  categories: [string]
   tags: [string]
 }
 
@@ -71,7 +72,11 @@ const HeaderBar: React.FC<Props> = (props) => {
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
       </div>
-      <SideNav tags={props.tags} activeStatus={isActive} />
+      <SideNav
+        categories={props.categories}
+        tags={props.tags}
+        activeStatus={isActive}
+      />
     </div>
   )
 }

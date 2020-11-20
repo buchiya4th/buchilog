@@ -7,6 +7,7 @@ import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/molecules/ArticleList'
 
 type Props = {
+  categories: [string]
   tags: [string]
   allPostsData: {
     date: string
@@ -21,7 +22,10 @@ type Props = {
 const Category: React.FC<Props> = (props) => {
   // console.log('tags', props)
   return (
-    <Layout tags={props.tags}>
+    <Layout
+      categories={props.categories}
+      tags={props.tags}
+    >
       <Head>
         <title>{metaData.title}</title>
         <meta name="description" content={metaData.description} />
