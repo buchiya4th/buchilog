@@ -13,6 +13,7 @@ async function generateSiteMap() {
   const pagePaths = await globby([
     'src/pages/**/*.tsx',
     '!src/pages/posts',
+    '!src/pages/categories',
     '!src/pages/tags',
     '!src/pages/_*.tsx',
     '!src/pages/404.tsx',
@@ -54,7 +55,7 @@ async function generateSiteMap() {
   }
 
   /**
-   * Tags page
+   * List page common
    */
   const postsDirectory = path.join(process.cwd(), 'posts')
   function getAllPostsData() {
@@ -70,6 +71,31 @@ async function generateSiteMap() {
       }
     })
   }
+
+  /**
+   * Categories page
+   */
+  const categoriesPaths = (() => {
+    const allPostsData = getAllPostsData()
+    const allcategories = allPostsData.flatMap(post => {
+      return {
+        date: post.date,
+        category: post.category,
+      }
+    })
+    const sortAllcategories = sortData(allcategories)
+    return sortAllcategories.filter((item, index, array) => {
+      return array.findIndex(item2 => item.category === item2.category) === index
+    })
+  })()
+  const categories = categoriesPaths.map(post => formatData(
+    `${process.env.DOMAIN}/categories/${post.category}`,
+    post.date)
+  )
+
+  /**
+   * Tags page
+   */
   const tagsPaths = (() => {
     const allPostsData = getAllPostsData()
     const allTags = allPostsData.flatMap(post => {
@@ -112,7 +138,7 @@ async function generateSiteMap() {
   /**
    * Array concat and generage sitemap
    */
-  const urlSet = pages.concat(posts, tags)
+  const urlSet = pages.concat(posts, categories, tags)
 
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>

@@ -3,16 +3,18 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
-import { getAllPostIds, getPostData, getTags } from '@/lib/posts'
+import { getAllPostIds, getPostData, getCategories, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
+import CategoryIcon from '@/src/components/icon/Category'
 import TagIcon from '@/src/components/icon/Tag'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
 type Props = {
+  categories: [string]
   tags: [string]
   postData: {
     title: string
@@ -47,12 +49,16 @@ const Post: React.FC<Props> = (props) => {
     }
   })
 
+  const categoryStyle = css({
+    'a': {
+      marginLeft: size(1),
+      textDecoration: 'none',
+    }
+  })
+
   const tagsStyle = css({
     'span:first-of-type': {
       marginLeft: size(0.5),
-    },
-    'span + span': {
-      marginLeft: size(1),
     },
     'span:not(:last-of-type):after': {
       content: '","',
@@ -155,7 +161,10 @@ const Post: React.FC<Props> = (props) => {
   const router = useRouter()
 
   return (
-    <Layout tags={props.tags}>
+    <Layout
+      categories={props.categories}
+      tags={props.tags}
+    >
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
         <title>{props.postData.title} | {metaData.title}</title>
@@ -170,7 +179,12 @@ const Post: React.FC<Props> = (props) => {
       <article id="article">
         <div css={dataStyle}>
           <span><Date datestring={props.postData.date} /></span>
-          <span>{props.postData.category}</span>
+          <span css={categoryStyle}>
+              <CategoryIcon />
+              <Link href="/categories/[id]" as={`/categories/${props.postData.category}`} passHref>
+                <a>{props.postData.category}</a>
+              </Link>
+            </span>
           <span css={tagsStyle}>
             <TagIcon styles={tagIconStyle} />
             {props.postData.tags.map(tag => (
@@ -201,10 +215,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params) return {props: {}}
   const postData = await getPostData(params.id as string)
+  const categories = getCategories()
   const tags = getTags()
   return {
     props: {
       postData,
+      categories,
       tags,
     }
   }

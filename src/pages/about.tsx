@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { getTags } from '@/lib/posts'
+import { getCategories, getTags } from '@/lib/posts'
 import { useRouter } from 'next/router'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
@@ -9,6 +9,7 @@ import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
 type Props = {
+  categories: [string]
   tags: [string]
 }
 
@@ -72,7 +73,10 @@ const About: React.FC<Props> = (props) => {
   const router = useRouter()
 
   return (
-    <Layout tags={props.tags}>
+    <Layout
+      categories={props.categories}
+      tags={props.tags}
+    >
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
         <title>{state.title} | {metaData.title}</title>
@@ -114,9 +118,11 @@ const About: React.FC<Props> = (props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const categories = getCategories()
   const tags = getTags()
   return {
     props: {
+      categories,
       tags,
     }
   }

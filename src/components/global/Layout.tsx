@@ -7,6 +7,7 @@ import { media, size } from '@/styles/index'
 
 type Props = {
   children: React.ReactNode
+  categories: [string]
   tags: [string]
   home?: boolean
 }
@@ -42,7 +43,10 @@ const Layout: React.FC<Props> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header tags={props.tags} />
+      <Header
+        categories={props.categories}
+        tags={props.tags}
+      />
       <main css={mainStyle}>{props.children}</main>
       <Footer />
     </>

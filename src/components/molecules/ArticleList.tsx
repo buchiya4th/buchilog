@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Date from '@/src/components/atoms/Date'
+import CategoryIcon from '@/src/components/icon/Category'
 import TagIcon from '@/src/components/icon/Tag'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
@@ -48,10 +49,19 @@ const ArticleListItem: React.FC<Props> = (props) => {
   const dataStyle = css({
     gridArea: 'data',
     alignSelf: 'end',
+    display: 'flex',
+    '& > span + span': {
+      marginLeft: size(1),
+    },
+    'a': {
+      textDecoration: 'none',
+    },
   })
 
-  const dateStyle = css({
-    marginRight: size(1),
+  const categoryStyle = css({
+    'a': {
+      marginLeft: size(1),
+    }
   })
 
   const tagsStyle = css({
@@ -64,9 +74,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
     'span:not(:last-of-type):after': {
       content: '","',
     },
-    'a': {
-      textDecoration: 'none',
-    },
   })
 
   const imageStyle = css({
@@ -76,7 +83,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
 
   return (
     <ul css={articleListStyle}>
-      {props.articleList.map(({ id, date, title, image, tags }) => (
+      {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li css={itemStyle} key={id}>
           <div css={titleStyle}>
             <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
@@ -84,7 +91,13 @@ const ArticleListItem: React.FC<Props> = (props) => {
             </Link>
           </div>
           <div css={dataStyle}>
-            <span css ={dateStyle}><Date datestring={date} /></span>
+            <span><Date datestring={date} /></span>
+            <span css={categoryStyle}>
+              <CategoryIcon />
+              <Link href="/categories/[id]" as={`/categories/${category}`} passHref>
+                <a>{category}</a>
+              </Link>
+            </span>
             <span css={tagsStyle}>
               <TagIcon />
               {tags.map(tag => (

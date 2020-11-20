@@ -90,6 +90,21 @@ export function getTags(): React.ReactNode {
 }
 
 /**
+ * categories page
+ */
+export function getSortedCategoryPostsData(id: string): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const categoryPostsData = allPostsData.filter(postData => postData.category === id)
+  return sortPostsData(categoryPostsData)
+}
+
+export function getCategories(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const category = allPostsData.flatMap(post => post.category)
+  return category.filter((x, i, self) => self.indexOf(x) === i)
+}
+
+/**
  * Post page
  */
 export function getAllPostIds() {
