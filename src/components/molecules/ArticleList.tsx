@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Date from '@/src/components/atoms/Date'
-import CategoryIcon from '@/src/components/icon/Category'
-import TagIcon from '@/src/components/icon/Tag'
+import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
@@ -50,30 +49,13 @@ const ArticleListItem: React.FC<Props> = (props) => {
     gridArea: 'data',
     alignSelf: 'end',
     display: 'flex',
-    '& > span + span': {
-      marginLeft: size(1),
-    },
     'a': {
       textDecoration: 'none',
     },
   })
 
-  const categoryStyle = css({
-    'a': {
-      marginLeft: size(1),
-    }
-  })
-
-  const tagsStyle = css({
-    'span:first-of-type': {
-      marginLeft: size(0.5),
-    },
-    'span + span': {
-      marginLeft: size(1),
-    },
-    'span:not(:last-of-type):after': {
-      content: '","',
-    },
+  const linkListStyle = css({
+    marginLeft: size(1),
   })
 
   const imageStyle = css({
@@ -92,21 +74,18 @@ const ArticleListItem: React.FC<Props> = (props) => {
           </div>
           <div css={dataStyle}>
             <span><Date datestring={date} /></span>
-            <span css={categoryStyle}>
-              <CategoryIcon />
-              <Link href="/categories/[id]" as={`/categories/${category}`} passHref>
-                <a>{category}</a>
-              </Link>
+            <span css={linkListStyle}>
+              <LinkList
+                items={[category]}
+                itemName="categories"
+                iconStyles={linkListStyle}
+              />
             </span>
-            <span css={tagsStyle}>
-              <TagIcon />
-              {tags.map(tag => (
-                <span key={tag}>
-                  <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
-                    <a>{tag}</a>
-                  </Link>
-                </span>
-              ))}
+            <span css={linkListStyle}>
+              <LinkList
+                items={tags}
+                itemName="tags"
+              />
             </span>
           </div>
           <div css={imageStyle}>
