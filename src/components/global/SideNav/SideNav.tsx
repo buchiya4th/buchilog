@@ -62,7 +62,6 @@ const SideNav: React.FC<Props> = (props) => {
 
   return (
     <div css={[sideNavStyle, isActiveStyle]}>
-      <div>search form</div>
       <span css={linkListStyle}>
         <LinkList
           items={props.categories}
