@@ -3,7 +3,7 @@ title: '養命酒飲んだら少食と疲労感が改善された。'
 description: '養命酒を初めて飲んでみた乾燥と続ける際に心がけたことを紹介します。'
 date: '2016-09-25'
 category: 'ライフスタイル'
-tags: ['健康', '週間']
+tags: ['健康', '習慣']
 image: 'yomeishu-improvement-featured-img.jpg'
 ---
 
