@@ -57,7 +57,7 @@ const FooterArea: React.FC = () => {
         <div css={profileTitleStyle}>このサイトについて</div>
         <div css={profileIconStyle}>
           <img
-            src="/img/profileicon.svg"
+            src="/img/profileIcon.svg"
             alt="ぶちや"
           />
           <div css={profileNameStyle}>ぶちや</div>

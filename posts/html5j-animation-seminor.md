@@ -3,7 +3,7 @@ title: 'html5j Webプラットフォーム部 第17回勉強会に行ってき�
 description: '先日、html5j Webプラットフォーム部 第17回勉強会に行ってきました。今回のテーマは「アニメーション」でアニメーションに関する話を聞いて勉強になりました。勉強になった部分をまとめます。'
 date: '2017-04-22'
 category: 'テクノロジー'
-tags: ['勉強会', '心理学']
+tags: ['勉強会', 'アニメーション', 'フロントエンド']
 image: 'html5j-animation-seminor-featured-img.png'
 ---
 

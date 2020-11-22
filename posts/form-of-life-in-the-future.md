@@ -3,7 +3,7 @@ title: 'これからの時代は個人の生き方・動機・向上心などが
 description: ''
 date: '2018-11-14'
 category: 'ライフスタイル'
-tags: ['テクノロジー', '生活']
+tags: ['未来']
 image: 'form-of-life-in-the-future-featured-img.png'
 ---
 

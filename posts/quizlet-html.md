@@ -2,8 +2,8 @@
 title: 'zuknowからQuizletへ移行した'
 description: '先日、zuknowが2017年4月27日でサービス終了とのアナウンスがありました。代わりにQuizletが近そうだったので、実際に使ってみました。試しに使ってみたので共有します。'
 date: '2017-02-12'
-category: '趣味'
-tags: ['漫画', '心理学']
+category: 'テクノロジー'
+tags: ['英語', 'アプリ', '学習']
 image: 'quizlet-html-featured-img.jpg'
 ---
 

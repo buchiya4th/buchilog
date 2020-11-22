@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Router from 'next/router'
 import { css } from '@emotion/core'
 import { size } from '@/styles/index'
 import SideNav from '@/src/components/global/SideNav/SideNav'
@@ -10,6 +11,7 @@ type Props = {
 
 const HeaderBar: React.FC<Props> = (props) => {
   const [isActive, setActive] = useState(false)
+  Router.events.on('routeChangeComplete', () => setActive(false))
 
   const headerBarStyle = css({
     height: size(7),
