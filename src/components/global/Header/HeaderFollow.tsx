@@ -51,6 +51,11 @@ const HeaderFollow: React.FC = () => {
       }
     }
   })
+  const fbLikeStyle = css({
+    '& > span, & iframe': {
+      width: '80px !important',
+    },
+  })
 
   return (
     <div css={headerFollowStyle}>
@@ -72,6 +77,7 @@ const HeaderFollow: React.FC = () => {
           <li>
             <div id="fb-root"></div>
             <div className="fb-like"
+              css={fbLikeStyle}
               data-href="http://buchilog.com"
               data-width=""
               data-layout="button"
