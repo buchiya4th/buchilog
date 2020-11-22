@@ -4,15 +4,15 @@ import Head from 'next/head'
 import { getSortedAllPostsData, getCategories, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
-import ArticleList from '@/src/components/molecules/ArticleList'
+import ArticleList from '@/src/components/organisms/ArticleList'
 
 type Props = {
   categories: [string]
   tags: [string]
   allPostsData: {
-    date: string
-    title: string
     id: string
+    title: string
+    date: string
     category: string
     tags: [string]
     image: string

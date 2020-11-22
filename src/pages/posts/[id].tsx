@@ -2,14 +2,12 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Link from 'next/link'
 import { getAllPostIds, getPostData, getCategories, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
-import CategoryIcon from '@/src/components/icon/Category'
-import TagIcon from '@/src/components/icon/Tag'
+import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
@@ -19,10 +17,10 @@ type Props = {
   postData: {
     title: string
     description: string
-    image: string
     date: string
     category: string
-    tags: string[]
+    tags: [string]
+    image: string
     contentHtml: string
   }
 }
@@ -35,43 +33,12 @@ const Post: React.FC<Props> = (props) => {
       textDecoration: 'none',
     }
   )
-
   const dataStyle = css({
     marginBottom: '0.25em',
-    lineHeight: 1.2,
-    'span': {
-      display: 'inline-block',
-      marginRight: '0.5em',
-      fontSize: size(1.5),
-      '&:last-child': {
-        marginRight: 0,
-      }
-    }
   })
-
-  const categoryStyle = css({
-    'a': {
-      marginLeft: size(1),
-      textDecoration: 'none',
-    }
+  const linkListStyle = css({
+    marginLeft: size(1),
   })
-
-  const tagsStyle = css({
-    'span:first-of-type': {
-      marginLeft: size(0.5),
-    },
-    'span:not(:last-of-type):after': {
-      content: '","',
-    },
-    'a': {
-      textDecoration: 'none',
-    },
-  })
-
-  const tagIconStyle = css({
-    width: size(1.25),
-  })
-
   const bodyStyle = css({
     'h2': {
       marginTop: size(5),
@@ -179,26 +146,27 @@ const Post: React.FC<Props> = (props) => {
       <article id="article">
         <div css={dataStyle}>
           <span><Date datestring={props.postData.date} /></span>
-          <span css={categoryStyle}>
-              <CategoryIcon />
-              <Link href="/categories/[id]" as={`/categories/${props.postData.category}`} passHref>
-                <a>{props.postData.category}</a>
-              </Link>
-            </span>
-          <span css={tagsStyle}>
-            <TagIcon styles={tagIconStyle} />
-            {props.postData.tags.map(tag => (
-              <span key={tag}>
-                <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
-                  <a>{tag}</a>
-                </Link>
-              </span>
-            ))}
+          <span css={linkListStyle}>
+            <LinkList
+              items={[props.postData.category]}
+              itemName="categories"
+            />
+          </span>
+          <span css={linkListStyle}>
+            <LinkList
+              items={props.postData.tags}
+              itemName="tags"
+            />
           </span>
         </div>
         <h1 css={titleStyle}>{props.postData.title}</h1>
-        {props.postData.image && <p><img src={`/img/posts/${props.postData.image}`} /></p>}
-        <div css={bodyStyle} dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }} />
+        {props.postData.image &&
+          <p><img src={`/img/posts/${props.postData.image}`} /></p>
+        }
+        <div
+          css={bodyStyle}
+          dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }}
+        />
       </article>
     </Layout>
   )
@@ -213,15 +181,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params) return {props: {}}
-  const postData = await getPostData(params.id as string)
   const categories = getCategories()
   const tags = getTags()
+  if (!params) return {props: {}}
+  const postData = await getPostData(params.id as string)
   return {
     props: {
-      postData,
       categories,
       tags,
+      postData,
     }
   }
 }

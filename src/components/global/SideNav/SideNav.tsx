@@ -1,8 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { css } from '@emotion/core'
-import CategoryIcon from '@/src/components/icon/Category'
-import TagIcon from '@/src/components/icon/Tag'
+import LinkList from '@/src/components/molecules/LinkList'
 import { colors, size } from '@/styles/index'
 
 type Props = {
@@ -24,72 +22,35 @@ const SideNav: React.FC<Props> = (props) => {
     color: colors.white.smoke,
     transition: 'all 0.1s ease',
   })
-
   const isActiveStyle = props.activeStatus && css({
     left: 0,
   })
-
-  const categoryStyle = css({
-    paddingLeft: size(2.25),
-    textIndent: `-${size(2.25)}`,
-    fontSize: size(1.75),
-    lineHeight: 2,
-    'a': {
-      paddingBottom: 1,
-      color: colors.gray.lighter,
-      textDecoration: 'none',
-      transition: 'all 0.1s ease',
-      '&:hover': {
-        borderBottom: '1px solid #fff',
-      }
-    },
+  const linkListStyle = css({
+    display: 'block',
+    paddingLeft: size(3),
+    textIndent: `-${size(3)}`,
     'span': {
-      display: 'inline-block',
       textIndent: 0,
-      marginRight: size(1),
-    },
-    'span:last-child': {
-      marginRight: 0,
-    },
-  })
-
-  const categoryIconStyle = css({
-    display: 'inline-block',
-    width: size(1.25),
-    marginRight: size(1),
-    'path': {
-      fill: colors.gray.lighter,
     }
   })
-
-  const tagsStyle = css({
-    paddingLeft: size(2.25),
-    textIndent: `-${size(2.25)}`,
-    fontSize: size(1.75),
+  const linkListTextStyles = css({
     lineHeight: 2,
-    'a': {
-      paddingBottom: 1,
-      color: colors.gray.lighter,
-      textDecoration: 'none',
-      transition: 'all 0.1s ease',
-      '&:hover': {
-        borderBottom: '1px solid #fff',
-      }
-    },
     'span': {
       display: 'inline-block',
-      textIndent: 0,
-      marginRight: size(1),
+      fontSize: size(1.75),
     },
-    'span:last-child': {
-      marginRight: 0,
+    'span:first-of-type': {
+      marginLeft: 0,
+    },
+    'a': {
+      color: colors.gray.lighter,
     },
   })
-
-  const tagIconStyle = css({
+  const linkListIconStyles = css({
     display: 'inline-block',
-    width: size(1.25),
+    width: size(2),
     marginRight: size(1),
+    textAlign: 'center',
     'path': {
       fill: colors.gray.lighter,
     }
@@ -97,27 +58,22 @@ const SideNav: React.FC<Props> = (props) => {
 
   return (
     <div css={[sideNavStyle, isActiveStyle]}>
-      <div>search form</div>
-      <div css={categoryStyle}>
-        <CategoryIcon styles={categoryIconStyle} />
-        {props.categories.map(category => (
-          <span key={category}>
-            <Link href="/categories/[id]" as={`/categories/${category}`} passHref>
-              <a>{category}</a>
-            </Link>
-          </span>
-        ))}
-      </div>
-      <div css={tagsStyle}>
-        <TagIcon styles={tagIconStyle} />
-        {props.tags.map(tag => (
-          <span key={tag}>
-            <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
-              <a>{tag}</a>
-            </Link>
-          </span>
-        ))}
-      </div>
+      <span css={linkListStyle}>
+        <LinkList
+          items={props.categories}
+          itemName="categories"
+          iconStyles={linkListIconStyles}
+          itemStyles={linkListTextStyles}
+        />
+      </span>
+      <span css={linkListStyle}>
+        <LinkList
+          items={props.tags}
+          itemName="tags"
+          iconStyles={linkListIconStyles}
+          itemStyles={linkListTextStyles}
+        />
+      </span>
     </div>
   )
 }

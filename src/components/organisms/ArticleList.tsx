@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Date from '@/src/components/atoms/Date'
-import CategoryIcon from '@/src/components/icon/Category'
-import TagIcon from '@/src/components/icon/Tag'
+import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
 import { colors, size, fonts } from '@/styles/index'
 
@@ -23,7 +22,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
     padding: 0,
     listStyle: 'none',
   })
-
   const itemStyle = css({
     display: 'grid',
     gridTemplate:
@@ -34,7 +32,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
     paddingBottom: size(2),
     borderBottom: `1px solid ${colors.gray.lighter}`,
   })
-
   const titleStyle = css(
     fonts.fontHeading,
     {
@@ -45,37 +42,17 @@ const ArticleListItem: React.FC<Props> = (props) => {
       }
     }
   )
-
   const dataStyle = css({
     gridArea: 'data',
     alignSelf: 'end',
     display: 'flex',
-    '& > span + span': {
-      marginLeft: size(1),
-    },
     'a': {
       textDecoration: 'none',
     },
   })
-
-  const categoryStyle = css({
-    'a': {
-      marginLeft: size(1),
-    }
+  const linkListStyle = css({
+    marginLeft: size(1),
   })
-
-  const tagsStyle = css({
-    'span:first-of-type': {
-      marginLeft: size(0.5),
-    },
-    'span + span': {
-      marginLeft: size(1),
-    },
-    'span:not(:last-of-type):after': {
-      content: '","',
-    },
-  })
-
   const imageStyle = css({
     gridArea: 'image',
     marginLeft: size(1),
@@ -86,31 +63,35 @@ const ArticleListItem: React.FC<Props> = (props) => {
       {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li css={itemStyle} key={id}>
           <div css={titleStyle}>
-            <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+            <Link
+              href="/posts/[id]"
+              as={`/posts/${id}`}
+              passHref
+            >
               <a>{title}</a>
             </Link>
           </div>
           <div css={dataStyle}>
             <span><Date datestring={date} /></span>
-            <span css={categoryStyle}>
-              <CategoryIcon />
-              <Link href="/categories/[id]" as={`/categories/${category}`} passHref>
-                <a>{category}</a>
-              </Link>
+            <span css={linkListStyle}>
+              <LinkList
+                items={[category]}
+                itemName="categories"
+                iconStyles={linkListStyle}
+              />
             </span>
-            <span css={tagsStyle}>
-              <TagIcon />
-              {tags.map(tag => (
-                <span key={tag}>
-                  <Link href="/tags/[id]" as={`/tags/${tag}`} passHref>
-                    <a>{tag}</a>
-                  </Link>
-                </span>
-              ))}
+            <span css={linkListStyle}>
+              <LinkList
+                items={tags}
+                itemName="tags"
+              />
             </span>
           </div>
           <div css={imageStyle}>
-            <img src={`/img/posts/${image}`} alt=""/>
+            <img
+              src={`/img/posts/${image}`}
+              alt=""
+            />
           </div>
         </li>
       ))}

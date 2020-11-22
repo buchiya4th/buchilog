@@ -7,14 +7,22 @@ type Props = {
 }
 
 const Date: React.FC<Props> = (props) => {
-  const parseDate = parseISO(props.datestring)
-  const date = format(parseDate, 'yyyy/L/d')
-
   const timeStyle = css({
     fontSize: 12,
   })
 
-  return <time dateTime={props.datestring} css={timeStyle} {...props}>{date}</time>
+  const parseDate = parseISO(props.datestring)
+  const date = format(parseDate, 'yyyy/L/d')
+
+  return (
+    <time
+      dateTime={props.datestring}
+      css={timeStyle}
+      {...props}
+    >
+      {date}
+    </time>
+  )
 }
 
 export default Date

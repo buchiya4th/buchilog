@@ -8,7 +8,7 @@ type Props = {
 
 const Tag: React.FC<Props> = (props) => {
   const svgStyle = css({
-    width: size(1.5),
+    width: size(1.25),
   })
   const pathStyle = css({
     fill: '#4B4B4B',

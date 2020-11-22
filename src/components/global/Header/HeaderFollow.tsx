@@ -7,7 +7,6 @@ const HeaderFollow: React.FC = () => {
     padding: `${size(3)} ${size(2)}`,
     textAlign: 'center',
   })
-
   const snsFollowStyle = css({
     position: 'relative',
     maxWidth: 320,
@@ -37,7 +36,6 @@ const HeaderFollow: React.FC = () => {
       backgroundColor: colors.white.main,
     }
   })
-
   const snsFollowListStyle = css({
     display: 'flex',
     justifyContent: 'center',
@@ -53,6 +51,11 @@ const HeaderFollow: React.FC = () => {
       }
     }
   })
+  const fbLikeStyle = css({
+    '& > span, & iframe': {
+      width: '80px !important',
+    },
+  })
 
   return (
     <div css={headerFollowStyle}>
@@ -62,11 +65,26 @@ const HeaderFollow: React.FC = () => {
         </div>
         <ul css={snsFollowListStyle}>
           <li>
-            <a href="https://twitter.com/buchiya4th" className="twitter-follow-button" data-related="" data-show-screen-name="false" data-lang="ja" data-dnt="true" data-show-count="false"></a>
+            <a
+              href="https://twitter.com/buchiya4th"
+              className="twitter-follow-button"
+              data-related=""
+              data-show-screen-name="false"
+              data-lang="ja" data-dnt="true"
+              data-show-count="false"
+            />
           </li>
           <li>
             <div id="fb-root"></div>
-            <div className="fb-like" data-href="http://buchilog.com" data-width="" data-layout="button" data-action="like" data-size="small" data-share="false"></div>
+            <div className="fb-like"
+              css={fbLikeStyle}
+              data-href="http://buchilog.com"
+              data-width=""
+              data-layout="button"
+              data-action="like"
+              data-size="small"
+              data-share="false"
+            />
           </li>
         </ul>
       </div>

@@ -40,7 +40,10 @@ const Layout: React.FC<Props> = (props) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+        />
       </Head>
 
       <Header
