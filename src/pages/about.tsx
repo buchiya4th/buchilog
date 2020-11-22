@@ -23,12 +23,10 @@ const About: React.FC<Props> = (props) => {
     fontStyle: 'normal',
     fontSize: size(2.75),
   })
-
   const bodyStyle = css({
     lineHeight: 2.2,
     whiteSpace: 'pre-wrap',
   })
-
   const tableStyle = css({
     'th, td': {
       padding: size(1),

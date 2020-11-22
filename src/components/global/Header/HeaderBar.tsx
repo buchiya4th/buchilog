@@ -15,7 +15,6 @@ const HeaderBar: React.FC<Props> = (props) => {
     height: size(7),
     background: '#000 url("/img/headerBar_bg.png")',
   })
-
   const navMenuStyle = css({
     display: 'inline-block',
     position: 'relative',
@@ -27,11 +26,9 @@ const HeaderBar: React.FC<Props> = (props) => {
     boxSizing: 'border-box',
     transition: 'all 0.2s',
   })
-
   const navMenuIsActiveStyle = isActive && css({
     position: 'fixed',
   })
-
   const lineStyle = css({
     display: 'inline-block',
     transition: 'all 0.2s',
@@ -52,7 +49,6 @@ const HeaderBar: React.FC<Props> = (props) => {
       bottom: 0,
     },
   })
-
   const isActiveStyle = isActive && css({
     '&:nth-of-type(1), &:nth-of-type(3)': {
       width: 12,
@@ -67,7 +63,10 @@ const HeaderBar: React.FC<Props> = (props) => {
 
   return (
     <div css={headerBarStyle}>
-      <div css={[navMenuStyle, navMenuIsActiveStyle]} onClick={() => setActive(!isActive)}>
+      <div
+        css={[navMenuStyle, navMenuIsActiveStyle]}
+        onClick={() => setActive(!isActive)}
+      >
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>
         <span css={[lineStyle, isActiveStyle]}></span>

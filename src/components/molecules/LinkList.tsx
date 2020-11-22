@@ -47,7 +47,11 @@ const LinkList: React.FC<Props> = (props) => {
       <span css={[itemStyle, props.itemStyles]}>
         {props.items.map(item => (
           <span key={item}>
-            <Link href={`/${props.itemName}/[id]`} as={`/${props.itemName}/${item}`} passHref>
+            <Link
+              href={`/${props.itemName}/[id]`}
+              as={`/${props.itemName}/${item}`}
+              passHref
+            >
               <a>{item}</a>
             </Link>
           </span>

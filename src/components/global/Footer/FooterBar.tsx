@@ -13,7 +13,7 @@ const FooterBar: React.FC = () => {
   })
 
   return (
-    <div css={footerBar} >&copy; 2015 buchilog.com.</div>
+    <div css={footerBar}>&copy; 2015 buchilog.com.</div>
   )
 }
 

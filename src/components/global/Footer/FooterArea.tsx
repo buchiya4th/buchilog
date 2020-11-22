@@ -8,7 +8,6 @@ const FooterArea: React.FC = () => {
     padding: `${size(4)} ${size(2)}`,
     background: 'url("/img/footerArea_bg.png")',
   })
-
   const footerProfileStyle = css({
     display: 'grid',
     gridTemplate:
@@ -21,7 +20,6 @@ const FooterArea: React.FC = () => {
     marginRight: 'auto',
     fontSize: size(1.75),
   })
-
   const profileTitleStyle = css(
     fonts.fontHeading,
     {
@@ -30,21 +28,17 @@ const FooterArea: React.FC = () => {
       lineHeight: 1,
     }
   )
-
   const profileIconStyle = css({
     gridArea: 'icon',
     textAlign: 'center',
   })
-
   const profileNameStyle = css({
     marginTop: size(0.5),
   })
-
   const profileTextStyle = css({
     gridArea: 'text',
     lineHeight: 1.85,
   })
-
   const profileDetailLinkStyle = css({
     marginTop: '1em',
     textAlign: 'right',
@@ -62,7 +56,10 @@ const FooterArea: React.FC = () => {
       <div css={footerProfileStyle}>
         <div css={profileTitleStyle}>このサイトについて</div>
         <div css={profileIconStyle}>
-          <img src="/img/profileicon.svg" alt="ぶちや" />
+          <img
+            src="/img/profileicon.svg"
+            alt="ぶちや"
+          />
           <div css={profileNameStyle}>ぶちや</div>
         </div>
         <div css={profileTextStyle}>

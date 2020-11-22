@@ -10,9 +10,9 @@ type Props = {
   categories: [string]
   tags: [string]
   allPostsData: {
-    date: string
-    title: string
     id: string
+    title: string
+    date: string
     category: string
     tags: [string]
     image: string
@@ -20,7 +20,6 @@ type Props = {
 }
 
 const Category: React.FC<Props> = (props) => {
-  // console.log('tags', props)
   return (
     <Layout
       categories={props.categories}
@@ -41,15 +40,15 @@ const Category: React.FC<Props> = (props) => {
   )
 }
 export const getServerSideProps: GetServerSideProps = async ({query}) => {
-  const id = query.id
-  const allPostsData = getSortedCategoryPostsData(id as string)
   const categories = getCategories()
   const tags = getTags()
+  const id = query.id
+  const allPostsData = getSortedCategoryPostsData(id as string)
   return {
     props: {
-      allPostsData,
       categories,
       tags,
+      allPostsData,
       id,
     }
   }

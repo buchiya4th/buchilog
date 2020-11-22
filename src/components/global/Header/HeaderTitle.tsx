@@ -12,7 +12,6 @@ const HeaderTitle: React.FC = () => {
     color: colors.white.main,
     textAlign: 'center',
   })
-
   const siteLogStyle = css({
     margin: size(1)
   })
@@ -21,7 +20,12 @@ const HeaderTitle: React.FC = () => {
     <div css={headerTitleStyle}>
       <p css={siteLogStyle}>
         <Link href="/">
-          <a><img src="/img/logo.svg" alt={metaData.title} /></a>
+          <a>
+            <img
+              src="/img/logo.svg"
+              alt={metaData.title}
+            />
+          </a>
         </Link>
       </p>
       <div>{metaData.description}</div>

@@ -17,10 +17,10 @@ type Props = {
   postData: {
     title: string
     description: string
-    image: string
     date: string
     category: string
     tags: [string]
+    image: string
     contentHtml: string
   }
 }
@@ -33,15 +33,12 @@ const Post: React.FC<Props> = (props) => {
       textDecoration: 'none',
     }
   )
-
   const dataStyle = css({
     marginBottom: '0.25em',
   })
-
   const linkListStyle = css({
     marginLeft: size(1),
   })
-
   const bodyStyle = css({
     'h2': {
       marginTop: size(5),
@@ -163,8 +160,13 @@ const Post: React.FC<Props> = (props) => {
           </span>
         </div>
         <h1 css={titleStyle}>{props.postData.title}</h1>
-        {props.postData.image && <p><img src={`/img/posts/${props.postData.image}`} /></p>}
-        <div css={bodyStyle} dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }} />
+        {props.postData.image &&
+          <p><img src={`/img/posts/${props.postData.image}`} /></p>
+        }
+        <div
+          css={bodyStyle}
+          dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }}
+        />
       </article>
     </Layout>
   )
@@ -179,15 +181,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params) return {props: {}}
-  const postData = await getPostData(params.id as string)
   const categories = getCategories()
   const tags = getTags()
+  if (!params) return {props: {}}
+  const postData = await getPostData(params.id as string)
   return {
     props: {
-      postData,
       categories,
       tags,
+      postData,
     }
   }
 }

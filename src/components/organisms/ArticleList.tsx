@@ -22,7 +22,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
     padding: 0,
     listStyle: 'none',
   })
-
   const itemStyle = css({
     display: 'grid',
     gridTemplate:
@@ -33,7 +32,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
     paddingBottom: size(2),
     borderBottom: `1px solid ${colors.gray.lighter}`,
   })
-
   const titleStyle = css(
     fonts.fontHeading,
     {
@@ -44,7 +42,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
       }
     }
   )
-
   const dataStyle = css({
     gridArea: 'data',
     alignSelf: 'end',
@@ -53,11 +50,9 @@ const ArticleListItem: React.FC<Props> = (props) => {
       textDecoration: 'none',
     },
   })
-
   const linkListStyle = css({
     marginLeft: size(1),
   })
-
   const imageStyle = css({
     gridArea: 'image',
     marginLeft: size(1),
@@ -68,7 +63,11 @@ const ArticleListItem: React.FC<Props> = (props) => {
       {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li css={itemStyle} key={id}>
           <div css={titleStyle}>
-            <Link href="/posts/[id]" as={`/posts/${id}`} passHref>
+            <Link
+              href="/posts/[id]"
+              as={`/posts/${id}`}
+              passHref
+            >
               <a>{title}</a>
             </Link>
           </div>
@@ -89,7 +88,10 @@ const ArticleListItem: React.FC<Props> = (props) => {
             </span>
           </div>
           <div css={imageStyle}>
-            <img src={`/img/posts/${image}`} alt=""/>
+            <img
+              src={`/img/posts/${image}`}
+              alt=""
+            />
           </div>
         </li>
       ))}

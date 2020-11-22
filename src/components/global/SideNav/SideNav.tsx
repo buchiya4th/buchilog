@@ -22,11 +22,9 @@ const SideNav: React.FC<Props> = (props) => {
     color: colors.white.smoke,
     transition: 'all 0.1s ease',
   })
-
   const isActiveStyle = props.activeStatus && css({
     left: 0,
   })
-
   const linkListStyle = css({
     display: 'block',
     paddingLeft: size(3),
@@ -35,7 +33,6 @@ const SideNav: React.FC<Props> = (props) => {
       textIndent: 0,
     }
   })
-
   const linkListTextStyles = css({
     lineHeight: 2,
     'span': {
@@ -49,7 +46,6 @@ const SideNav: React.FC<Props> = (props) => {
       color: colors.gray.lighter,
     },
   })
-
   const linkListIconStyles = css({
     display: 'inline-block',
     width: size(2),

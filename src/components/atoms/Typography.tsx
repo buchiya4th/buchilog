@@ -43,15 +43,17 @@ const Typography: React.FC<Props> = (props) => {
     })
   }
 
-  return <ElementName
-    css={[
-      headingCommonStyle,
-      (headingStyles as StyleType)[props.styletype]
-    ]}
-    {...props}
-  >
-    {props.value}
-  </ElementName>
+  return (
+    <ElementName
+      css={[
+        headingCommonStyle,
+        (headingStyles as StyleType)[props.styletype]
+      ]}
+      {...props}
+    >
+      {props.value}
+    </ElementName>
+  )
 }
 
 export default Typography

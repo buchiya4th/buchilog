@@ -10,9 +10,9 @@ type Props = {
   categories: [string]
   tags: [string]
   allPostsData: {
-    date: string
-    title: string
     id: string
+    title: string
+    date: string
     category: string
     tags: [string]
     image: string
