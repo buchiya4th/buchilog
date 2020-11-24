@@ -23,6 +23,8 @@ const HeaderTitle: React.FC = () => {
           <a>
             <img
               src="/img/logo.svg"
+              width={224}
+              height={51}
               alt={metaData.title}
             />
           </a>
