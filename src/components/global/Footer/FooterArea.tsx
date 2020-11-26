@@ -58,6 +58,8 @@ const FooterArea: React.FC = () => {
         <div css={profileIconStyle}>
           <img
             src="/img/profileIcon.svg"
+            width={48}
+            height={60.75}
             alt="ぶちや"
           />
           <div css={profileNameStyle}>ぶちや</div>

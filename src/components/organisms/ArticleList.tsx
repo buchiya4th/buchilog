@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
@@ -88,8 +89,10 @@ const ArticleListItem: React.FC<Props> = (props) => {
             </span>
           </div>
           <div css={imageStyle}>
-            <img
+            <Image
               src={`/img/posts/${image}`}
+              width={136}
+              height={81.6}
               alt=""
             />
           </div>
