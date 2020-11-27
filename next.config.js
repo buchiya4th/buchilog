@@ -2,7 +2,12 @@
 const path = require("path")
 const generateSiteMap = require('./utils/generateSiteMap')
 
-module.exports = {
+// Bundle analyzer
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer({
   env: {
     DOMAIN: process.env.DOMAIN
   },
@@ -18,4 +23,4 @@ module.exports = {
 
     return config
   }
-}
+})
