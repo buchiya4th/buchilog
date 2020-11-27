@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
-    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx' --syntax scss"
+    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx' --syntax scss",
+    "bundle-analyze": "ANALYZE=true yarn build"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
+    "@next/bundle-analyzer": "^10.0.3",
     "@types/classnames": "^2.2.10",
     "@types/highlightjs": "^10.1.0",
     "classnames": "^2.2.6",
@@ -28,6 +30,7 @@
     "globby": "^11.0.1",
     "highlight.js": "^10.3.2",
     "next": "10.0.1",
+    "next-compose-plugins": "^2.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark-highlight.js": "^6.0.0"
@@ -46,7 +49,6 @@
     "gray-matter": "^4.0.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "node-sass": "^4.14.1",
     "remark": "^12.0.1",
     "remark-autolink-headings": "^6.0.1",
     "remark-external-links": "^8.0.0",
