@@ -1,13 +1,18 @@
 // tslint:disable-next-line:no-var-requires
 const path = require("path")
 const generateSiteMap = require('./utils/generateSiteMap')
+const withPlugins = require('next-compose-plugins')
 
-// Bundle analyzer
+// Plugins
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
-module.exports = withBundleAnalyzer({
+module.exports = withPlugins(
+  [ // Plugins
+    [withBundleAnalyzer],
+  ],
+  {
   env: {
     DOMAIN: process.env.DOMAIN
   },
