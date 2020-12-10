@@ -31,6 +31,7 @@ const Post: React.FC<Props> = (props) => {
     fonts.fontHeading,
     {
       fontSize: size(3),
+      letterSpacing: '0.05em',
       textDecoration: 'none',
     }
   )

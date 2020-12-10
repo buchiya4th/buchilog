@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
-import { colors, size, fonts } from '@/styles/index'
+import { colors, size, fonts, media } from '@/styles/index'
 
 type Props = {
   categories: [string]
@@ -31,6 +31,10 @@ const About: React.FC<Props> = (props) => {
     'th, td': {
       padding: size(1),
       borderLeft: `1px solid ${colors.gray.lighter}`,
+      fontSize: size(1.75),
+      [media.up('phoneLarge')]: {
+        fontSize: size(2),
+      },
       '&:first-child': {
         borderLeft: 'none',
       }
@@ -38,8 +42,8 @@ const About: React.FC<Props> = (props) => {
     'tr + tr > th, tr + tr > td': {
       borderTop: `1px solid ${colors.gray.lighter}`,
     },
-    'thead > tr > th': {
-      borderBottom: `2px solid ${colors.gray.lighter}`,
+    'th': {
+      minWidth: `calc(5em + ${size(2)})`,
     },
   })
 
@@ -63,7 +67,7 @@ const About: React.FC<Props> = (props) => {
         { th: '2013年', td: '人生を見つめ直し生活基盤を安定させるため『音楽＜仕事』に比重を改める。' },
         { th: '2015年', td: '大企業へ転職して人生を謳歌する。' },
         { th: '2018年', td: '家族が増え生活スタイルが激変する。' },
-        { th: '2020年', td: 'コロナ禍で生活スタイルが激変する。' },
+        { th: '2020年', td: 'グローバル企業へ転職、そしてコロナ禍で生活スタイルが激変する。' },
       ]
     }
   }

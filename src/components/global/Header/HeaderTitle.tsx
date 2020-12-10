@@ -2,18 +2,34 @@ import React from 'react'
 import Link from 'next/link'
 import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
-import { colors, size } from '@/styles/index'
+import { colors, size, media } from '@/styles/index'
 
 const HeaderTitle: React.FC = () => {
   const headerTitleStyle = css({
-    padding: `${size(6)} ${size(2)}`,
+    maxHeight: size(20),
+    padding: `2.5% ${size(2)}`,
     background: '#5d2369 url("/img/headerTitle_bg.png")',
     backgroundBlendMode: 'darken',
     color: colors.white.main,
     textAlign: 'center',
   })
   const siteLogStyle = css({
-    margin: size(1)
+    margin: size(1),
+    'img': {
+      width: '70%',
+      maxWidth: 224,
+    },
+  })
+  const descriptionStyle = css({
+    fontSize: size(1.75),
+    [media.up('phoneLarge')]: {
+      fontSize: size(2),
+    },
+    [media.less(433)]: {
+      width: '18em',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
   })
 
   return (
@@ -30,7 +46,7 @@ const HeaderTitle: React.FC = () => {
           </a>
         </Link>
       </p>
-      <div>{metaData.description}</div>
+      <div css={descriptionStyle}>{metaData.description}</div>
     </div>
   )
 }

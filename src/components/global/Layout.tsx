@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
 import { css } from '@emotion/core'
-import { media, size } from '@/styles/index'
+import { size } from '@/styles/index'
 
 type Props = {
   children: React.ReactNode
@@ -14,13 +14,11 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => {
   const mainStyle = css({
-    maxWidth: 720,
+    maxWidth: `calc(720px + ${size(2)})`,
     marginLeft: 'auto',
     marginRight: 'auto',
-    [media.less('phoneLarge')]: {
-      paddingLeft: size(2),
-      paddingRight: size(2),
-    },
+    paddingLeft: size(1),
+    paddingRight: size(1),
   })
 
   useEffect(() => {
