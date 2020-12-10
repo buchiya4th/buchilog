@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       letterSpacing: '0.1em',
       fontVariantNumeric: 'lining-nums',
       fontFeatureSettings: '"palt", "lnum"',
+      textAlign: 'justify',
     },
     'a': {
       color: colors.link.main,

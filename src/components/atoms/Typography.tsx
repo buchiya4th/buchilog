@@ -17,9 +17,6 @@ const Typography: React.FC<Props> = (props) => {
 
   const headingCommonStyle = css(
     fonts.fontHeading,
-    {
-      textAlign: 'justify',
-    }
   )
 
   const headingStyles = {

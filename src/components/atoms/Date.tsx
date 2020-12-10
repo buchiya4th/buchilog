@@ -1,6 +1,7 @@
 import React from 'react'
 import { parseISO, format } from 'date-fns'
 import { css } from '@emotion/core'
+import { size, media } from '@/styles/index'
 
 type Props = {
   datestring: string
@@ -8,7 +9,10 @@ type Props = {
 
 const Date: React.FC<Props> = (props) => {
   const timeStyle = css({
-    fontSize: 12,
+    fontSize: size(1.25),
+    [media.up('tablet')]: {
+      fontSize: size(1.5),
+    },
   })
 
   const parseDate = parseISO(props.datestring)

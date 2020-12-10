@@ -3,7 +3,7 @@ import Link from 'next/link'
 import CategoryIcon from '@/src/components/icon/Category'
 import TagIcon from '@/src/components/icon/Tag'
 import { css } from '@emotion/core'
-import { size } from '@/styles/index'
+import { size, media } from '@/styles/index'
 
 type Props = {
   items: [string]
@@ -14,14 +14,20 @@ type Props = {
 
 const LinkList: React.FC<Props> = (props) => {
   const itemStyle = css({
-    fontSize: size(1.5),
+    fontSize: size(1.25),
     lineHeight: 1.2,
+    'span': {
+      display: 'inline-block',
+    },
     'span:first-of-type': {
       marginLeft: size(0.5),
     },
     'span:not(:last-of-type):after': {
       marginRight: size(1),
       content: '","',
+    },
+    [media.up('tablet')]: {
+      fontSize: size(1.5),
     },
     'a': {
       paddingBottom: 1,

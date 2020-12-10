@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
-import { colors, size, fonts } from '@/styles/index'
+import { colors, size, fonts, media } from '@/styles/index'
 
 type Props = {
   articleList: {
@@ -27,17 +27,33 @@ const ArticleListItem: React.FC<Props> = (props) => {
     display: 'grid',
     gridTemplate:
       `"title image" auto
-       "data image" auto /
-        1fr ${size(18)}`,
+       "data data" auto /
+        1fr 28%`,
     paddingTop: size(2),
     paddingBottom: size(2),
     borderBottom: `1px solid ${colors.gray.lighter}`,
+    letterSpacing: 0,
+    [media.up('phoneLarge')]: {
+      display: 'grid',
+      gridTemplate:
+      `"title image" auto
+       "data image" auto /
+        1fr ${size(18)}`,
+    },
   })
   const titleStyle = css(
     fonts.fontHeading,
     {
+      overflow: 'hidden',
+      display: '-webkit-box',
       gridArea: 'title',
-      fontSize: size(3),
+      fontSize: size(1.75),
+      WebkitLineClamp: 3,
+      WebkitBoxOrient: 'vertical',
+      lineHeight: 1.5,
+      [media.up('tablet')]: {
+        fontSize: size(2.5),
+      },
       'a': {
         textDecoration: 'none',
       }
@@ -46,16 +62,24 @@ const ArticleListItem: React.FC<Props> = (props) => {
   const dataStyle = css({
     gridArea: 'data',
     alignSelf: 'end',
-    display: 'flex',
     'a': {
       textDecoration: 'none',
     },
   })
+  const dateStyle = css({
+    marginRight: size(1),
+  })
   const linkListStyle = css({
-    marginLeft: size(1),
+    [media.less('tablet')]: {
+      display: 'inline-block',
+    },
+  })
+  const categoryStyle = css({
+    marginRight: size(1),
   })
   const imageStyle = css({
     gridArea: 'image',
+    justifySelf: 'end',
     marginLeft: size(1),
   })
 
@@ -63,6 +87,14 @@ const ArticleListItem: React.FC<Props> = (props) => {
     <ul css={articleListStyle}>
       {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li css={itemStyle} key={id}>
+          <div css={imageStyle}>
+            <Image
+              src={`/img/posts/${image}`}
+              width={136}
+              height={81.6}
+              alt=""
+            />
+          </div>
           <div css={titleStyle}>
             <Link
               href="/posts/[id]"
@@ -73,8 +105,8 @@ const ArticleListItem: React.FC<Props> = (props) => {
             </Link>
           </div>
           <div css={dataStyle}>
-            <span><Date datestring={date} /></span>
-            <span css={linkListStyle}>
+            <span css={dateStyle}><Date datestring={date} /></span>
+            <span css={[linkListStyle, categoryStyle]}>
               <LinkList
                 items={[category]}
                 itemName="categories"
@@ -87,14 +119,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
                 itemName="tags"
               />
             </span>
-          </div>
-          <div css={imageStyle}>
-            <Image
-              src={`/img/posts/${image}`}
-              width={136}
-              height={81.6}
-              alt=""
-            />
           </div>
         </li>
       ))}

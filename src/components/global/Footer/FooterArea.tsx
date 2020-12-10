@@ -37,7 +37,7 @@ const FooterArea: React.FC = () => {
   })
   const profileTextStyle = css({
     gridArea: 'text',
-    lineHeight: 1.85,
+    lineHeight: 1.65,
   })
   const profileDetailLinkStyle = css({
     marginTop: '1em',
