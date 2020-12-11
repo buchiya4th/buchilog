@@ -10,7 +10,10 @@ import '@/styles/globals.scss'
 // Use only { cache } from 'emotion'. Don't use { css }.
 import { cache } from 'emotion'
 
-function MyApp({ Component, pageProps }: AppProps) {
+type Props = {
+}
+
+function MyApp({ Component, pageProps }: AppProps): Props {
   const globalStyle = css({
     '*, *::before, *::after': {
       boxSizing: 'border-box',
