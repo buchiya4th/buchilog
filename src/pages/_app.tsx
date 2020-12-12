@@ -30,9 +30,13 @@ function MyApp({ Component, pageProps }: AppProps): Props {
       textAlign: 'justify',
     },
     'a': {
+      paddingBottom: 1,
+      textDecoration: 'none',
+      transition: 'all 0.1s ease',
       color: colors.link.main,
       '&:hover': {
-        textDecoration: 'none',
+        borderBottomWidth: 1,
+        borderBottomStyle: 'solid',
       }
     },
     'img': {
