@@ -29,15 +29,6 @@ const LinkList: React.FC<Props> = (props) => {
     [media.up('tablet')]: {
       fontSize: size(1.5),
     },
-    'a': {
-      paddingBottom: 1,
-      textDecoration: 'none',
-      transition: 'all 0.1s ease',
-      '&:hover': {
-        borderBottomWidth: 1,
-        borderBottomStyle: 'solid',
-      }
-    },
   })
 
   return (
