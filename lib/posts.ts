@@ -22,6 +22,12 @@ type PostsData = {
   tags: [string]
 }[]
 
+type AllPostId = {
+  params: {
+    id: string
+  }
+}[]
+
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 /**
@@ -107,7 +113,7 @@ export function getCategories(): React.ReactNode {
 /**
  * Post page
  */
-export function getAllPostIds() {
+export function getAllPostIds(): AllPostId {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {

@@ -8,8 +8,8 @@ import { size, media } from '@/styles/index'
 type Props = {
   items: [string]
   itemName: string
-  iconStyles?: any
-  itemStyles?: any
+  iconStyles?: React.ReactNode | any
+  itemStyles?: React.ReactNode
 }
 
 const LinkList: React.FC<Props> = (props) => {

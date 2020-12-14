@@ -118,14 +118,12 @@ interface Window {
       clear: function
     },
     Frictionless: {
-      _allowedRecipients: any,
-       _updateRecipients: function,
-       init: function
+      _updateRecipients: function,
+      init: function
     },
     XFBML: {
       parse: function
     }
-    __globalCallbacks: any
     api: function
     gamingservices: {
       friendFinder: function,

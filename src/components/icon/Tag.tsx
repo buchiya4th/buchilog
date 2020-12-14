@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import { size } from '@/styles/index'
 
 type Props = {
-  styles?: any
+  styles?: React.ReactNode
 }
 
 const Tag: React.FC<Props> = (props) => {
