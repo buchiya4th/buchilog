@@ -6,7 +6,7 @@ import Layout from '@/src/components/global/Layout'
 import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
 import { size, media } from '@/styles/index'
-import Typegraphy from '@/src/components/atoms/Typography'
+import Typography from '@/src/components/atoms/Typography'
 
 type Props = {
   categories: [string]
@@ -40,7 +40,7 @@ const Custom404: React.FC<Props> = (props) => {
       categories={props.categories}
       tags={props.tags}
     >
-      <Typegraphy elementname="h1" styletype="heading1" value="ページが見つかりませんでした。" />
+      <Typography elementname="h1" styletype="heading1" value="ページが見つかりませんでした。" />
       <div css={linkAreaStyle}>
         <div css={linkListStyle}>
           <LinkList
