@@ -110,7 +110,6 @@ const ArticleListItem: React.FC<Props> = (props) => {
               <LinkList
                 items={[category]}
                 itemName="categories"
-                iconStyles={linkListStyle}
               />
             </span>
             <span css={linkListStyle}>

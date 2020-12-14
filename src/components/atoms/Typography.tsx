@@ -9,7 +9,7 @@ type Props = {
 }
 
 interface StyleType {
-  [key: string]: any
+  [key: string]: React.ReactNode
 }
 
 const Typography: React.FC<Props> = (props) => {
