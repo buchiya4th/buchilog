@@ -7,6 +7,7 @@ import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
 import { colors, size, fonts, media } from '@/styles/index'
+import Typography from '@/src/components/atoms/Typography'
 
 type Props = {
   categories: [string]
@@ -92,15 +93,15 @@ const About: React.FC<Props> = (props) => {
 
       <article>
         <section className="aboutSite">
-          <h2 css={headingStyle}>{state.aboutSite.heading}</h2>
+          <Typography elementname="h2" styletype="heading1" value={state.aboutSite.heading} css={headingStyle} />
           <div css={bodyStyle}>{state.aboutSite.body}</div>
         </section>
         <section className="aboutAuther">
-          <h2 css={headingStyle}>{state.aboutAuther.heading}</h2>
+          <Typography elementname="h2" styletype="heading1" value={state.aboutAuther.heading} css={headingStyle} />
           <div css={bodyStyle}>{state.aboutAuther.body}</div>
         </section>
         <section className="biography">
-          <h2 css={headingStyle}>{state.biography.heading}</h2>
+          <Typography elementname="h2" styletype="heading1" value={state.biography.heading} css={headingStyle} />
           <div css={bodyStyle}>
             <table css={tableStyle}>
               <tbody>
