@@ -4,7 +4,7 @@
       
             <url>
               <loc>https://buchilog.com/about</loc>
-              <lastmod>2020-12-13</lastmod>
+              <lastmod>2020-12-15</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com</loc>
@@ -25,6 +25,10 @@
             <url>
               <loc>https://buchilog.com/posts/form-of-life-in-the-future</loc>
               <lastmod>2020-11-23</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/posts/frontend-2020</loc>
+              <lastmod>2020-12-25</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/html5j-animation-seminor</loc>
@@ -83,16 +87,20 @@
               <lastmod>2020-11-23</lastmod>
             </url>
             <url>
+              <loc>https://buchilog.com/categories/テクノロジー</loc>
+              <lastmod>2020-12-25</lastmod>
+            </url>
+            <url>
               <loc>https://buchilog.com/categories/ライフスタイル</loc>
               <lastmod>2019-12-23</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/categories/テクノロジー</loc>
-              <lastmod>2018-08-07</lastmod>
-            </url>
-            <url>
               <loc>https://buchilog.com/categories/趣味</loc>
               <lastmod>2017-04-09</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/フロントエンド</loc>
+              <lastmod>2020-12-25</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/旅行</loc>
@@ -125,10 +133,6 @@
             <url>
               <loc>https://buchilog.com/tags/生活</loc>
               <lastmod>2018-11-03</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com/tags/フロントエンド</loc>
-              <lastmod>2018-08-07</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/アニメーション</loc>
