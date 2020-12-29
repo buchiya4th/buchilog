@@ -88,12 +88,20 @@ const ArticleListItem: React.FC<Props> = (props) => {
       {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li css={itemStyle} key={id}>
           <div css={imageStyle}>
-            <Image
-              src={`/img/posts/${image}`}
-              width={136}
-              height={81.6}
-              alt=""
-            />
+            <Link
+              href="/posts/[id]"
+              as={`/posts/${id}`}
+              passHref
+            >
+              <a>
+                <Image
+                  src={`/img/posts/${image}`}
+                  width={136}
+                  height={81.6}
+                  alt=""
+                />
+              </a>
+            </Link>
           </div>
           <div css={titleStyle}>
             <Link

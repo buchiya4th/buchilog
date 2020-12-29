@@ -10,7 +10,7 @@ import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
-import { colors, size, fonts } from '@/styles/index'
+import { colors, size, fonts, media } from '@/styles/index'
 
 type Props = {
   categories: [string]
@@ -68,8 +68,11 @@ const Post: React.FC<Props> = (props) => {
       fontSize: size(2.25),
     },
     'p': {
-      lineHeight: 2.2,
+      lineHeight: 1.9,
       whiteSpace: 'pre-wrap',
+      [media.up('phoneLarge')]: {
+        lineHeight: 2.2,
+      },
     },
     'ul': {
       paddingLeft: '1em',
