@@ -25,9 +25,12 @@ const About: React.FC<Props> = (props) => {
     fontSize: size(2.75),
   })
   const bodyStyle = css({
-    lineHeight: 2.2,
+    lineHeight: 1.9,
     whiteSpace: 'pre-wrap',
-  })
+    [media.up('phoneLarge')]: {
+      lineHeight: 2.2,
+    },
+})
   const tableStyle = css({
     'th, td': {
       padding: size(1),

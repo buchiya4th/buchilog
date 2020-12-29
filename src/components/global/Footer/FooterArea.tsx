@@ -56,12 +56,16 @@ const FooterArea: React.FC = () => {
       <div css={footerProfileStyle}>
         <div css={profileTitleStyle}>このサイトについて</div>
         <div css={profileIconStyle}>
-          <img
-            src="/img/profileIcon.svg"
-            width={48}
-            height={60.75}
-            alt="ぶちや"
-          />
+          <Link href="/about/">
+            <a>
+              <img
+                src="/img/profileIcon.svg"
+                width={48}
+                height={60.75}
+                alt="ぶちや"
+              />
+            </a>
+          </Link>
           <div css={profileNameStyle}>ぶちや</div>
         </div>
         <div css={profileTextStyle}>
