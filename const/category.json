@@ -1,0 +1,9 @@
+[
+  { "slug": "lifestyle", "name": "ライフスタイル" },
+  { "slug": "society", "name": "世の中" },
+  { "slug": "technology", "name": "テクノロジー" },
+  { "slug": "design", "name": "デザイン" },
+  { "slug": "business", "name": "ビジネス" },
+  { "slug": "hobby", "name": "趣味" },
+  { "slug": "learn", "name": "学び" }
+]

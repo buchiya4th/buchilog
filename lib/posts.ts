@@ -1,15 +1,42 @@
-import fs, { readFileSync } from 'fs'
+import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
+import toc from 'remark-toc'
+import slug from 'remark-slug'
+import headings from 'remark-autolink-headings'
+import externalLinks from 'remark-external-links'
+import highlight from 'remark-highlight.js'
 import html from 'remark-html'
+
+type Props = {
+  id: string
+  contentHtml: string
+}
+
+type PostsData = {
+  id: string
+  date: string
+  title: string
+  category: string
+  tags: [string]
+}[]
+
+type AllPostId = {
+  params: {
+    id: string
+  }
+}[]
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData() {
+/**
+ * list page
+ */
+function getAllPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.map(fileName => {
+  return fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
@@ -23,11 +50,37 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data as { date: string; title: string }
+      ...matterResult.data as {
+        date: string
+        title: string
+        category: string
+        tags: [string]
+      }
     }
   })
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
+}
+
+/**
+ * index page
+ */
+export function getSortedAllPostsData(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  return sortPostsData(allPostsData)
+}
+
+/**
+ * tags page
+ */
+export function getSortedTagsPostsData(id: string): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const tagsPostsData = allPostsData.filter(postData => {
+    return postData.tags.find(tag => tag === id)
+  })
+  return sortPostsData(tagsPostsData)
+}
+
+function sortPostsData(data: PostsData) {
+  return data.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
@@ -36,7 +89,31 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
+export function getTags(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const tags = allPostsData.flatMap(post => post.tags)
+  return tags.filter((x, i, self) => self.indexOf(x) === i)
+}
+
+/**
+ * categories page
+ */
+export function getSortedCategoryPostsData(id: string): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const categoryPostsData = allPostsData.filter(postData => postData.category === id)
+  return sortPostsData(categoryPostsData)
+}
+
+export function getCategories(): React.ReactNode {
+  const allPostsData = getAllPostsData()
+  const category = allPostsData.flatMap(post => post.category)
+  return category.filter((x, i, self) => self.indexOf(x) === i)
+}
+
+/**
+ * Post page
+ */
+export function getAllPostIds(): AllPostId {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
@@ -47,13 +124,18 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string): Promise<Props> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)
 
   const processedContent = await remark()
+    .use(toc, {heading: '目次', tight: true})
+    .use(slug)
+    .use(headings)
+    .use(externalLinks, {target: '_blank', rel: ['nofollow']})
+    .use(highlight)
     .use(html)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
