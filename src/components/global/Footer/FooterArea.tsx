@@ -44,11 +44,7 @@ const FooterArea: React.FC = () => {
     textAlign: 'right',
     'a': {
       marginRight: '0.2em',
-      textDecoration: 'none',
-      '&:hover': {
-        textDecoration: 'underline',
-      }
-    }
+    },
   })
 
   return (

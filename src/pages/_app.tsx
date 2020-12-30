@@ -32,12 +32,15 @@ function MyApp({ Component, pageProps }: AppProps): Props {
     'a': {
       paddingBottom: 1,
       textDecoration: 'none',
-      transition: 'all 0.1s ease',
       color: colors.link.main,
+      borderBottomWidth: 1,
+      borderBottomStyle: 'none',
+      borderBottomColor: 'transparent',
+      transition: 'all 0.2s ease',
       '&:hover': {
-        borderBottomWidth: 1,
         borderBottomStyle: 'solid',
-      }
+        borderBottomColor: 'inherit',
+      },
     },
     'img': {
       maxWidth: '100%',
