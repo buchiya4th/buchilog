@@ -33,6 +33,7 @@
     "next-compose-plugins": "^2.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-scripts": "4.0.3",
     "remark-highlight.js": "^6.0.0"
   },
   "devDependencies": {
