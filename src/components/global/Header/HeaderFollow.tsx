@@ -4,14 +4,13 @@ import { colors, size } from '@/styles/index'
 
 const HeaderFollow: React.FC = () => {
   const headerFollowStyle = css({
-    padding: `${size(3)} ${size(2)}`,
+    padding: `0 ${size(2)}`,
     textAlign: 'center',
   })
   const snsFollowStyle = css({
     position: 'relative',
     maxWidth: 320,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    margin: `${size(3)} auto`,
     padding: size(2),
     '&::before, &::after': {
       position: 'absolute',
