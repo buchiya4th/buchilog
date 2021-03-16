@@ -22,23 +22,23 @@ const ArticleListItem: React.FC<Props> = (props) => {
     margin: 0,
     padding: 0,
     listStyle: 'none',
-  })
-  const itemStyle = css({
-    display: 'grid',
-    gridTemplate:
-      `"title image" auto
-       "data data" auto /
-        1fr 28%`,
-    paddingTop: size(2),
-    paddingBottom: size(2),
-    borderBottom: `1px solid ${colors.gray.lighter}`,
-    letterSpacing: 0,
-    [media.up('phoneLarge')]: {
+    li: {
       display: 'grid',
       gridTemplate:
-      `"title image" auto
-       "data image" auto /
-        1fr ${size(18)}`,
+        `"title image" auto
+         "data data" auto /
+          1fr 28%`,
+      paddingTop: size(2),
+      paddingBottom: size(2),
+      borderBottom: `1px solid ${colors.gray.lighter}`,
+      letterSpacing: 0,
+      [media.up('phoneLarge')]: {
+        display: 'grid',
+        gridTemplate:
+        `"title image" auto
+         "data image" auto /
+          1fr ${size(18)}`,
+      },
     },
   })
   const titleStyle = css(
@@ -86,7 +86,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
   return (
     <ul css={articleListStyle}>
       {props.articleList.map(({ id, date, title, image, category, tags }) => (
-        <li css={itemStyle} key={id}>
+        <li key={id}>
           <div css={imageStyle}>
             <Link
               href="/posts/[id]"
