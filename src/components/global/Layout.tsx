@@ -15,8 +15,9 @@ type Props = {
 const Layout: React.FC<Props> = (props) => {
   const mainStyle = css({
     maxWidth: `calc(720px + ${size(2)})`,
-    marginLeft: 'auto',
     marginRight: 'auto',
+    marginBottom: size(10),
+    marginLeft: 'auto',
     paddingLeft: size(1),
     paddingRight: size(1),
   })
