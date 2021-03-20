@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
 import { css } from '@emotion/core'
@@ -36,6 +37,8 @@ const Layout: React.FC<Props> = (props) => {
     }
   })
 
+  const AdsContentBottom = dynamic(() => import('src/components/atoms/AdsContentBottom'), { ssr: false })
+
   return (
     <>
       <Head>
@@ -49,7 +52,10 @@ const Layout: React.FC<Props> = (props) => {
         categories={props.categories}
         tags={props.tags}
       />
-      <main css={mainStyle}>{props.children}</main>
+      <main css={mainStyle}>
+        {props.children}
+        <AdsContentBottom />
+      </main>
       <Footer />
     </>
   )
