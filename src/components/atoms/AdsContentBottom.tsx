@@ -13,9 +13,7 @@ const AdsContentBottom: React.FC = () => {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-            setTimeout(() => {
-              (adsbygoogle = window.adsbygoogle || []).push({})
-            }, 5000)
+            (adsbygoogle = window.adsbygoogle || []).push({})
           `
         }}
       />
