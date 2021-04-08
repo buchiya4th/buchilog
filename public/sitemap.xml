@@ -1,7 +1,7 @@
 
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+      
             <url>
               <loc>https://buchilog.com/about</loc>
               <lastmod>2020-12-31</lastmod>
@@ -76,11 +76,15 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/smart-payment-skills</loc>
-              <lastmod>2021-03-19</lastmod>
+              <lastmod>2021-03-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/text-editing-in-windows</loc>
               <lastmod>2020-12-31</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/posts/video-english-method-2700</loc>
+              <lastmod>2021-04-09</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/vuejs-insidefrontend</loc>
@@ -100,7 +104,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/categories/ライフスタイル</loc>
-              <lastmod>2021-03-19</lastmod>
+              <lastmod>2021-04-10</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/categories/テクノロジー</loc>
@@ -109,6 +113,14 @@
             <url>
               <loc>https://buchilog.com/categories/趣味</loc>
               <lastmod>2017-04-09</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/学習</loc>
+              <lastmod>2021-04-10</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/英語</loc>
+              <lastmod>2021-04-10</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/お金</loc>
@@ -171,15 +183,7 @@
               <lastmod>2017-04-09</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/tags/学習</loc>
-              <lastmod>2017-02-12</lastmod>
-            </url>
-            <url>
               <loc>https://buchilog.com/tags/アプリ</loc>
-              <lastmod>2017-02-12</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com/tags/英語</loc>
               <lastmod>2017-02-12</lastmod>
             </url>
             <url>
@@ -231,3 +235,4 @@
               <lastmod>2015-07-26</lastmod>
             </url>
     </urlset>
+  
