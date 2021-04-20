@@ -9,6 +9,7 @@ import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
+import Share from '@/src/components/molecules/Share'
 import { css } from '@emotion/core'
 import { colors, size, fonts, media } from '@/styles/index'
 
@@ -23,7 +24,8 @@ type Props = {
     tags: [string]
     image: string
     contentHtml: string
-  }
+  },
+  id: [string],
 }
 
 const Post: React.FC<Props> = (props) => {
@@ -40,6 +42,9 @@ const Post: React.FC<Props> = (props) => {
   })
   const linkListStyle = css({
     marginLeft: size(1),
+  })
+  const shareAreaStyle = css({
+    marginTop: 32,
   })
   const bodyStyle = css({
     'h2': {
@@ -177,6 +182,12 @@ const Post: React.FC<Props> = (props) => {
           css={bodyStyle}
           dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }}
         />
+        <div css={shareAreaStyle}>
+          <Share
+            text={props.postData.title}
+            url={`${process.env.DOMAIN}/posts/${props.id}`}
+          />
+        </div>
       </article>
     </Layout>
   )
@@ -195,11 +206,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const tags = getTags()
   if (!params) return {props: {}}
   const postData = await getPostData(params.id as string)
+  const id = params.id
   return {
     props: {
       categories,
       tags,
       postData,
+      id,
     }
   }
 }
