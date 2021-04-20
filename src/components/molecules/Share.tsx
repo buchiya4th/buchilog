@@ -1,10 +1,12 @@
 import React from 'react'
-import { FacebookIcon,
+import {
+  FacebookIcon,
   FacebookShareButton,
   TwitterIcon,
   TwitterShareButton,
   HatenaIcon,
-  HatenaShareButton } from 'react-share'
+  HatenaShareButton
+} from 'react-share'
 import { css } from '@emotion/core'
 
 type Props = {
