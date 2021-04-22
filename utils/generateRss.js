@@ -8,7 +8,7 @@ const metaData = {
   description: 'このサイトは、Webと音楽を愛する人の提供でお送りします。',
 }
 const POST_URL = `${process.env.DOMAIN}/posts`
-const RSS_URL = `${process.env.DOMAIN}/feed.xml`
+const RSS_URL = `${process.env.DOMAIN}/rss.xml`
 const postDirPath = path.join(process.cwd(), "posts")
 const outputPostDirPath = path.join(process.cwd(), "out/posts")
 
@@ -69,7 +69,7 @@ ${feeds.join("\n")}
   </channel>
 </rss>`
 
-  const filePath = path.join(process.cwd(), "out/feed.xml")
+  const filePath = path.join(process.cwd(), "out/rss.xml")
 
   await writeRss(filePath, rss)
 }
