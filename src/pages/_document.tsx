@@ -37,6 +37,7 @@ class MyDocument extends NextDocument<Props> {
           <link rel="dns-prefetch" href="//platform.twitter.com" />
           <link rel="dns-prefetch" href="//connect.facebook.net" />
           <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+          <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="rss.xml" />
           <meta name="format-detection" content="telephone=no,email=no,address=no" />
           <script data-ad-client="ca-pub-7461708163833457" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
