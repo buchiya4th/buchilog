@@ -20,6 +20,7 @@ const getPost = async (slug) => {
   const post = {
     slug: slug,
     title: data["title"],
+    description: data["description"],
     date: Date.parse(data["date"]),
   }
 
@@ -39,8 +40,8 @@ const getAllPosts = async () => {
 const createFeed = (post) => `    <item>
       <title>${post.title}</title>
       <link>${POST_URL}/${post.slug}</link>
-      <guid>${POST_URL}/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <description>${post.description}</description>
     </item>`
 
 const writeRss = async (filePath, content) => {
@@ -56,15 +57,27 @@ const generateRss = async () => {
   const lastBuildDate = new Date(posts.slice(-1)[0].date).toUTCString()
   const feeds = posts.map((post) => createFeed(post))
 
-  const rss = `<?xml version="1.0" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  xmlns:georss="http://www.georss.org/georss"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+>
   <channel>
     <title>${metaData.title}</title>
+    <atom:link href="${RSS_URL}" rel="self" type="application/rss+xml" />
     <link>${process.env.DOMAIN}</link>
     <description>${metaData.description}</description>
-    <language>ja</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
-    <atom:link href="${RSS_URL}" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>https://wordpress.org/?v=5.1.1</generator>
 ${feeds.join("\n")}
   </channel>
 </rss>`
