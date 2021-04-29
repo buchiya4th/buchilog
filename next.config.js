@@ -1,7 +1,6 @@
 // tslint:disable-next-line:no-var-requires
 const path = require("path")
 const generateSiteMap = require('./utils/generateSiteMap')
-const generateRss = require('./utils/generateRss')
 const withPlugins = require('next-compose-plugins')
 
 // Plugins
@@ -25,7 +24,6 @@ module.exports = withPlugins(
 
     if (isServer) {
       generateSiteMap
-      generateRss
     }
 
     return config
