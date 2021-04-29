@@ -17,6 +17,7 @@ type Props = {
     tags: [string]
     image: string
   }[]
+  id: string
 }
 
 const Tags: React.FC<Props> = (props) => {
@@ -27,7 +28,7 @@ const Tags: React.FC<Props> = (props) => {
       tags={props.tags}
     >
       <Head>
-        <title>{metaData.title}</title>
+        <title>{props.id} | {metaData.title}</title>
         <meta name="description" content={metaData.description} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${metaData.title}`} key="og:title" />
