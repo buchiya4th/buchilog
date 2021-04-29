@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && tsc generate-rss.ts --esModuleInterop && node generate-rss.js",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
     "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx' --syntax scss",
@@ -35,7 +35,8 @@
     "react-dom": "16.13.1",
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
-    "remark-highlight.js": "^6.0.0"
+    "remark-highlight.js": "^6.0.0",
+    "tsc": "^1.20150623.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
