@@ -52,8 +52,6 @@ const About: React.FC<Props> = (props) => {
   })
 
   const state = {
-    title: '',
-    description: '',
     aboutSite: {
       heading: 'このサイトについて',
       body: 'Webおいしいです。 Web屋の人たちと繋がっていきたいなーと思い立ち上げました。 自分の実績的な面と世の困っている人の為の社会貢献的な面で技術的なことも書いていきます的な。 ネットの人たちはいろんな人がいるので、自分の趣味と合う人とつながりたいなーっていう思いもあり、 エンタメとして情報提供するので良かったら楽しいお話しましょう。 生活してて思うことがあり、ちょっとしたことも書いていきます。 自分の脳内をメモしていきます。'
@@ -85,11 +83,11 @@ const About: React.FC<Props> = (props) => {
     >
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
-        <title>{state.title} | {metaData.title}</title>
-        <meta name="description" content={state.description} />
+        <title>{state.aboutSite.heading} | {metaData.title}</title>
+        <meta name="description" content={metaData.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${state.title} | ${metaData.title}`} key="og:title" />
-        <meta property="og:description" content={state.description} />
+        <meta property="og:title" content={`${state.aboutSite.heading} | ${metaData.title}`} key="og:title" />
+        <meta property="og:description" content={metaData.description} />
         <meta property="og:url" content={`${process.env.DOMAIN}${router.asPath}`} />
         <meta property="og:image" content={`${process.env.DOMAIN}${metaData.ogpImage}`} />
       </Head>
