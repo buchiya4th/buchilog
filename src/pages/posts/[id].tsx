@@ -3,13 +3,15 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
-import { getAllPostIds, getPostData, getCategories, getTags } from '@/lib/posts'
+import { getAllPostIds, getPostData, getCategories, getTags, getRelatedArticleList } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import 'highlight.js/styles/monokai.css'
 import { metaData } from '@/const/metaData'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import Share from '@/src/components/molecules/Share'
+import ArticleList from '@/src/components/organisms/ArticleList'
+import Typography from '@/src/components/atoms/Typography'
 import { css } from '@emotion/core'
 import { colors, size, fonts, media } from '@/styles/index'
 
@@ -26,6 +28,14 @@ type Props = {
     contentHtml: string
   },
   id: [string],
+  relatedArticleData: {
+    id: string
+    title: string
+    date: string
+    category: string
+    tags: [string]
+    image: string
+  }[]
 }
 
 const Post: React.FC<Props> = (props) => {
@@ -134,6 +144,9 @@ const Post: React.FC<Props> = (props) => {
       }
     }
   })
+  const relatedArticleHeadingStyle = css({
+    margin: `${size(5)} 0 0`,
+  })
 
   const router = useRouter()
 
@@ -189,6 +202,10 @@ const Post: React.FC<Props> = (props) => {
           />
         </div>
       </article>
+      <div>
+        <Typography elementname="h2" styletype="heading2" value="関連記事" css={relatedArticleHeadingStyle} />
+        <ArticleList articleList={props.relatedArticleData} />
+      </div>
     </Layout>
   )
 }
@@ -206,6 +223,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const tags = getTags()
   if (!params) return {props: {}}
   const postData = await getPostData(params.id as string)
+  const relatedArticleData = await getRelatedArticleList(postData as any)
   const id = params.id
   return {
     props: {
@@ -213,6 +231,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       tags,
       postData,
       id,
+      relatedArticleData,
     }
   }
 }

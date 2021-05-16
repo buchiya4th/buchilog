@@ -124,6 +124,28 @@ export function getAllPostIds(): AllPostId {
   })
 }
 
+/**
+ * Related posts list
+ */
+export function getRelatedArticleList(postData: any): React.ReactNode {
+  const ARTICLE_LIMIT = 3
+  const allPostsData = getAllPostsData()
+  const matchTagsData = allPostsData.filter(
+    post => post.tags.find(tag => {
+      return postData.tags.find((targetTag: string) => { return targetTag === tag })
+    })
+  )
+  const matchCategoryData = allPostsData.filter(
+    post => post.category === postData.category
+  )
+  const allRelatedArticleData = matchTagsData
+    .concat(matchCategoryData)
+    .filter((x, i, self) => self.indexOf(x) === i)
+  const removeCurrentArticleData = allRelatedArticleData.filter(item => item.id !== postData.id)
+  const reduceLimitArticleData = removeCurrentArticleData.filter((item, index) => index < ARTICLE_LIMIT)
+  return reduceLimitArticleData
+}
+
 export async function getPostData(id: string): Promise<Props> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
