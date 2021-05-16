@@ -128,7 +128,7 @@ export function getAllPostIds(): AllPostId {
  * Related posts list
  */
 export function getRelatedArticleList(postData: any): React.ReactNode {
-  const ARTICLE_LIMIT = 5
+  const ARTICLE_LIMIT = 3
   const allPostsData = getAllPostsData()
   const matchTagsData = allPostsData.filter(
     post => post.tags.find(tag => {
