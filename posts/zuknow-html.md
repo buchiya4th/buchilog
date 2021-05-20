@@ -2,7 +2,7 @@
 title: '友達とクイズで競える学習アプリzuknowで勉強捗りそう'
 description: 'zuknowという学習アプリが学習で大切なアウトプット機能が充実してそうだったので使ってみたので紹介します。'
 date: '2017-01-09'
-category: 'テクノロジー'
+category: '学び'
 tags: ['英語', 'アプリ']
 image: 'zuknow-html-featured-img.jpg'
 ---

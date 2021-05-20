@@ -2,8 +2,8 @@
 title: '英文法を動画で学ぶなら「動画英文法2700」がおすすめ'
 description: '過去問解きながらわからないところは講師が解説してくれる夢のようなアプリを紹介します。'
 date: '2021-04-10'
-category: 'ライフスタイル'
-tags: ['英語', '学習']
+category: '学び'
+tags: ['英語', 'アプリ']
 image: 'video-english-method-2700-img.jpg'
 ---
 

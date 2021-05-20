@@ -2,8 +2,8 @@
 title: '大阪旅行でなんやかんやあったけど満喫してきた。'
 description: '師匠も走る忙しい12月に有給をいただいて大阪へ旅行してきました。備忘録も兼ねて大阪旅行について書いていきたいと思います。'
 date: '2019-12-23'
-category: 'ライフスタイル'
-tags: ['旅行']
+category: '旅行'
+tags: ['国内旅行']
 image: 'osaka-travel-2020-featured-img.jpg'
 ---
 
