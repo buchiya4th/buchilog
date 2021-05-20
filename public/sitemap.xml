@@ -4,7 +4,7 @@
       
             <url>
               <loc>https://buchilog.com/about</loc>
-              <lastmod>2021-05-20</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com</loc>
@@ -12,7 +12,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/basic-income</loc>
-              <lastmod>2021-04-23</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/blog-renewal-2020</loc>
@@ -24,11 +24,11 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/flow</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/form-of-life-in-the-future</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/frontend-2020</loc>
@@ -40,11 +40,11 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/html5j-animation-seminor</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/nagoya-travel-2020</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/one-person-play-vol2</loc>
@@ -52,11 +52,11 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/osaka-travel-2020</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/personality-diagnosis-mbti</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/psycho_romantica_introduction</loc>
@@ -68,7 +68,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/quizlet-html</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/row-layout-markup</loc>
@@ -76,7 +76,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/smart-payment-skills</loc>
-              <lastmod>2021-03-21</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/text-editing-in-windows</loc>
@@ -84,47 +84,59 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/video-english-method-2700</loc>
-              <lastmod>2021-04-09</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/vuejs-insidefrontend</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/wabisabi-book</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/yomeishu-improvement</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/zuknow-html</loc>
-              <lastmod>2020-12-31</lastmod>
+              <lastmod>2021-05-21</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/categories/ライフスタイル</loc>
+              <loc>https://buchilog.com/categories/学び</loc>
               <lastmod>2021-04-10</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/categories/お金</loc>
+              <lastmod>2021-03-19</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/categories/テクノロジー</loc>
               <lastmod>2021-03-02</lastmod>
             </url>
             <url>
+              <loc>https://buchilog.com/categories/旅行</loc>
+              <lastmod>2019-12-23</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/categories/暮らし</loc>
+              <lastmod>2018-11-14</lastmod>
+            </url>
+            <url>
               <loc>https://buchilog.com/categories/趣味</loc>
               <lastmod>2017-04-09</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/tags/学習</loc>
+              <loc>https://buchilog.com/categories/健康</loc>
+              <lastmod>2016-09-25</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/アプリ</loc>
               <lastmod>2021-04-10</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/英語</loc>
               <lastmod>2021-04-10</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com/tags/お金</loc>
-              <lastmod>2021-03-19</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/生活</loc>
@@ -143,7 +155,7 @@
               <lastmod>2021-01-11</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/tags/旅行</loc>
+              <loc>https://buchilog.com/tags/国内旅行</loc>
               <lastmod>2019-12-23</lastmod>
             </url>
             <url>
@@ -183,10 +195,6 @@
               <lastmod>2017-04-09</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/tags/アプリ</loc>
-              <lastmod>2017-02-12</lastmod>
-            </url>
-            <url>
               <loc>https://buchilog.com/tags/日本</loc>
               <lastmod>2017-01-15</lastmod>
             </url>
@@ -211,7 +219,11 @@
               <lastmod>2016-09-25</lastmod>
             </url>
             <url>
-              <loc>https://buchilog.com/tags/健康</loc>
+              <loc>https://buchilog.com/tags/栄養</loc>
+              <lastmod>2016-09-25</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/健康食品</loc>
               <lastmod>2016-09-25</lastmod>
             </url>
             <url>
