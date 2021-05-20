@@ -43,9 +43,14 @@ const Post: React.FC<Props> = (props) => {
   const titleStyle = css(
     fonts.fontHeading,
     {
-      fontSize: size(3),
+      marginTop: '0.25em',
+      marginBottom: '0.5em',
+      fontSize: size(2.5),
       letterSpacing: '0.05em',
       textDecoration: 'none',
+      [media.up('phoneLarge')]: {
+        fontSize: size(3),
+      }
     }
   )
   const dataStyle = css({
