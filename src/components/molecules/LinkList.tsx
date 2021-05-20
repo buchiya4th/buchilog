@@ -30,15 +30,21 @@ const LinkList: React.FC<Props> = (props) => {
       fontSize: size(1.5),
     },
   })
+  const iconStyle = css({
+    width: size(1),
+    [media.up('tablet')]: {
+      width: size(1.25),
+    },
+  })
 
   return (
     <>
       <span css={props.iconStyles}>
         {props.itemName === 'categories' &&
-          <CategoryIcon />
+          <CategoryIcon styles={iconStyle} />
         }
         {props.itemName === 'tags' &&
-          <TagIcon />
+          <TagIcon styles={iconStyle} />
         }
       </span>
       <span css={[itemStyle, props.itemStyles]}>

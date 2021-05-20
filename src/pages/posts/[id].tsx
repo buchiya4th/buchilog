@@ -11,6 +11,7 @@ import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import Share from '@/src/components/molecules/Share'
 import ArticleList from '@/src/components/organisms/ArticleList'
+import Breadcrumbs from '@/src/components/atoms/Breadcrumbs'
 import Typography from '@/src/components/atoms/Typography'
 import { css } from '@emotion/core'
 import { colors, size, fonts, media } from '@/styles/index'
@@ -42,9 +43,14 @@ const Post: React.FC<Props> = (props) => {
   const titleStyle = css(
     fonts.fontHeading,
     {
-      fontSize: size(3),
+      marginTop: '0.25em',
+      marginBottom: '0.5em',
+      fontSize: size(2.5),
       letterSpacing: '0.05em',
       textDecoration: 'none',
+      [media.up('phoneLarge')]: {
+        fontSize: size(3),
+      }
     }
   )
   const dataStyle = css({
@@ -147,6 +153,19 @@ const Post: React.FC<Props> = (props) => {
   const relatedArticleHeadingStyle = css({
     margin: `${size(5)} 0 0`,
   })
+  const breadcrumbs = [
+    {
+      title: "トップページ",
+      path: "/",
+    },
+    {
+      title: `${props.postData.category}`,
+      path: `/categories/${props.postData.category}`,
+    },
+    {
+      title: `${props.postData.title}`,
+    },
+  ]
 
   const router = useRouter()
 
@@ -166,6 +185,7 @@ const Post: React.FC<Props> = (props) => {
         <meta property="og:image" content={`${process.env.DOMAIN}/img/posts/${props.postData.image}`} />
       </Head>
 
+      <Breadcrumbs list={breadcrumbs} />
       <article id="article">
         <div css={dataStyle}>
           <span><Date datestring={props.postData.date} /></span>
