@@ -5,6 +5,7 @@ import { getSortedCategoryPostsData, getCategories, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/organisms/ArticleList'
+import Breadcrumbs from '@/src/components/atoms/Breadcrumbs'
 
 type Props = {
   categories: [string]
@@ -21,6 +22,16 @@ type Props = {
 }
 
 const Category: React.FC<Props> = (props) => {
+  const breadcrumbs = [
+    {
+      title: "トップページ",
+      path: "/",
+    },
+    {
+      title: `${props.id}`,
+    },
+  ]
+
   return (
     <Layout
       categories={props.categories}
@@ -35,6 +46,8 @@ const Category: React.FC<Props> = (props) => {
         <meta property="og:url" content={`${process.env.DOMAIN}`} />
         <meta property="og:image" content={`${process.env.DOMAIN}${metaData.ogpImage}`} />
       </Head>
+
+      <Breadcrumbs list={breadcrumbs} />
       <ArticleList articleList={props.allPostsData} />
     </Layout>
   )

@@ -8,6 +8,7 @@ import { metaData } from '@/const/metaData'
 import { css } from '@emotion/core'
 import { colors, size, fonts, media } from '@/styles/index'
 import Typography from '@/src/components/atoms/Typography'
+import Breadcrumbs from '@/src/components/atoms/Breadcrumbs'
 
 type Props = {
   categories: [string]
@@ -74,6 +75,16 @@ const About: React.FC<Props> = (props) => {
     }
   }
 
+  const breadcrumbs = [
+    {
+      title: "トップページ",
+      path: "/",
+    },
+    {
+      title: `${state.aboutSite.heading}`,
+    },
+  ]
+
   const router = useRouter()
 
   return (
@@ -92,6 +103,7 @@ const About: React.FC<Props> = (props) => {
         <meta property="og:image" content={`${process.env.DOMAIN}${metaData.ogpImage}`} />
       </Head>
 
+      <Breadcrumbs list={breadcrumbs} />
       <article>
         <section className="aboutSite">
           <Typography elementname="h2" styletype="heading1" value={state.aboutSite.heading} css={headingStyle} />
