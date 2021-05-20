@@ -2,8 +2,8 @@
 title: 'スマートな現金支払いを鍛えるおすすめアプリの紹介'
 description: 'お釣りの小銭を少なく支払う技術を磨くことができるアプリを紹介します。'
 date: '2021-03-19'
-category: 'ライフスタイル'
-tags: ['生活', 'お金']
+category: 'お金'
+tags: ['生活', 'アプリ']
 image: 'smart-payment-skills-img.jpg'
 ---
 
