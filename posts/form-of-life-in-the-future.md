@@ -2,7 +2,7 @@
 title: 'これからの時代は個人の生き方・動機・向上心などが問われてくるようになってくるかもしれない。'
 description: '「これからの時代」と「個人の生き方」について自分の考えをお伝えします。「そうなんだ〜」ぐらいの軽い気持ちで受け止めていただければと思います。'
 date: '2018-11-14'
-category: 'ライフスタイル'
+category: '暮らし'
 tags: ['未来']
 image: 'form-of-life-in-the-future-featured-img.png'
 ---

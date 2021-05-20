@@ -2,7 +2,7 @@
 title: '１６タイプ性格診断をやってみた'
 description: '先日、Twitterの検索人気ワードで「性格-１６タイプ性格診断」というものがあり、気になってツイートを見たところ性格診断サービスをみんなが使ってツイートしていたようです。今日はTwitterでツイートされていたサービスを切り口にお伝えしていこうと思います。'
 date: '2018-12-08'
-category: 'ライフスタイル'
+category: '学び'
 tags: ['診断', 'サービス']
 image: 'personality-diagnosis-mbti-featured-img.png'
 ---

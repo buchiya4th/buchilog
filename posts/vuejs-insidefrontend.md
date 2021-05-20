@@ -3,7 +3,7 @@ title: 'セミナー「事例で見るVue.jsとJavaScript LT」と「Inside Fron
 description: '先日、DIST.14 「事例で見るVue.jsとJavaScript LT」とInside Frontend #1という2つのセミナー参加してきました。その時のまとめです。'
 date: '2017-03-12'
 category: 'テクノロジー'
-tags: ['勉強会', 'フロントエンド']
+tags: ['フロントエンド', '勉強会']
 image: 'vuejs-insidefrontend-featured-img.jpg'
 ---
 
