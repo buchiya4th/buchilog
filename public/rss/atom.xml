@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2021-05-23T07:59:58.525Z</updated>
+    <updated>2021-05-23T09:34:30.183Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -15,6 +15,24 @@
     <logo>https://buchilog.com/img/logo.svg</logo>
     <icon>https://buchilog.com/favicon.ico</icon>
     <rights>© 2015 buchilog.com.</rights>
+    <entry>
+        <title type="html"><![CDATA[アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
+        <id>https://buchilog.com/posts/iruma-season2</id>
+        <link href="https://buchilog.com/posts/iruma-season2"/>
+        <updated>2021-05-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。]]></summary>
+        <content type="html"><![CDATA[子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。]]></content>
+        <author>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </author>
+        <contributor>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[英文法を動画で学ぶなら「動画英文法2700」がおすすめ]]></title>
         <id>https://buchilog.com/posts/video-english-method-2700</id>
