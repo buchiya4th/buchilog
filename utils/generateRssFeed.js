@@ -5,7 +5,6 @@ import { Feed } from 'feed'
 const fsPromise = fs.promises
 
 const postDirPath = join(process.cwd(), 'posts')
-const outputPostDirPath = join(process.cwd(), 'out/posts')
 
 export const getPost = async (slug) => {
   const fullPath = join(postDirPath, `${slug}.md`)
@@ -23,8 +22,11 @@ export const getPost = async (slug) => {
 }
 
 const getBlogPostsData = async () => {
-  const filenames = await fsPromise.readdir(outputPostDirPath)
-  const slugs = filenames.map((filename) => filename.replace(/\.html$/, ''))
+  const DIR = join(process.cwd(), 'posts')
+  const files = fs
+    .readdirSync(DIR)
+    .filter((file) => file.endsWith('.md'))
+  const slugs = files.map((filename) => filename.replace(/\.md$/, ''))
   const promisePosts = slugs.map(async (filename) => await getPost(filename))
   const posts = await Promise.all(promisePosts)
   posts.sort((a, b) => b.date - a.date)

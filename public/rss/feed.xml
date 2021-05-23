@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、Webと音楽を愛する人の提供でお送りします。</description>
-        <lastBuildDate>Sun, 23 May 2021 07:59:58 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 May 2021 09:34:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>https://buchilog.com</link>
         </image>
         <copyright>© 2015 buchilog.com.</copyright>
+        <item>
+            <title><![CDATA[アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
+            <link>https://buchilog.com/posts/iruma-season2</link>
+            <guid>https://buchilog.com/posts/iruma-season2</guid>
+            <pubDate>Sun, 23 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。]]></description>
+            <content:encoded><![CDATA[子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。]]></content:encoded>
+            <author>buchiya4th@gmail.com (buchiya4th)</author>
+        </item>
         <item>
             <title><![CDATA[英文法を動画で学ぶなら「動画英文法2700」がおすすめ]]></title>
             <link>https://buchilog.com/posts/video-english-method-2700</link>
