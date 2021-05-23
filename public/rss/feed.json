@@ -1,0 +1,302 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "ぶちろぐ",
+    "home_page_url": "https://buchilog.com",
+    "feed_url": "https://buchilog.com/rss/feed.json",
+    "description": "このサイトは、Webと音楽を愛する人の提供でお送りします。",
+    "icon": "https://buchilog.com/img/logo.svg",
+    "author": {
+        "name": "buchiya4th",
+        "url": "https://twitter.com/buchiya4th"
+    },
+    "items": [
+        {
+            "id": "https://buchilog.com/posts/iruma-season2",
+            "content_html": "子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。",
+            "url": "https://buchilog.com/posts/iruma-season2",
+            "title": "アニメ「魔入りました！入間くん」2期がさらにおもしろい",
+            "summary": "子供と一緒に観て楽しめるアニメ「魔入りました！入間くん」2期が放送中。実際に観ておもしろいのでどんな作品か紹介します。",
+            "date_modified": "2021-05-23T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/video-english-method-2700",
+            "content_html": "過去問解きながらわからないところは講師が解説してくれる夢のようなアプリを紹介します。",
+            "url": "https://buchilog.com/posts/video-english-method-2700",
+            "title": "英文法を動画で学ぶなら「動画英文法2700」がおすすめ",
+            "summary": "過去問解きながらわからないところは講師が解説してくれる夢のようなアプリを紹介します。",
+            "date_modified": "2021-04-10T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/smart-payment-skills",
+            "content_html": "お釣りの小銭を少なく支払う技術を磨くことができるアプリを紹介します。",
+            "url": "https://buchilog.com/posts/smart-payment-skills",
+            "title": "スマートな現金支払いを鍛えるおすすめアプリの紹介",
+            "summary": "お釣りの小銭を少なく支払う技術を磨くことができるアプリを紹介します。",
+            "date_modified": "2021-03-19T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/frontend-tech-tools-2021",
+            "content_html": "現在フロントエンド開発で使用している技術やツールなどをまとめます。",
+            "url": "https://buchilog.com/posts/frontend-tech-tools-2021",
+            "title": "【2021年】フロントエンド開発で使用している技術やツール",
+            "summary": "現在フロントエンド開発で使用している技術やツールなどをまとめます。",
+            "date_modified": "2021-03-02T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/blog-renewal-2020",
+            "content_html": "昨年の大晦日に密かに当ブログをリニューアルしました。構想から数年経ってしまいましたが無事リニューアルすることができました。覚えている限りで振り返りながら紹介していきます。",
+            "url": "https://buchilog.com/posts/blog-renewal-2020",
+            "title": "ブログをリニューアルしました",
+            "summary": "昨年の大晦日に密かに当ブログをリニューアルしました。構想から数年経ってしまいましたが無事リニューアルすることができました。覚えている限りで振り返りながら紹介していきます。",
+            "date_modified": "2021-01-11T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/frontend-2020",
+            "content_html": "2020年は世間的にコロナ禍の1年でした。2020年に開発でやったことを振り返って今年を締めたいと思います。",
+            "url": "https://buchilog.com/posts/frontend-2020",
+            "title": "【2020年】フロントエンドの棚卸し",
+            "summary": "2020年は世間的にコロナ禍の1年でした。2020年に開発でやったことを振り返って今年を締めたいと思います。",
+            "date_modified": "2020-12-25T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/osaka-travel-2020",
+            "content_html": "師匠も走る忙しい12月に有給をいただいて大阪へ旅行してきました。備忘録も兼ねて大阪旅行について書いていきたいと思います。",
+            "url": "https://buchilog.com/posts/osaka-travel-2020",
+            "title": "大阪旅行でなんやかんやあったけど満喫してきた。",
+            "summary": "師匠も走る忙しい12月に有給をいただいて大阪へ旅行してきました。備忘録も兼ねて大阪旅行について書いていきたいと思います。",
+            "date_modified": "2019-12-23T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/nagoya-travel-2020",
+            "content_html": "先日、家族で名古屋旅行に行ってきましたので、振り返りやまとめも兼ねて投稿します。名古屋旅行を検討している方の何かしらの参考になれば幸いです。",
+            "url": "https://buchilog.com/posts/nagoya-travel-2020",
+            "title": "名古屋旅行に行ってきた。",
+            "summary": "先日、家族で名古屋旅行に行ってきましたので、振り返りやまとめも兼ねて投稿します。名古屋旅行を検討している方の何かしらの参考になれば幸いです。",
+            "date_modified": "2019-03-31T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/personality-diagnosis-mbti",
+            "content_html": "先日、Twitterの検索人気ワードで「性格-１６タイプ性格診断」というものがあり、気になってツイートを見たところ性格診断サービスをみんなが使ってツイートしていたようです。今日はTwitterでツイートされていたサービスを切り口にお伝えしていこうと思います。",
+            "url": "https://buchilog.com/posts/personality-diagnosis-mbti",
+            "title": "１６タイプ性格診断をやってみた",
+            "summary": "先日、Twitterの検索人気ワードで「性格-１６タイプ性格診断」というものがあり、気になってツイートを見たところ性格診断サービスをみんなが使ってツイートしていたようです。今日はTwitterでツイートされていたサービスを切り口にお伝えしていこうと思います。",
+            "date_modified": "2018-12-08T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/form-of-life-in-the-future",
+            "content_html": "「これからの時代」と「個人の生き方」について自分の考えをお伝えします。「そうなんだ〜」ぐらいの軽い気持ちで受け止めていただければと思います。",
+            "url": "https://buchilog.com/posts/form-of-life-in-the-future",
+            "title": "これからの時代は個人の生き方・動機・向上心などが問われてくるようになってくるかもしれない。",
+            "summary": "「これからの時代」と「個人の生き方」について自分の考えをお伝えします。「そうなんだ〜」ぐらいの軽い気持ちで受け止めていただければと思います。",
+            "date_modified": "2018-11-14T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/flow",
+            "content_html": "フローについて簡単にまとめ仕事でも趣味でも何かしらの活動をする時に充実した時間を過ごして達成感が出る方法をお伝えします。",
+            "url": "https://buchilog.com/posts/flow",
+            "title": "フロー状態に入ってミッションを爆速コンプリートする",
+            "summary": "フローについて簡単にまとめ仕事でも趣味でも何かしらの活動をする時に充実した時間を過ごして達成感が出る方法をお伝えします。",
+            "date_modified": "2018-11-11T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/basic-income",
+            "content_html": "近年、お金を国から無条件で配布する政策が話題になっています。それがベーシックインカムです。今日はベーシックインカムについてお伝えします。",
+            "url": "https://buchilog.com/posts/basic-income",
+            "title": "無条件の現金支給政策「ベーシックインカム」が導く未来の暮らしとは",
+            "summary": "近年、お金を国から無条件で配布する政策が話題になっています。それがベーシックインカムです。今日はベーシックインカムについてお伝えします。",
+            "date_modified": "2018-11-03T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/qiita-mail-ranking-in",
+            "content_html": "先日、月曜日にQiitaへ記事を投稿したところ翌週のQiitaのメルマガの「先週いいねが多かった投稿ベスト20」にランクインしました。その時の記念として今回は投稿します。",
+            "url": "https://buchilog.com/posts/qiita-mail-ranking-in",
+            "title": "Qiitaのメルマガランキングに初めて載った",
+            "summary": "先日、月曜日にQiitaへ記事を投稿したところ翌週のQiitaのメルマガの「先週いいねが多かった投稿ベスト20」にランクインしました。その時の記念として今回は投稿します。",
+            "date_modified": "2018-08-07T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/html5j-animation-seminor",
+            "content_html": "先日、html5j Webプラットフォーム部 第17回勉強会に行ってきました。今回のテーマは「アニメーション」でアニメーションに関する話を聞いて勉強になりました。勉強になった部分をまとめます。",
+            "url": "https://buchilog.com/posts/html5j-animation-seminor",
+            "title": "html5j Webプラットフォーム部 第17回勉強会に行ってきた",
+            "summary": "先日、html5j Webプラットフォーム部 第17回勉強会に行ってきました。今回のテーマは「アニメーション」でアニメーションに関する話を聞いて勉強になりました。勉強になった部分をまとめます。",
+            "date_modified": "2017-04-22T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/one-person-play-vol2",
+            "content_html": "先日、恩師伊藤靖浩さんが主催した「一人芝居ミュージカル短編集vol.2」に行ってきました。",
+            "url": "https://buchilog.com/posts/one-person-play-vol2",
+            "title": "「一人芝居ミュージカル短編集vol.2」に行ってきた",
+            "summary": "先日、恩師伊藤靖浩さんが主催した「一人芝居ミュージカル短編集vol.2」に行ってきました。",
+            "date_modified": "2017-04-09T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/vuejs-insidefrontend",
+            "content_html": "先日、DIST.14 「事例で見るVue.jsとJavaScript LT」とInside Frontend #1という2つのセミナー参加してきました。その時のまとめです。",
+            "url": "https://buchilog.com/posts/vuejs-insidefrontend",
+            "title": "セミナー「事例で見るVue.jsとJavaScript LT」と「Inside Frontend」に行ってきた",
+            "summary": "先日、DIST.14 「事例で見るVue.jsとJavaScript LT」とInside Frontend #1という2つのセミナー参加してきました。その時のまとめです。",
+            "date_modified": "2017-03-12T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/quizlet-html",
+            "content_html": "先日、zuknowが2017年4月27日でサービス終了とのアナウンスがありました。代わりにQuizletが近そうだったので、実際に使ってみました。試しに使ってみたので共有します。",
+            "url": "https://buchilog.com/posts/quizlet-html",
+            "title": "zuknowからQuizletへ移行した",
+            "summary": "先日、zuknowが2017年4月27日でサービス終了とのアナウンスがありました。代わりにQuizletが近そうだったので、実際に使ってみました。試しに使ってみたので共有します。",
+            "date_modified": "2017-02-12T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/wabisabi-book",
+            "content_html": "日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。",
+            "url": "https://buchilog.com/posts/wabisabi-book",
+            "title": "書籍「Wabi-Sabi わびさびを読み解く」を読んでみた",
+            "summary": "日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。",
+            "date_modified": "2017-01-15T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/zuknow-html",
+            "content_html": "zuknowという学習アプリが学習で大切なアウトプット機能が充実してそうだったので使ってみたので紹介します。",
+            "url": "https://buchilog.com/posts/zuknow-html",
+            "title": "友達とクイズで競える学習アプリzuknowで勉強捗りそう",
+            "summary": "zuknowという学習アプリが学習で大切なアウトプット機能が充実してそうだったので使ってみたので紹介します。",
+            "date_modified": "2017-01-09T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/first-time-dtm",
+            "content_html": "音楽スクールに通っていつもギターを教わっているのですが、今回はDTMのレッスンを始めて受講してきて刺激を受けたので、その内容についてお話します。",
+            "url": "https://buchilog.com/posts/first-time-dtm",
+            "title": "初DTMレッスンでドラムとミックスについて教わった",
+            "summary": "音楽スクールに通っていつもギターを教わっているのですが、今回はDTMのレッスンを始めて受講してきて刺激を受けたので、その内容についてお話します。",
+            "date_modified": "2016-11-06T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/row-layout-markup",
+            "content_html": "CSSにはいろんなスタイルがあり、いろんなスタイルを組み合わせて実現したい体裁に整えていきます。 今回はサイト設計でよくある横並びコンテンツのスタイルの選択基準について解説します。",
+            "url": "https://buchilog.com/posts/row-layout-markup",
+            "title": "サイト設計でよくある横並びコンテンツのスタイルの選択基準",
+            "summary": "CSSにはいろんなスタイルがあり、いろんなスタイルを組み合わせて実現したい体裁に整えていきます。 今回はサイト設計でよくある横並びコンテンツのスタイルの選択基準について解説します。",
+            "date_modified": "2016-10-02T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/yomeishu-improvement",
+            "content_html": "養命酒を初めて飲んでみた乾燥と続ける際に心がけたことを紹介します。",
+            "url": "https://buchilog.com/posts/yomeishu-improvement",
+            "title": "養命酒飲んだら少食と疲労感が改善されて健康になった。",
+            "summary": "養命酒を初めて飲んでみた乾燥と続ける際に心がけたことを紹介します。",
+            "date_modified": "2016-09-25T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/text-editing-in-windows",
+            "content_html": "なるべくマウスを使わずテキスト入力・編集に集中するための時短キー操作をご紹介します。",
+            "url": "https://buchilog.com/posts/text-editing-in-windows",
+            "title": "意外と知らない！？テキスト編集の時短キー操作",
+            "summary": "なるべくマウスを使わずテキスト入力・編集に集中するための時短キー操作をご紹介します。",
+            "date_modified": "2015-11-07T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
+            "id": "https://buchilog.com/posts/psycho_romantica_introduction",
+            "content_html": "楽しく読んで悩みが解決するかもしれない漫画『サイコろまんちか』をご紹介します。",
+            "url": "https://buchilog.com/posts/psycho_romantica_introduction",
+            "title": "漫画『サイコろまんちか』で青春の悩みが解決？！",
+            "summary": "楽しく読んで悩みが解決するかもしれない漫画『サイコろまんちか』をご紹介します。",
+            "date_modified": "2015-07-26T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        }
+    ]
+}
