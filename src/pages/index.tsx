@@ -5,6 +5,7 @@ import { getSortedAllPostsData, getCategories, getTags } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
 import ArticleList from '@/src/components/organisms/ArticleList'
+import { generateRssFeed }from 'utils/generateRssFeed.js'
 
 type Props = {
   categories: [string]
@@ -41,6 +42,7 @@ const Home: React.FC<Props> = (props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  await generateRssFeed()
   const allPostsData = getSortedAllPostsData()
   const categories = getCategories()
   const tags = getTags()
