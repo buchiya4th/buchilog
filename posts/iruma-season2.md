@@ -73,3 +73,5 @@ U-NEXTで1期・2期ともに観れるので興味を持った方はぜひご視
 <a href="https://px.a8.net/svt/ejp?a8mat=3HBSNM+8QYBSI+3250+6FWRL" rel="nofollow" target="_blank">
 <img border="0" width="320" height="100" alt="" src="https://www25.a8.net/svt/bgt?aid=210502354529&wid=001&eno=01&mid=s00000014274001082000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3HBSNM+8QYBSI+3250+6FWRL" alt="">
+
+※ 紹介している作品は、2021年5月時点の情報です。 現在は配信終了している場合もありますので、最新の配信状況はU-NEXTサイトにてご確認ください。
