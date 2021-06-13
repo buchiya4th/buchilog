@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2021-06-05T13:37:48.305Z</updated>
+    <updated>2021-06-13T21:46:43.828Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -15,6 +15,24 @@
     <logo>https://buchilog.com/img/logo.svg</logo>
     <icon>https://buchilog.com/favicon.ico</icon>
     <rights>© 2015 buchilog.com.</rights>
+    <entry>
+        <title type="html"><![CDATA[初心者向けHTML/CSS入門：書き方の基本と現場レベルのTIPSの紹介]]></title>
+        <id>https://buchilog.com/posts/html-css-beginner</id>
+        <link href="https://buchilog.com/posts/html-css-beginner"/>
+        <updated>2021-06-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Webサイト制作に挑戦する初心者向けにHTML/CSSの基本や押さえておくと良いポイントなどを紹介します。]]></summary>
+        <content type="html"><![CDATA[Webサイト制作に挑戦する初心者向けにHTML/CSSの基本や押さえておくと良いポイントなどを紹介します。]]></content>
+        <author>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </author>
+        <contributor>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
         <id>https://buchilog.com/posts/iruma-season2</id>
