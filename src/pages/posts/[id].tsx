@@ -123,7 +123,7 @@ const Post: React.FC<Props> = (props) => {
         borderLeft: 'none',
       }
     },
-    'tr + tr > td': {
+    'tr + tr > th, tr + tr > td': {
       borderTop: `1px solid ${colors.gray.lighter}`,
     },
     'thead > tr > th': {
