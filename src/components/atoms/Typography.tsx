@@ -44,7 +44,7 @@ const Typography: React.FC<Props> = (props) => {
     <ElementName
       css={[
         headingCommonStyle,
-        (headingStyles as StyleType)[props.styletype]
+        (headingStyles as any)[props.styletype]
       ]}
       {...props}
     >
