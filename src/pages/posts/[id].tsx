@@ -2,6 +2,7 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import Image from 'next/image'
 import { getAllPostIds, getPostData, getCategories, getTags, getRelatedArticleList } from '@/lib/posts'
 import Layout from '@/src/components/global/Layout'
 import 'highlight.js/styles/monokai.css'
@@ -34,7 +35,7 @@ type Props = {
     date: string
     category: string
     tags: [string]
-    thumb: string
+    image: string
   }[]
 }
 
@@ -203,11 +204,11 @@ const Post: React.FC<Props> = (props) => {
         </div>
         <h1 css={titleStyle}>{props.postData.title}</h1>
         {props.postData.image &&
-          <img
+          <Image
             src={`/img/posts/${props.postData.image}`}
-            width="800"
-            height="480"
-            alt={props.postData.title}
+            width={800}
+            height={480}
+            alt=""
           />
         }
         <div

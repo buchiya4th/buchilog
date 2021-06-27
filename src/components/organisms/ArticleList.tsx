@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Date from '@/src/components/atoms/Date'
 import LinkList from '@/src/components/molecules/LinkList'
 import { css } from '@emotion/core'
@@ -12,7 +13,7 @@ type Props = {
     id: string
     category: string
     tags: [string]
-    thumb: string
+    image: string
   }[]
 }
 
@@ -84,7 +85,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
 
   return (
     <ul css={articleListStyle}>
-      {props.articleList.map(({ id, date, title, category, tags, thumb }) => (
+      {props.articleList.map(({ id, date, title, image, category, tags }) => (
         <li key={id}>
           <div css={imageStyle}>
             <Link
@@ -93,11 +94,11 @@ const ArticleListItem: React.FC<Props> = (props) => {
               passHref
             >
               <a>
-                <img
-                  src={`/img/posts/${thumb}`}
-                  width="136"
-                  height="82"
-                  alt={title}
+                <Image
+                  src={`/img/posts/${image}`}
+                  width={136}
+                  height={81.6}
+                  alt=""
                 />
               </a>
             </Link>
