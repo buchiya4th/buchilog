@@ -47,6 +47,8 @@ function getAllPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
+    const thumb = matterResult.data.image.replace(/(.+)(\.[^.]+$)/, '$1-thumb$2')
+
     // Combine the data with the id
     return {
       id,
@@ -55,7 +57,8 @@ function getAllPostsData() {
         title: string
         category: string
         tags: [string]
-      }
+      },
+      thumb: thumb,
     }
   })
 }
