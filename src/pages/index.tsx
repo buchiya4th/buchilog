@@ -16,7 +16,7 @@ type Props = {
     date: string
     category: string
     tags: [string]
-    thumb: string
+    image: string
   }[]
 }
 
