@@ -11,9 +11,13 @@ import Typography from '@/src/components/atoms/Typography'
 type Props = {
   categories: [string]
   tags: [string]
+  statusCode: string
 }
 
-const Custom404: React.FC<Props> = (props) => {
+const Error: React.FC<Props> = (props) => {
+  const textStyles = css({
+    margin: '2em auto',
+  })
   const linkAreaStyle = css({
     marginTop: '1em',
   })
@@ -40,7 +44,10 @@ const Custom404: React.FC<Props> = (props) => {
       categories={props.categories}
       tags={props.tags}
     >
-      <Typography elementname="h1" styletype="heading1" value="ページが見つかりませんでした。" />
+      {props.statusCode.toString().slice(0, 1) === '4'
+        ? <Typography css={textStyles} elementname="h1" styletype="heading1" value="ページが見つかりませんでした。" />
+        : <Typography css={textStyles} elementname="h1" styletype="heading1" value="サーバエラーが発生しました。" />
+      }
       <div css={linkAreaStyle}>
         <div css={linkListStyle}>
           <LinkList
@@ -66,15 +73,17 @@ const Custom404: React.FC<Props> = (props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ res, err }: any) => {
   const categories = getCategories()
   const tags = getTags()
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404
   return {
     props: {
       categories,
       tags,
+      statusCode,
     }
   }
 }
 
-export default Custom404
+export default Error
