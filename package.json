@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run dev:generateResizeImage & npm run dev:next",
+    "dev:generateResizeImage": "node utils/generateResizeImage",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
@@ -30,13 +32,14 @@
     "feed": "^4.2.2",
     "globby": "^11.0.1",
     "highlight.js": "^10.3.2",
-    "next": "^11.0.0",
+    "next": "10.0.1",
     "next-compose-plugins": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
-    "remark-highlight.js": "^6.0.0"
+    "remark-highlight.js": "^6.0.0",
+    "sharp": "^0.28.3"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
@@ -48,7 +51,6 @@
     "babel-plugin-emotion": "^10.0.33",
     "date-fns": "^2.15.0",
     "eslint": "^7.6.0",
-    "eslint-config-next": "^11.0.0",
     "eslint-plugin-react": "^7.20.6",
     "gray-matter": "^4.0.2",
     "husky": "^4.2.5",
