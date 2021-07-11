@@ -9,7 +9,7 @@ type Props = {
   items: [string]
   itemName: string
   iconStyles?: React.ReactNode | any
-  itemStyles?: React.ReactNode | any
+  itemStyles?: React.ReactNode
 }
 
 const LinkList: React.FC<Props> = (props) => {

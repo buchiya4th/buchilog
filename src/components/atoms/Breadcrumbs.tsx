@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { css } from '@emotion/core'
 import HomeIcon from '@/src/components/icon/Home'
 import { colors, size, media } from '@/styles/index'
@@ -7,7 +6,10 @@ import { colors, size, media } from '@/styles/index'
 type Props = {
   list: ({
     title: string
-    path?: string | undefined
+    path: string
+  } | {
+    title: string
+    path?: undefined
   })[]
 }
 
@@ -57,11 +59,11 @@ const Breadcrumbs: React.FC<Props> = (props) => {
                 <span css={homeIconStyle}>
                   <HomeIcon styles={iconStyle} />
                 </span>
-                <Link href={`${path}`}><a>{title}</a></Link>
+                <a href={path}>{title}</a>
               </>
             :
               props.list.length - 1 !== index
-                ? <Link href={`${path}`}><a>{title}</a></Link>
+                ? <a href={path}>{title}</a>
                 : <span aria-current="page">{title}</span>
           }
         </li>
