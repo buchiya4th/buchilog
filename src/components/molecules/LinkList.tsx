@@ -2,54 +2,29 @@ import React from 'react'
 import Link from 'next/link'
 import CategoryIcon from '@/src/components/icon/Category'
 import TagIcon from '@/src/components/icon/Tag'
-import { css } from '@emotion/core'
-import { size, media } from '@/styles/index'
+import styles from '@/styles/components/molecules/LinkList.module.scss'
 
 type Props = {
   items: [string]
   itemName: string
-  iconStyles?: React.ReactNode | any
+  iconStyles?: React.ReactNode
   itemStyles?: React.ReactNode
 }
 
 const LinkList: React.FC<Props> = (props) => {
-  const itemStyle = css({
-    fontSize: size(1.25),
-    lineHeight: 1.2,
-    'span': {
-      display: 'inline-block',
-    },
-    'span:first-of-type': {
-      marginLeft: size(0.5),
-    },
-    'span:not(:last-of-type):after': {
-      marginRight: size(1),
-      content: '","',
-    },
-    [media.up('tablet')]: {
-      fontSize: size(1.5),
-    },
-  })
-  const iconStyle = css({
-    width: size(1),
-    [media.up('tablet')]: {
-      width: size(1.25),
-    },
-  })
-
   return (
-    <>
-      <span css={props.iconStyles}>
+    <div className={styles.linkList}>
+      <div className={`${styles.icon} ${props.iconStyles}`}>
         {props.itemName === 'categories' &&
-          <CategoryIcon styles={iconStyle} />
+          <CategoryIcon />
         }
         {props.itemName === 'tags' &&
-          <TagIcon styles={iconStyle} />
+          <TagIcon />
         }
-      </span>
-      <span css={[itemStyle, props.itemStyles]}>
+      </div>
+      <div className={`${styles.item} ${props.itemStyles}`}>
         {props.items.map(item => (
-          <span key={item}>
+          <div key={item} className={styles.itemText}>
             <Link
               href={`/${props.itemName}/[id]`}
               as={`/${props.itemName}/${item}`}
@@ -57,10 +32,10 @@ const LinkList: React.FC<Props> = (props) => {
             >
               <a>{item}</a>
             </Link>
-          </span>
+          </div>
         ))}
-      </span>
-    </>
+      </div>
+    </div>
   )
 }
 

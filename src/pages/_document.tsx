@@ -1,36 +1,12 @@
 import React from 'react'
-import NextDocument, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
-import { extractCritical } from 'emotion-server'
 import { metaData } from '@/const/metaData'
 
 type Props = {
 }
 
-type InitialProps = {
-  styles: JSX.Element
-  html: string
-  head?: (JSX.Element | null)[] | undefined
-}
-
 class MyDocument extends NextDocument<Props> {
-  static async getInitialProps(ctx: DocumentContext): Promise<InitialProps> {
-    const initialProps = await NextDocument.getInitialProps(ctx)
-    const styles = extractCritical(initialProps.html)
-    return {
-      ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          <style
-            data-emotion-css={styles.ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: styles.css }}
-          />
-        </>
-      ),
-    }
-  }
-
   render(): JSX.Element {
     return (
       <Html lang="ja">
