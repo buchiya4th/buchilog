@@ -1,0 +1,41 @@
+.footerArea {
+  padding: 3.2rem 1.6rem;
+  background: url("/img/footerArea_bg.png");
+}
+
+.footerProfile {
+  display: grid;
+  grid-template:
+    "title title" minmax(1em, auto)
+    "icon text" 1fr/
+    4.8rem 1fr;
+  gap: 1.8rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+}
+
+.profileTitle {
+  grid-area: title;
+  line-height: 1;
+}
+
+.profileIcon {
+  grid-area: icon;
+  text-align: center;
+}
+
+.profileName {
+  margin-top: 0.4rem;
+}
+
+.profileText {
+  grid-area: text;
+  line-height: 1.65;
+}
+
+.profileDetailLink {
+  margin-top: 1em;
+  text-align: right;
+}

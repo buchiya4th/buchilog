@@ -1,1 +1,47 @@
 @import "vendor/normalize";
+@import "vars/colors.module.scss";
+@import "vars/fonts.module.scss";
+@import "vars/zindex.module.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box,
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--bc-font-family-base);
+  line-height: 1.6;
+  color: var(--bc-gray-darker-color);
+  letter-spacing: 0.1em;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "palt", "lnum";
+  text-align: justify;
+}
+
+a {
+  padding-bottom: 0.1rem;
+  text-decoration: none;
+  color: var(--bc-link-color);
+  border-bottom-width: 0.1rem;
+  border-bottom-style: none;
+  border-bottom-color: transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}

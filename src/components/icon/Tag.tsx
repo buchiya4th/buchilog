@@ -1,22 +1,14 @@
 import React from 'react'
-import { css } from '@emotion/core'
-import { size } from '@/styles/index'
+import styles from 'styles/components/icon/Tag.module.scss'
 
 type Props = {
   styles?: React.ReactNode
 }
 
 const Tag: React.FC<Props> = (props) => {
-  const svgStyle = css({
-    width: size(1.25),
-  })
-  const pathStyle = css({
-    fill: '#4B4B4B',
-  })
-
   return (
     <svg
-      css={[svgStyle, props.styles]}
+      className={`${styles.svg} ${props.styles}`}
       version="1.1"
       id="_x32_"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +20,7 @@ const Tag: React.FC<Props> = (props) => {
     >
       <g>
         <path
-          css={pathStyle}
+          className={styles.path}
           d="M497.004,258.8L262.098,23.873c-8.977-8.954-20.938-14.277-33.581-14.911L53.749,0.067
           C39.297-0.673,25.22,4.756,14.974,14.99C4.752,25.224-0.676,39.313,0.076,53.764l8.883,174.757
           c0.634,12.655,5.945,24.616,14.899,33.57l234.927,234.928c19.976,19.974,52.382,19.974,72.357,0l165.862-165.874

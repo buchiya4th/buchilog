@@ -1,0 +1,40 @@
+@mixin fontHeading {
+  font-family: var(--bc-font-family-heading);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading1 {
+  @include fontHeading;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-size: clamp(2rem, 6vw, 2.4rem);
+  line-height: 1.45;
+}
+
+@mixin heading2 {
+  @include fontHeading;
+  margin-top: 4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.1rem solid var(--bc-gray-lighter-color);
+  font-size: 2.2rem;
+  line-height: 1.45;
+}
+
+@mixin heading3 {
+  @include fontHeading;
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+@mixin heading4 {
+  @include fontHeading;
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}

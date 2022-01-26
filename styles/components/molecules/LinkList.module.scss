@@ -1,0 +1,26 @@
+.linkList {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.2rem;
+  margin-top: 0.2rem;
+  font-size: 0;
+  line-height: 1;
+}
+
+.item {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.itemText {
+  display: inline-block;
+
+  &:not(:last-of-type)::after {
+    margin-right: 0.8rem;
+    content: ",";
+  }
+}

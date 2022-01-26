@@ -3,8 +3,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
-import { css } from '@emotion/core'
-import { size } from '@/styles/index'
+import styles from 'styles/components/global/Layout.module.scss'
 
 type Props = {
   children: React.ReactNode
@@ -14,15 +13,6 @@ type Props = {
 }
 
 const Layout: React.FC<Props> = (props) => {
-  const mainStyle = css({
-    maxWidth: `calc(720px + ${size(2)})`,
-    marginRight: 'auto',
-    marginBottom: size(10),
-    marginLeft: 'auto',
-    paddingLeft: size(1),
-    paddingRight: size(1),
-  })
-
   useEffect(() => {
     if (window.twttr) {
       window.twttr.widgets.load()
@@ -52,7 +42,7 @@ const Layout: React.FC<Props> = (props) => {
         categories={props.categories}
         tags={props.tags}
       />
-      <main css={mainStyle}>
+      <main className={styles.main}>
         {props.children}
         <AdsContentBottom />
       </main>
