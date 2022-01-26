@@ -1,0 +1,46 @@
+.shareUl {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & li {
+    flex-grow: 1;
+    border-radius: 2;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+
+  & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 0 !important;
+    border-radius: 2;
+    line-height: 1;
+  }
+}
+
+.shareTwitter {
+  background-color: var(--bc-twitter-color);
+}
+
+.shareFacebook {
+  background-color: var(--bc-facebook-color);
+}
+
+.shareHatena {
+  background-color: var(--bc-hatena-color);
+}
+
+.shareText {
+  padding-right: 1rem;
+}

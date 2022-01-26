@@ -7,7 +7,7 @@ import {
   HatenaIcon,
   HatenaShareButton
 } from 'react-share'
-import { css } from '@emotion/core'
+import styles from 'styles/components/molecules/Share.module.scss'
 
 type Props = {
   text: string
@@ -15,48 +15,9 @@ type Props = {
 }
 
 const Share: React.FC<Props> = (props) => {
-  const shareUlStyle = css({
-    display: 'flex',
-    margin: 0,
-    padding: 0,
-    listStyle: 'none',
-    'li': {
-      flexGrow: 1,
-      borderRadius: 2,
-      color: '#fff',
-      '&:hover': {
-        opacity: '0.9',
-      },
-      '&:not(:last-child)': {
-        marginRight: 8,
-      },
-    },
-    'button': {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      padding: '8px 0 !important',
-      borderRadius: 2,
-      lineHeight: 1,
-    },
-    'span': {
-      paddingRight: 10,
-    },
-  })
-  const shareTwitterStyle = css({
-    backgroundColor: '#00aced',
-  })
-  const shareFacebookStyle = css({
-    backgroundColor: '#3b5998',
-  })
-  const shareHatenaStyle = css({
-    backgroundColor: '#009ad9',
-  })
-
   return (
-    <ul css={shareUlStyle}>
-      <li css={shareTwitterStyle}>
+    <ul className={styles.shareUl}>
+      <li className={styles.shareTwitter}>
         <TwitterShareButton
           url={props.url}
           title={props.text}
@@ -65,25 +26,25 @@ const Share: React.FC<Props> = (props) => {
             size={32}
             round={false}
           />
-          <span>ツイート</span>
+          <span className={styles.shareText}>ツイート</span>
         </TwitterShareButton>
       </li>
-      <li css={shareFacebookStyle}>
+      <li className={styles.shareFacebook}>
         <FacebookShareButton url={props.url}>
           <FacebookIcon
             size={32}
             round={false}
           />
-          <span>シェア</span>
+          <span className={styles.shareText}>シェア</span>
         </FacebookShareButton>
       </li>
-      <li css={shareHatenaStyle}>
+      <li className={styles.shareHatena}>
         <HatenaShareButton url={props.url}>
           <HatenaIcon
             size={32}
             round={false}
           />
-          <span>はてブ</span>
+          <span className={styles.shareText}>はてブ</span>
         </HatenaShareButton>
       </li>
     </ul>

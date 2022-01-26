@@ -5,10 +5,9 @@ import { getCategories, getTags } from '@/lib/posts'
 import { useRouter } from 'next/router'
 import Layout from '@/src/components/global/Layout'
 import { metaData } from '@/const/metaData'
-import { css } from '@emotion/core'
-import { colors, size, fonts, media } from '@/styles/index'
 import Typography from '@/src/components/atoms/Typography'
 import Breadcrumbs from '@/src/components/atoms/Breadcrumbs'
+import styles from 'styles/pages/about.module.scss'
 
 type Props = {
   categories: [string]
@@ -16,42 +15,6 @@ type Props = {
 }
 
 const About: React.FC<Props> = (props) => {
-  const headingStyle = css({
-    marginTop: size(5),
-    paddingBottom: 4,
-    borderBottom: `1px solid ${colors.gray.lighter}`,
-    fontFamily: fonts.fontFamily.heading,
-    fontWeight: 700,
-    fontStyle: 'normal',
-    fontSize: size(2.75),
-  })
-  const bodyStyle = css({
-    lineHeight: 1.9,
-    whiteSpace: 'pre-wrap',
-    [media.up('phoneLarge')]: {
-      lineHeight: 2.2,
-    },
-})
-  const tableStyle = css({
-    'th, td': {
-      padding: size(1),
-      borderLeft: `1px solid ${colors.gray.lighter}`,
-      fontSize: size(1.75),
-      [media.up('phoneLarge')]: {
-        fontSize: size(2),
-      },
-      '&:first-child': {
-        borderLeft: 'none',
-      }
-    },
-    'tr + tr > th, tr + tr > td': {
-      borderTop: `1px solid ${colors.gray.lighter}`,
-    },
-    'th': {
-      minWidth: `calc(5em + ${size(2)})`,
-    },
-  })
-
   const state = {
     aboutSite: {
       heading: 'このサイトについて',
@@ -106,17 +69,17 @@ const About: React.FC<Props> = (props) => {
       <Breadcrumbs list={breadcrumbs} />
       <article>
         <section className="aboutSite">
-          <Typography elementname="h2" styletype="heading1" value={state.aboutSite.heading} css={headingStyle} />
-          <div css={bodyStyle}>{state.aboutSite.body}</div>
+          <Typography elementname="h2" styletype="heading2" value={state.aboutSite.heading} />
+          <div className={styles.body}>{state.aboutSite.body}</div>
         </section>
         <section className="aboutAuther">
-          <Typography elementname="h2" styletype="heading1" value={state.aboutAuther.heading} css={headingStyle} />
-          <div css={bodyStyle}>{state.aboutAuther.body}</div>
+          <Typography elementname="h2" styletype="heading2" value={state.aboutAuther.heading} />
+          <div className={styles.body}>{state.aboutAuther.body}</div>
         </section>
         <section className="biography">
-          <Typography elementname="h2" styletype="heading1" value={state.biography.heading} css={headingStyle} />
-          <div css={bodyStyle}>
-            <table css={tableStyle}>
+          <Typography elementname="h2" styletype="heading2" value={state.biography.heading} />
+          <div className={styles.body}>
+            <table className={styles.table}>
               <tbody>
                 {state.biography.body.map(({th, td}, index) => (
                   <tr key={index}>

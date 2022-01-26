@@ -12,8 +12,7 @@ import Share from '@/src/components/molecules/Share'
 import ArticleList from '@/src/components/organisms/ArticleList'
 import Breadcrumbs from '@/src/components/atoms/Breadcrumbs'
 import Typography from '@/src/components/atoms/Typography'
-import { css } from '@emotion/core'
-import { colors, size, fonts, media } from '@/styles/index'
+import styles from 'styles/pages/posts/id.module.scss'
 
 type Props = {
   categories: [string]
@@ -39,119 +38,6 @@ type Props = {
 }
 
 const Post: React.FC<Props> = (props) => {
-  const titleStyle = css(
-    fonts.fontHeading,
-    {
-      marginTop: '0.25em',
-      marginBottom: '0.5em',
-      fontSize: size(2.5),
-      letterSpacing: '0.05em',
-      textDecoration: 'none',
-      [media.up('phoneLarge')]: {
-        fontSize: size(3),
-      }
-    }
-  )
-  const dataStyle = css({
-    marginBottom: '0.25em',
-  })
-  const linkListStyle = css({
-    marginLeft: size(1),
-  })
-  const shareAreaStyle = css({
-    marginTop: 32,
-  })
-  const bodyStyle = css({
-    'h2': {
-      marginTop: size(5),
-      paddingBottom: 4,
-      borderBottom: `1px solid ${colors.gray.lighter}`,
-      fontFamily: fonts.fontFamily.heading,
-      fontWeight: 700,
-      fontStyle: 'normal',
-      fontSize: size(2.75),
-    },
-    'h3': {
-      marginTop: size(5),
-      marginBottom: size(1),
-      fontFamily: fonts.fontFamily.heading,
-      fontWeight: 700,
-      fontStyle: 'normal',
-      fontSize: size(2.5),
-    },
-    'h4': {
-      marginTop: size(3),
-      marginBottom: size(1),
-      fontFamily: fonts.fontFamily.heading,
-      fontWeight: 700,
-      fontStyle: 'normal',
-      fontSize: size(2.25),
-    },
-    'p': {
-      lineHeight: 1.9,
-      whiteSpace: 'pre-wrap',
-      [media.up('phoneLarge')]: {
-        lineHeight: 2.2,
-      },
-    },
-    'ul': {
-      paddingLeft: '1em',
-      lineHeight: 1.8,
-    },
-    'ol': {
-      display: 'table',
-      paddingLeft: 0,
-      counterReset: 'li',
-      listStyle: 'none',
-      lineHeight: 1.8,
-      '& > li': {
-        display: 'table-row',
-        counterIncrement: 'li',
-        '&::before': {
-          display: 'table-cell',
-          paddingRight: '0.4em',
-          textAlign: 'right',
-          content: 'counter(li) "."',
-        },
-      },
-    },
-    'th, td': {
-      padding: size(1),
-      borderLeft: `1px solid ${colors.gray.lighter}`,
-      '&:first-child': {
-        borderLeft: 'none',
-      }
-    },
-    'tr + tr > th, tr + tr > td': {
-      borderTop: `1px solid ${colors.gray.lighter}`,
-    },
-    'thead > tr > th': {
-      borderBottom: `2px solid ${colors.gray.lighter}`,
-    },
-    'blockquote': {
-      position: 'relative',
-      margin: '1em 0',
-      padding: `${size(3)} ${size(2)} ${size(2)}`,
-      backgroundColor: colors.white.smoke,
-      fontStyle: 'italic',
-      '&::before': {
-        position: 'absolute',
-        top: size(2),
-        left: size(2),
-        width: 30,
-        height: 20,
-        background: 'url(/img/icon_quote.svg)',
-        content: '""',
-      },
-      'p': {
-        margin: '1em 0 0',
-        color: colors.gray.dark,
-      }
-    }
-  })
-  const relatedArticleHeadingStyle = css({
-    margin: `${size(5)} 0 0`,
-  })
   const breadcrumbs = [
     {
       title: "トップページ",
@@ -186,22 +72,14 @@ const Post: React.FC<Props> = (props) => {
 
       <Breadcrumbs list={breadcrumbs} />
       <article id="article">
-        <div css={dataStyle}>
-          <span><Date datestring={props.postData.date} /></span>
-          <span css={linkListStyle}>
-            <LinkList
-              items={[props.postData.category]}
-              itemName="categories"
-            />
-          </span>
-          <span css={linkListStyle}>
-            <LinkList
-              items={props.postData.tags}
-              itemName="tags"
-            />
-          </span>
+        <div className={styles.data}>
+          <Date datestring={props.postData.date} />
+          <LinkList
+            items={[props.postData.category]}
+            itemName="categories"
+          />
         </div>
-        <h1 css={titleStyle}>{props.postData.title}</h1>
+        <h1 className={styles.title}>{props.postData.title}</h1>
         {props.postData.image &&
           <img
             src={`/img/posts/${props.postData.image}`}
@@ -211,10 +89,14 @@ const Post: React.FC<Props> = (props) => {
           />
         }
         <div
-          css={bodyStyle}
+          className={styles.body}
           dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }}
         />
-        <div css={shareAreaStyle}>
+        <LinkList
+          items={props.postData.tags}
+          itemName="tags"
+        />
+        <div className={styles.shareArea}>
           <Share
             text={props.postData.title}
             url={`${process.env.DOMAIN}/posts/${props.id}`}
@@ -222,7 +104,7 @@ const Post: React.FC<Props> = (props) => {
         </div>
       </article>
       <div>
-        <Typography elementname="h2" styletype="heading2" value="関連記事" css={relatedArticleHeadingStyle} />
+        <Typography elementname="h2" styletype="heading2" value="関連記事" styles={styles.relatedArticleHeading} />
         <ArticleList articleList={props.relatedArticleData} />
       </div>
     </Layout>

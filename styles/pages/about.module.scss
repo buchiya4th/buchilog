@@ -1,0 +1,14 @@
+@import "styles/mixin/table.module.scss";
+
+.body {
+  white-space: pre-wrap;
+}
+
+.table {
+  @include table;
+
+  & th {
+    box-sizing: content-box;
+    width: 7rem;
+  }
+}

@@ -14,8 +14,6 @@ type Props = {
     id: string
     title: string
     date: string
-    category: string
-    tags: [string]
     thumb: string
   }[]
 }
