@@ -4,11 +4,11 @@
       
             <url>
               <loc>https://buchilog.com/about</loc>
-              <lastmod>2021-06-19</lastmod>
+              <lastmod>2022-01-26</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com</loc>
-              <lastmod>2021-06-27</lastmod>
+              <lastmod>2022-01-26</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/basic-income</loc>
@@ -17,6 +17,10 @@
             <url>
               <loc>https://buchilog.com/posts/blog-renewal-2020</loc>
               <lastmod>2021-01-11</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/posts/change-emotion-to-css-modules</loc>
+              <lastmod>2022-01-31</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/first-time-dtm</loc>
@@ -112,7 +116,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/categories/テクノロジー</loc>
-              <lastmod>2021-06-14</lastmod>
+              <lastmod>2022-01-31</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/categories/趣味</loc>
@@ -140,7 +144,15 @@
             </url>
             <url>
               <loc>https://buchilog.com/tags/CSS</loc>
-              <lastmod>2021-06-14</lastmod>
+              <lastmod>2022-01-31</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/フロントエンド</loc>
+              <lastmod>2022-01-31</lastmod>
+            </url>
+            <url>
+              <loc>https://buchilog.com/tags/ブログ</loc>
+              <lastmod>2022-01-31</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/HTML</loc>
@@ -148,10 +160,6 @@
             </url>
             <url>
               <loc>https://buchilog.com/tags/初心者</loc>
-              <lastmod>2021-06-14</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com/tags/フロントエンド</loc>
               <lastmod>2021-06-14</lastmod>
             </url>
             <url>
@@ -177,10 +185,6 @@
             <url>
               <loc>https://buchilog.com/tags/ツール</loc>
               <lastmod>2021-03-02</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com/tags/ブログ</loc>
-              <lastmod>2021-01-11</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/tags/国内旅行</loc>
