@@ -161,7 +161,7 @@ export async function getPostData(id: string): Promise<Props> {
     .use(headings)
     .use(externalLinks, {target: '_blank', rel: ['nofollow']})
     .use(highlight)
-    .use(html)
+    .use(html, {sanitize: false})
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
