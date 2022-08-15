@@ -66,7 +66,7 @@ function getAllPostsData() {
 /**
  * index page
  */
-export function getSortedAllPostsData(): React.ReactNode {
+export function getSortedAllPostsData(): PostsData {
   const allPostsData = getAllPostsData()
   return sortPostsData(allPostsData)
 }
@@ -74,7 +74,7 @@ export function getSortedAllPostsData(): React.ReactNode {
 /**
  * tags page
  */
-export function getSortedTagsPostsData(id: string): React.ReactNode {
+export function getSortedTagsPostsData(id: string): PostsData {
   const allPostsData = getAllPostsData()
   const tagsPostsData = allPostsData.filter(postData => {
     return postData.tags.find(tag => tag === id)
@@ -101,7 +101,7 @@ export function getTags(): React.ReactNode {
 /**
  * categories page
  */
-export function getSortedCategoryPostsData(id: string): React.ReactNode {
+export function getSortedCategoryPostsData(id: string): PostsData {
   const allPostsData = getAllPostsData()
   const categoryPostsData = allPostsData.filter(postData => postData.category === id)
   return sortPostsData(categoryPostsData)
@@ -130,7 +130,7 @@ export function getAllPostIds(): AllPostId {
 /**
  * Related posts list
  */
-export function getRelatedArticleList(postData: any): React.ReactNode {
+export function getRelatedArticleList(postData: any): PostsData {
   const ARTICLE_LIMIT = 3
   const allPostsData = getAllPostsData()
   const matchTagsData = allPostsData.filter(

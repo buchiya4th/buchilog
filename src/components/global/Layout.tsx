@@ -5,6 +5,12 @@ import Header from '@/src/components/global/Header/Header'
 import Footer from '@/src/components/global/Footer/Footer'
 import styles from 'styles/components/global/Layout.module.scss'
 
+interface Window {
+  twttr: any
+  FB: any
+}
+declare const window: Window
+
 type Props = {
   children: React.ReactNode
   categories: [string]
