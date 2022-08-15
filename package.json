@@ -36,7 +36,7 @@
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
     "remark-highlight.js": "^6.0.0",
-    "sharp": "^0.28.3"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.3.0",
