@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 import type { AppProps /*, AppContext */ } from 'next/app'
+import { googleTagManagerId } from '@/utils/gtm'
+import GoogleTagManager, {
+  GoogleTagManagerId,
+} from '@/src/components/GoogleTagManager'
 import { useRouter } from "next/router"
 import * as gtag from 'lib/gtag'
 import '@/styles/globals.scss'
@@ -20,7 +24,12 @@ function MyApp({ Component, pageProps }: AppProps): Props {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
