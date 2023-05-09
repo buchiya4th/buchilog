@@ -23,14 +23,12 @@ const ArticleListItem: React.FC<Props> = (props) => {
               as={`/posts/${id}`}
               passHref
             >
-              <a>
-                <img
-                  src={`/img/posts/${thumb}`}
-                  width="136"
-                  height="82"
-                  alt={title}
-                />
-              </a>
+              <img
+                src={`/img/posts/${thumb}`}
+                width="136"
+                height="82"
+                alt={title}
+              />
             </Link>
           </div>
           <div className={styles.title}>
@@ -39,7 +37,7 @@ const ArticleListItem: React.FC<Props> = (props) => {
               as={`/posts/${id}`}
               passHref
             >
-              <a>{title}</a>
+              {title}
             </Link>
           </div>
           <div className={styles.data}>
