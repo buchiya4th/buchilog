@@ -30,7 +30,7 @@ const LinkList: React.FC<Props> = (props) => {
               as={`/${props.itemName}/${item}`}
               passHref
             >
-              <a>{item}</a>
+              {item}
             </Link>
           </div>
         ))}

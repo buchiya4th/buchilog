@@ -8,15 +8,13 @@ const HeaderTitle: React.FC = () => {
     <div className={styles.headerTitle}>
       <p className={styles.siteLogo}>
         <Link href="/">
-          <a>
-            <img
-              src="/img/logo.svg"
-              width={224}
-              height={51}
-              alt={metaData.title}
-              className={styles.siteLogoImage}
-            />
-          </a>
+          <img
+            src="/img/logo.svg"
+            width={224}
+            height={51}
+            alt={metaData.title}
+            className={styles.siteLogoImage}
+          />
         </Link>
       </p>
       <div className={styles.description}>{metaData.description}</div>
