@@ -33,7 +33,7 @@ const Custom404: React.FC<Props> = (props) => {
       </div>
       <p className={styles.goTopPage}>
         <Link href="/">
-          <a>トップページへ</a>
+          トップページへ
         </Link>
       </p>
     </Layout>
