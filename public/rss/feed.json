@@ -15,6 +15,7 @@
             "content_html": "書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。",
             "url": "https://buchilog.com/posts/lead-learn-like-a-pro",
             "title": "学び方の学び方を読んで自分の学び方",
+            "summary": "書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。",
             "date_modified": "2022-07-12T00:00:00.000Z",
             "author": {
                 "name": "buchiya4th",
@@ -23,7 +24,7 @@
         },
         {
             "id": "https://buchilog.com/posts/change-emotion-to-css-modules",
-            "content_html": "",
+            "content_html": "ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。",
             "url": "https://buchilog.com/posts/change-emotion-to-css-modules",
             "title": "ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた",
             "date_modified": "2022-01-31T00:00:00.000Z",
