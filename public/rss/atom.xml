@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2022-01-31T02:40:44.382Z</updated>
+    <updated>2023-07-12T12:32:14.322Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -15,6 +15,22 @@
     <logo>https://buchilog.com/img/logo.svg</logo>
     <icon>https://buchilog.com/favicon.ico</icon>
     <rights>© 2015 buchilog.com.</rights>
+    <entry>
+        <title type="html"><![CDATA[学び方の学び方を読んで自分の学び方]]></title>
+        <id>https://buchilog.com/posts/lead-learn-like-a-pro</id>
+        <link href="https://buchilog.com/posts/lead-learn-like-a-pro"/>
+        <updated>2022-07-12 T00:00:00.000Z</updated>
+        <author>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </author>
+        <contributor>
+            <name>buchiya4th</name>
+            <email>buchiya4th@gmail.com</email>
+            <uri>https://twitter.com/buchiya4th</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた]]></title>
         <id>https://buchilog.com/posts/change-emotion-to-css-modules</id>

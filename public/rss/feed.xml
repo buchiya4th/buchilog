@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、Webと音楽を愛する人の提供でお送りします。</description>
-        <lastBuildDate>Mon, 31 Jan 2022 02:40:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jul 2023 12:32:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://buchilog.com</link>
         </image>
         <copyright>© 2015 buchilog.com.</copyright>
+        <item>
+            <title><![CDATA[学び方の学び方を読んで自分の学び方]]></title>
+            <link>https://buchilog.com/posts/lead-learn-like-a-pro</link>
+            <guid>https://buchilog.com/posts/lead-learn-like-a-pro</guid>
+            <pubDate>Wed, 12 Jul 2022 00:00:00 GMT</pubDate>
+            <author>buchiya4th@gmail.com (buchiya4th)</author>
+        </item>
         <item>
             <title><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた]]></title>
             <link>https://buchilog.com/posts/change-emotion-to-css-modules</link>
