@@ -1,6 +1,6 @@
 ---
 title: 'ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた'
-description: ''
+description: 'ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。'
 date: '2022-01-31'
 category: 'テクノロジー'
 tags: ['ブログ', 'フロントエンド', 'CSS']
