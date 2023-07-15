@@ -3,7 +3,7 @@
     "title": "ぶちろぐ",
     "home_page_url": "https://buchilog.com",
     "feed_url": "https://buchilog.com/rss/feed.json",
-    "description": "このサイトは、Webと音楽を愛する人の提供でお送りします。",
+    "description": "このサイトは、学びと共に生きる人の提供でお送りします。",
     "icon": "https://buchilog.com/img/logo.svg",
     "author": {
         "name": "buchiya4th",
@@ -27,6 +27,7 @@
             "content_html": "ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。",
             "url": "https://buchilog.com/posts/change-emotion-to-css-modules",
             "title": "ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた",
+            "summary": "ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。",
             "date_modified": "2022-01-31T00:00:00.000Z",
             "author": {
                 "name": "buchiya4th",
