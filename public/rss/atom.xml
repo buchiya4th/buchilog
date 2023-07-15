@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2023-07-11T21:42:04.661Z</updated>
+    <updated>2023-07-15T12:20:49.548Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -11,7 +11,7 @@
     </author>
     <link rel="alternate" href="https://buchilog.com"/>
     <link rel="self" href="https://buchilog.com/rss/atom.xml"/>
-    <subtitle>このサイトは、Webと音楽を愛する人の提供でお送りします。</subtitle>
+    <subtitle>このサイトは、学びと共に生きる人の提供でお送りします。</subtitle>
     <logo>https://buchilog.com/img/logo.svg</logo>
     <icon>https://buchilog.com/favicon.ico</icon>
     <rights>© 2015 buchilog.com.</rights>
@@ -38,6 +38,8 @@
         <id>https://buchilog.com/posts/change-emotion-to-css-modules</id>
         <link href="https://buchilog.com/posts/change-emotion-to-css-modules"/>
         <updated>2022-01-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。]]></summary>
+        <content type="html"><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。]]></content>
         <author>
             <name>buchiya4th</name>
             <email>buchiya4th@gmail.com</email>

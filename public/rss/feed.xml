@@ -3,8 +3,8 @@
     <channel>
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
-        <description>このサイトは、Webと音楽を愛する人の提供でお送りします。</description>
-        <lastBuildDate>Tue, 11 Jul 2023 21:42:04 GMT</lastBuildDate>
+        <description>このサイトは、学びと共に生きる人の提供でお送りします。</description>
+        <lastBuildDate>Sat, 15 Jul 2023 12:20:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -27,6 +27,8 @@
             <link>https://buchilog.com/posts/change-emotion-to-css-modules</link>
             <guid>https://buchilog.com/posts/change-emotion-to-css-modules</guid>
             <pubDate>Mon, 31 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。]]></description>
+            <content:encoded><![CDATA[ブログのCSSの使用ライブラリをEmotionからCSS Modulesに乗り換えた時の背景や設計などを紹介します。]]></content:encoded>
             <author>buchiya4th@gmail.com (buchiya4th)</author>
         </item>
         <item>

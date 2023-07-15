@@ -20,7 +20,7 @@ const FooterArea: React.FC = () => {
           <div className={styles.profileName}>ぶちや</div>
         </div>
         <div className={styles.profileText}>
-          <div>有益な情報より有意義な時間になるよう日々感じたことをお伝えします。 管理人は、IT企業で働きながら子育てや家事をして暮らしてます。</div>
+          <div>フロントエンドエンジニアが、技術的な話題や書籍、公私それぞれでの学びを通じて得た知見を主なテーマとして投稿する個人ブログです。実践的な知識やスキルの解説、考えるきっかけとなる話題などを通じて役立つ情報を提供します。</div>
           <div className={styles.profileDetailLink}>
             <Link href="/about/">詳しく見る &gt;</Link>
           </div>
