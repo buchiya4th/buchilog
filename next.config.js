@@ -14,7 +14,7 @@ module.exports = withPlugins(
   ],
   {
   env: {
-    DOMAIN: process.env.DOMAIN
+    DOMAIN: process.env.NEXT_PUBLIC_DOMAIN
   },
   webpack: (config, { isServer }) => {
     config.resolve.alias = {

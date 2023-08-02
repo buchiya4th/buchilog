@@ -9,31 +9,43 @@ import externalLinks from 'remark-external-links'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 
-type Props = {
-  id: string
+type PostData = {
+  title: string
+  description: string
+  date: string
+  category: string
+  tags: string[]
+  image: string
   contentHtml: string
+  thumb: string
 }
 
 type PostsData = {
   id: string
-  date: string
   title: string
+  description: string
+  date: string
   category: string
-  tags: [string]
+  tags: string[]
+  image: string
+  thumb: string
 }[]
 
-type AllPostId = {
-  params: {
-    id: string
-  }
-}[]
+type MatterResultData = {
+  title: string
+  description: string
+  date: string
+  category: string
+  tags: string[]
+  image: string
+}
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 /**
  * list page
  */
-function getAllPostsData() {
+export function getAllPostsData(): PostsData {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
@@ -53,36 +65,19 @@ function getAllPostsData() {
     return {
       id,
       ...matterResult.data as {
-        date: string
         title: string
+        description: string
+        date: string
         category: string
-        tags: [string]
+        tags: string[]
+        image: string
       },
       thumb: thumb,
     }
   })
 }
 
-/**
- * index page
- */
-export function getSortedAllPostsData(): PostsData {
-  const allPostsData = getAllPostsData()
-  return sortPostsData(allPostsData)
-}
-
-/**
- * tags page
- */
-export function getSortedTagsPostsData(id: string): PostsData {
-  const allPostsData = getAllPostsData()
-  const tagsPostsData = allPostsData.filter(postData => {
-    return postData.tags.find(tag => tag === id)
-  })
-  return sortPostsData(tagsPostsData)
-}
-
-function sortPostsData(data: PostsData) {
+export function sortPostsData(data: PostsData): PostsData {
   return data.sort((a, b) => {
     if (a.date < b.date) {
       return 1
@@ -92,69 +87,59 @@ function sortPostsData(data: PostsData) {
   })
 }
 
-export function getTags(): React.ReactNode {
+export function getTags(): string[] {
   const allPostsData = getAllPostsData()
   const tags = allPostsData.flatMap(post => post.tags)
   return tags.filter((x, i, self) => self.indexOf(x) === i)
 }
 
-/**
- * categories page
- */
-export function getSortedCategoryPostsData(id: string): PostsData {
-  const allPostsData = getAllPostsData()
-  const categoryPostsData = allPostsData.filter(postData => postData.category === id)
-  return sortPostsData(categoryPostsData)
-}
-
-export function getCategories(): React.ReactNode {
+export function getCategories(): string[] {
   const allPostsData = getAllPostsData()
   const category = allPostsData.flatMap(post => post.category)
   return category.filter((x, i, self) => self.indexOf(x) === i)
 }
 
 /**
- * Post page
- */
-export function getAllPostIds(): AllPostId {
-  const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.map(fileName => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, '')
-      }
-    }
-  })
-}
-
-/**
  * Related posts list
  */
-export function getRelatedArticleList(postData: any): PostsData {
+export function getRelatedArticleList(currentId: string, currentPostData: PostData): PostsData {
   const ARTICLE_LIMIT = 3
   const allPostsData = getAllPostsData()
   const matchTagsData = allPostsData.filter(
-    post => post.tags.find(tag => {
-      return postData.tags.find((targetTag: string) => { return targetTag === tag })
+    everyPostData => everyPostData.tags.find(tag => {
+      return currentPostData.tags.find((targetTag: string) => {
+        return targetTag === tag
+      })
     })
   )
   const matchCategoryData = allPostsData.filter(
-    post => post.category === postData.category
+    post => post.category === currentPostData.category
   )
   const allRelatedArticleData = matchTagsData
     .concat(matchCategoryData)
     .filter((x, i, self) => self.indexOf(x) === i)
-  const removeCurrentArticleData = allRelatedArticleData.filter(item => item.id !== postData.id)
+  const removeCurrentArticleData = allRelatedArticleData.filter(item => item.id !== currentId)
   const reduceLimitArticleData = removeCurrentArticleData.filter((item, index) => index < ARTICLE_LIMIT)
   return reduceLimitArticleData
 }
 
-export async function getPostData(id: string): Promise<Props> {
+/**
+ * Post page
+ */
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)
 
+  const {
+    title,
+    description,
+    date,
+    category,
+    tags,
+    image
+  } = matterResult.data as MatterResultData
   const processedContent = await remark()
     .use(toc, {heading: '目次', tight: true})
     .use(slug)
@@ -164,10 +149,16 @@ export async function getPostData(id: string): Promise<Props> {
     .use(html, {sanitize: false})
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
+  const thumb = image.replace(/(.+)(\.[^.]+$)/, '$1-thumb$2') as string
 
   return {
-    id,
-    contentHtml,
-    ...matterResult.data
+    title,
+    description,
+    date,
+    category,
+    tags,
+    image,
+    thumb,
+    contentHtml
   }
 }

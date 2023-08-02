@@ -36,7 +36,7 @@ const getBlogPostsData = async () => {
 
 export const generateRssFeed = async () => {
   const posts = await getBlogPostsData()
-  const siteURL = process.env.DOMAIN
+  const siteURL = process.env.NEXT_PUBLIC_DOMAIN
   const date = new Date()
   const author = {
     name: 'buchiya4th',

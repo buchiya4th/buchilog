@@ -5,7 +5,7 @@ import TagIcon from '@/src/components/icon/Tag'
 import styles from '@/styles/components/molecules/LinkList.module.scss'
 
 type Props = {
-  items: [string]
+  items: string[]
   itemName: string
   iconStyles?: React.ReactNode
   itemStyles?: React.ReactNode

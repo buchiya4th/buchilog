@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useState } from 'react'
 import Router from 'next/router'
 import SideNav from '@/src/components/global/SideNav/SideNav'
 import styles from 'styles/components/global/Header/HeaderBar.module.scss'
 
 type Props = {
-  categories: [string]
-  tags: [string]
+  categories: string[]
+  tags: string[]
 }
 
 const HeaderBar: React.FC<Props> = (props) => {

@@ -4,8 +4,8 @@ import HeaderTitle from './HeaderTitle'
 import HeaderFollow from './HeaderFollow'
 
 type Props = {
-  categories: [string]
-  tags: [string]
+  categories: string[]
+  tags: string[]
 }
 
 const Header: React.FC<Props> = (props) => {

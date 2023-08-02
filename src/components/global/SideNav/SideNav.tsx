@@ -3,8 +3,8 @@ import LinkList from '@/src/components/molecules/LinkList'
 import styles from 'styles/components/global/SideNav.module.scss'
 
 type Props = {
-  categories: [string]
-  tags: [string]
+  categories: string[]
+  tags: string[]
   activeStatus?: boolean
 }
 

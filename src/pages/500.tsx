@@ -15,7 +15,7 @@ type Props = {
   tags: string[]
 }
 
-const Custom404: React.FC<Props> = (props) => {
+const Custom500: React.FC<Props> = (props) => {
   const AdsContentBottom = dynamic(() => import('src/components/atoms/AdsContentBottom'), { ssr: false })
 
   return (
@@ -61,4 +61,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Custom404
+export default Custom500

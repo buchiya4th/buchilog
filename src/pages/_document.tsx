@@ -18,7 +18,7 @@ class MyDocument extends NextDocument<Props> {
           <link rel="dns-prefetch" href="//static.xx.fbcdn.net" />
           <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
           <link rel="dns-prefetch" href="//googleads.g.doubleclick.net" />
-          <link rel="alternate" type="application/rss+xml" title={`${metaData.title}`} href={`${process.env.DOMAIN}/rss/feed.xml`} />
+          <link rel="alternate" type="application/rss+xml" title={`${metaData.title}`} href={`${process.env.NEXT_PUBLIC_DOMAIN}/rss/feed.xml`} />
           <meta name="format-detection" content="telephone=no,email=no,address=no" />
           <meta property="og:locale" content="ja_JP" />
           <meta property="og:site_name" content={`${metaData.title}`} />
