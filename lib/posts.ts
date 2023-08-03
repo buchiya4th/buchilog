@@ -8,6 +8,7 @@ import headings from 'remark-autolink-headings'
 import externalLinks from 'remark-external-links'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
+import { notFound } from 'next/navigation'
 
 type PostData = {
   title: string
@@ -128,6 +129,9 @@ export function getRelatedArticleList(currentId: string, currentPostData: PostDa
  */
 export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
+  if (!fs.existsSync(fullPath)) {
+    notFound()
+  }
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const matterResult = matter(fileContents)

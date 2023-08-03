@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { metaData } from '@/const/metaData'
 import { getAllPostsData, sortPostsData } from '@/lib/posts'
 import ArticleList from '@/src/components/organisms/ArticleList'
@@ -40,6 +41,10 @@ export async function Posts({ params }: Params): Promise<JSX.Element> {
   const tagsPostsData = allPostsData.filter(postData => {
     return postData.tags.find(tag => tag === id)
   })
+  if (!tagsPostsData.length) {
+    notFound()
+  }
+
   const sortTagsPostsData = sortPostsData(tagsPostsData)
   const breadcrumbs = [
     {

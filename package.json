@@ -9,12 +9,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx",
-    "stylelint": "./node_modules/.bin/stylelint './src/**/*.tsx' --syntax scss",
+    "stylelint": "stylelint './**/*.scss'",
     "bundle-analyze": "ANALYZE=true yarn build"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint",
-    "*.{css,scss}": "stylelint"
+    "*.{ts,tsx}": "eslint"
   },
   "husky": {
     "hooks": {

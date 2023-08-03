@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = (props) => {
   const AdsContentBottom = dynamic(() => import('src/components/atoms/AdsContentBottom'), { ssr: false })
 
   return (
-    <>
+    <div className={styles.wrap}>
       <Head>
         <link
           rel="icon"
@@ -34,7 +34,7 @@ const Layout: React.FC<Props> = (props) => {
         <AdsContentBottom />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
