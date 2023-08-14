@@ -31,7 +31,7 @@ const HeaderFollow: React.FC = () => {
           最新情報を受け取る
         </div>
         <ul className={styles.snsFollowList}>
-          {/* <li>
+          <li>
             <a
               href="https://twitter.com/buchiya4th"
               className="twitter-follow-button"
@@ -40,7 +40,7 @@ const HeaderFollow: React.FC = () => {
               data-lang="ja" data-dnt="true"
               data-show-count="false"
             />
-          </li> */}
+          </li>
           <li>
             <div>
               <div id="fb-root"></div>
