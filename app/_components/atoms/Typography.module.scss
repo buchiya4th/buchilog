@@ -1,0 +1,21 @@
+@import "styles/mixin/typography.module.scss";
+
+.heading1 {
+  @include heading1;
+}
+
+.heading2 {
+  @include heading2;
+}
+
+.heading3 {
+  @include heading3;
+}
+
+.heading4 {
+  @include heading4;
+}
+
+.p {
+  font-size: 16px;
+}

@@ -1,12 +1,17 @@
-@import "vendor/normalize";
-@import "vars/colors.module.scss";
-@import "vars/fonts.module.scss";
-@import "vars/zindex.module.scss";
+@import "./vendor/normalize";
+@import "./vars/colors.module.scss";
+@import "./vars/fonts.module.scss";
+@import "./vars/zindex.module.scss";
 
 *,
 *::before,
 *::after {
   box-sizing: border-box,
+}
+
+html,
+body {
+  min-height: 100vh;
 }
 
 html {
