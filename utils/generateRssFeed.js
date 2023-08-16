@@ -1,12 +1,12 @@
-import fs from 'fs'
-import { join } from 'path'
-import matter from 'gray-matter'
-import { Feed } from 'feed'
+const fs = require('fs')
+const { join } = require('path')
+const matter = require('gray-matter')
+const { Feed } = require('feed')
 const fsPromise = fs.promises
 
 const postDirPath = join(process.cwd(), 'posts')
 
-export const getPost = async (slug) => {
+async function getPost(slug) {
   const fullPath = join(postDirPath, `${slug}.md`)
   const fileContents = await fsPromise.readFile(fullPath, 'utf8')
   const { data } = matter(fileContents)
@@ -21,7 +21,7 @@ export const getPost = async (slug) => {
   return post
 }
 
-const getBlogPostsData = async () => {
+async function getBlogPostsData() {
   const DIR = join(process.cwd(), 'posts')
   const files = fs
     .readdirSync(DIR)
@@ -34,9 +34,9 @@ const getBlogPostsData = async () => {
   return posts
 }
 
-export const generateRssFeed = async () => {
+async function generateRssFeed () {
   const posts = await getBlogPostsData()
-  const siteURL = process.env.NEXT_PUBLIC_DOMAIN
+  const siteURL = 'https://buchilog.com'
   const date = new Date()
   const author = {
     name: 'buchiya4th',
@@ -85,3 +85,5 @@ export const generateRssFeed = async () => {
   fs.writeFileSync('public/rss/atom.xml', feed.atom1())
   fs.writeFileSync('public/rss/feed.json', feed.json1())
 }
+
+generateRssFeed()

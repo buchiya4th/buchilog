@@ -6,8 +6,9 @@
     "node": "18.x"
   },
   "scripts": {
-    "dev": "npm run dev:generateResizeImage & npm run dev:next",
+    "dev": "npm run dev:generateRssFeed & npm run dev:generateResizeImage & npm run dev:next",
     "dev:generateResizeImage": "node utils/generateResizeImage",
+    "dev:generateRssFeed": "node utils/generateRssFeed",
     "dev:next": "next dev",
     "build": "next build",
     "start": "next start",

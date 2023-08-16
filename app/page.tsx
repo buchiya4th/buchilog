@@ -2,10 +2,8 @@ import React from 'react'
 import { getAllPostsData, sortPostsData } from '@/lib/posts'
 import ArticleList from '@/app/_components/organisms/ArticleList'
 import Layout from '@/app/_components/global/Layout'
-import { generateRssFeed }from 'utils/generateRssFeed.js'
 
-export async function Home(): Promise<JSX.Element> {
-  await generateRssFeed()
+export default function Page(): JSX.Element {
   const allPostsData = getAllPostsData()
   const sortAllPostsData = sortPostsData(allPostsData)
 
@@ -15,5 +13,3 @@ export async function Home(): Promise<JSX.Element> {
     </Layout>
   )
 }
-
-export default Home
