@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
   }
 }
 
-export async function Posts({ params }: Params): Promise<JSX.Element> {
+export async function Tags({ params }: Params): Promise<JSX.Element> {
   const id = decodeURI(params.id)
   const allPostsData = getAllPostsData()
   const tagsPostsData = allPostsData.filter(postData => {
@@ -64,4 +64,4 @@ export async function Posts({ params }: Params): Promise<JSX.Element> {
   )
 }
 
-export default Posts
+export default Tags
