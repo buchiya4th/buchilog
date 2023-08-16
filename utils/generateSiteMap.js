@@ -23,8 +23,8 @@ async function generateSiteMap() {
     const lastModTime = getLastModTime(pagePath)
     const path = pagePath.replace('src/pages', '').replace('.tsx', '')
     const url = path === '/index'
-      ? process.env.DOMAIN + path.replace('.md', '').replace('/index', '')
-      : process.env.DOMAIN + path.replace('.md', '')
+      ? process.env.NEXT_PUBLIC_DOMAIN + path.replace('.md', '').replace('/index', '')
+      : process.env.NEXT_PUBLIC_DOMAIN + path.replace('.md', '')
     return formatData(url, lastModTime)
   })
 
@@ -34,7 +34,7 @@ async function generateSiteMap() {
   const postPaths = await globby(['posts/*.md'])
   const posts = postPaths.map(postPath => {
     const lastModTime = getLastModTime(postPath)
-    const url = process.env.DOMAIN + '/' + postPath.replace('.md', '')
+    const url = process.env.NEXT_PUBLIC_DOMAIN + '/' + postPath.replace('.md', '')
     return formatData(url, lastModTime)
   })
 
@@ -89,7 +89,7 @@ async function generateSiteMap() {
     })
   })()
   const categories = categoriesPaths.map(post => formatData(
-    `${process.env.DOMAIN}/categories/${post.category}`,
+    `${process.env.NEXT_PUBLIC_DOMAIN}/categories/${post.category}`,
     post.date)
   )
 
@@ -118,7 +118,7 @@ async function generateSiteMap() {
     })
   })()
   const tags = tagsPaths.map(post => formatData(
-    `${process.env.DOMAIN}/tags/${post.tag}`,
+    `${process.env.NEXT_PUBLIC_DOMAIN}/tags/${post.tag}`,
     post.date)
   )
 

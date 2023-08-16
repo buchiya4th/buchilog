@@ -3,16 +3,8 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       
             <url>
-              <loc>https://buchilog.com/about</loc>
-              <lastmod>2023-07-15</lastmod>
-            </url>
-            <url>
-              <loc>https://buchilog.com</loc>
-              <lastmod>2023-04-19</lastmod>
-            </url>
-            <url>
               <loc>https://buchilog.com/posts/basic-income</loc>
-              <lastmod>2023-04-19</lastmod>
+              <lastmod>2023-07-29</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/blog-renewal-2020</loc>
@@ -32,7 +24,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/form-of-life-in-the-future</loc>
-              <lastmod>2023-04-19</lastmod>
+              <lastmod>2023-07-15</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/frontend-2020</loc>
@@ -60,7 +52,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/nagoya-travel-2020</loc>
-              <lastmod>2023-04-19</lastmod>
+              <lastmod>2023-07-15</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/one-person-play-vol2</loc>
@@ -68,7 +60,7 @@
             </url>
             <url>
               <loc>https://buchilog.com/posts/osaka-travel-2020</loc>
-              <lastmod>2023-04-19</lastmod>
+              <lastmod>2023-07-15</lastmod>
             </url>
             <url>
               <loc>https://buchilog.com/posts/personality-diagnosis-mbti</loc>
