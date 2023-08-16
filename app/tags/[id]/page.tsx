@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
   }
 }
 
-export async function Tags({ params }: Params): Promise<JSX.Element> {
+export function Tags({ params }: Params): JSX.Element {
   const id = decodeURI(params.id)
   const allPostsData = getAllPostsData()
   const tagsPostsData = allPostsData.filter(postData => {
