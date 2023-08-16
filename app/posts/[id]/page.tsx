@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
   }
 }
 
-export async function Posts({ params }: Params): Promise<JSX.Element> {
+export default async function Page({ params }: Params): Promise<JSX.Element> {
   const id = params.id
   const postData = await getPostData(id)
   const relatedArticleData = await getRelatedArticleList(id, postData)
@@ -100,5 +100,3 @@ export async function Posts({ params }: Params): Promise<JSX.Element> {
     </Layout>
   )
 }
-
-export default Posts
