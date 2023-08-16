@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Typography from '@/app/_components/atoms/Typography'
-import styles from 'styles/components/global/Footer/FooterArea.module.scss'
+import styles from './FooterArea.module.scss'
 
 const FooterArea: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import LinkList from '@/app/_components/molecules/LinkList'
-import styles from 'styles/components/global/SideNav.module.scss'
+import styles from './SideNav.module.scss'
 
 type Props = {
   categories: string[]

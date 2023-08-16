@@ -9,7 +9,7 @@ import {
   HatenaIcon,
   HatenaShareButton
 } from 'react-share'
-import styles from 'styles/components/molecules/Share.module.scss'
+import styles from './Share.module.scss'
 
 type Props = {
   text: string

@@ -4,7 +4,7 @@ import { metaData } from '@/const/metaData'
 import Typography from '@/app/_components/atoms/Typography'
 import Breadcrumbs from '@/app/_components/atoms/Breadcrumbs'
 import Layout from '@/app/_components/global/Layout'
-import styles from 'styles/pages/about.module.scss'
+import styles from './about.module.scss'
 
 const state = {
   aboutSite: {

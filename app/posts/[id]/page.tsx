@@ -9,7 +9,7 @@ import Typography from '@/app/_components/atoms/Typography'
 import Share from '@/app/_components/molecules/Share'
 import ArticleList from '@/app/_components/organisms/ArticleList'
 import Layout from '@/app/_components/global/Layout'
-import styles from 'styles/pages/posts/id.module.scss'
+import styles from './posts.module.scss'
 
 type MetadataProps = {
   params: { id: string }

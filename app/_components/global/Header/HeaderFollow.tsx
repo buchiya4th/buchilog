@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react'
-import styles from 'styles/components/global/Header/HeaderFollow.module.scss'
+import styles from './HeaderFollow.module.scss'
 
 interface Window {
   twttr: any

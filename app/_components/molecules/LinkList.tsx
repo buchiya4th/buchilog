@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import CategoryIcon from '@/app/_components/icon/Category'
 import TagIcon from '@/app/_components/icon/Tag'
-import styles from '@/styles/components/molecules/LinkList.module.scss'
+import styles from './LinkList.module.scss'
 
 type Props = {
   items: string[]

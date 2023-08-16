@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { getCategories, getTags } from '@/lib/posts'
 import Header from '@/app/_components/global/Header/Header'
 import Footer from '@/app/_components/global/Footer/Footer'
-import styles from 'styles/components/global/Layout.module.scss'
+import styles from './Layout.module.scss'
 
 type Props = {
   children: React.ReactNode

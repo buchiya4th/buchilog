@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/components/atoms/Typography.module.scss'
+import styles from './Typography.module.scss'
 
 type Props = {
   elementname: string

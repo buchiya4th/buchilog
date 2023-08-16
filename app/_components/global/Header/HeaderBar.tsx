@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import SideNav from '@/app/_components/global/SideNav/SideNav'
-import styles from 'styles/components/global/Header/HeaderBar.module.scss'
+import styles from './HeaderBar.module.scss'
 
 type Props = {
   categories: string[]

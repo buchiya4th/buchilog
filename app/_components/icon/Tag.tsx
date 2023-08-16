@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/components/icon/Tag.module.scss'
+import styles from './Tag.module.scss'
 
 type Props = {
   styles?: React.ReactNode

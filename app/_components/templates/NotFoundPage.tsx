@@ -6,11 +6,11 @@ import Link from 'next/link'
 import Typography from '@/app/_components/atoms/Typography'
 import Header from '@/app/_components/global/Header/Header'
 import Footer from '@/app/_components/global/Footer/Footer'
-import layoutStyles from 'styles/components/global/Layout.module.scss'
+import layoutStyles from '@/app/_components/global/Layout.module.scss'
 import '@/styles/globals.scss'
-import styles from 'styles/pages/404.module.scss'
+import styles from './NotFoundPage.module.scss'
 
-const NotFound: React.FC = () => {
+const NotFoundPage: React.FC = () => {
   const AdsContentBottom = dynamic(() => import('@/app/_components/atoms/AdsContentBottom'), { ssr: false })
   const categories = ['']
   const tags = ['']
@@ -41,4 +41,4 @@ const NotFound: React.FC = () => {
   )
 }
 
-export default NotFound
+export default NotFoundPage

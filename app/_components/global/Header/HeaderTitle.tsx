@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { metaData } from '@/const/metaData'
-import styles from 'styles/components/global/Header/HeaderTitle.module.scss'
+import styles from './HeaderTitle.module.scss'
 
 const HeaderTitle: React.FC = () => {
   return (

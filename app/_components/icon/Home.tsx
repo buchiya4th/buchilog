@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/components/icon/Home.module.scss'
+import styles from './Home.module.scss'
 
 type Props = {
   styles?: React.ReactNode

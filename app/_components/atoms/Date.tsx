@@ -1,6 +1,6 @@
 import React from 'react'
 import { parseISO, format } from 'date-fns'
-import styles from 'styles/components/atoms/Date.module.scss'
+import styles from './Date.module.scss'
 
 type Props = {
   datestring: string

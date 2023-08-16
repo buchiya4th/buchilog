@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Date from '@/app/_components/atoms/Date'
-import styles from 'styles/components/organisms/ArticleList.module.scss'
+import styles from './ArticleList.module.scss'
 
 type Props = {
   articleList: {

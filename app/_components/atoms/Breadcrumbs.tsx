@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeIcon from '@/app/_components/icon/Home'
-import styles from 'styles/components/atoms/Breadcrumbs.module.scss'
+import styles from './Breadcrumbs.module.scss'
 
 type Props = {
   list: ({
