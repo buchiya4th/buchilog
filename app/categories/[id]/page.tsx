@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
   }
 }
 
-export function Categories({ params }: Params): JSX.Element {
+export default function Page({ params }: Params): JSX.Element {
   const id = decodeURI(params.id)
   const allPostsData = getAllPostsData()
   const categoryPostsData = allPostsData.filter(postData => postData.category === id)
@@ -60,5 +60,3 @@ export function Categories({ params }: Params): JSX.Element {
     </Layout>
   )
 }
-
-export default Categories
