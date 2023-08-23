@@ -1,9 +1,9 @@
 [
-  { "slug": "lifestyle", "name": "ライフスタイル" },
-  { "slug": "society", "name": "世の中" },
-  { "slug": "technology", "name": "テクノロジー" },
-  { "slug": "design", "name": "デザイン" },
-  { "slug": "business", "name": "ビジネス" },
-  { "slug": "hobby", "name": "趣味" },
-  { "slug": "learn", "name": "学び" }
+  { "index": 0, "slug": "learn", "name": "学び" },
+  { "index": 1, "slug": "technology", "name": "テクノロジー" },
+  { "index": 2, "slug": "lifestyle", "name": "ライフスタイル" },
+  { "index": 3, "slug": "society", "name": "世の中" },
+  { "index": 4, "slug": "money", "name": "お金" },
+  { "index": 5, "slug": "health", "name": "健康" },
+  { "index": 6, "slug": "hobby", "name": "趣味" }
 ]

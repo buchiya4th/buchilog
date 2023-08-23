@@ -12,8 +12,15 @@ import styles from './NotFoundPage.module.scss'
 
 const NotFoundPage: React.FC = () => {
   const AdsContentBottom = dynamic(() => import('@/app/_components/atoms/AdsContentBottom'), { ssr: false })
-  const categories = ['']
-  const tags = ['']
+  const categories = [{
+    index: 0,
+    slug: '',
+    name: ''
+}]
+  const tags = [{
+    slug: '',
+    name: ''
+  }]
   const isActiveSideNav = false
 
   return (

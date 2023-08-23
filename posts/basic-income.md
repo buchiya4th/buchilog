@@ -2,7 +2,7 @@
 title: '無条件の現金支給政策「ベーシックインカム」が導く未来の暮らしとは'
 description: '近年、お金を国から無条件で配布する政策が話題になっています。それがベーシックインカムです。今日はベーシックインカムについてお伝えします。'
 date: '2018-11-03'
-category: '暮らし'
+category: '世の中'
 tags: ['未来']
 image: 'basic-income-featured-img.png'
 ---
