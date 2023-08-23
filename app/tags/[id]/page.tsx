@@ -6,6 +6,7 @@ import { getAllPostsData, sortPostsData } from '@/lib/posts'
 import ArticleList from '@/app/_components/organisms/ArticleList'
 import Breadcrumbs from '@/app/_components/atoms/Breadcrumbs'
 import Layout from '@/app/_components/global/Layout'
+import tagList from 'const/tag.json'
 
 type MetadataProps = {
   params: { id: string }
@@ -18,8 +19,9 @@ type Params = {
 }
 
 export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
-  const id = decodeURI(params.id)
-  const title = id
+  const tag = tagList.filter(tag => tag.slug === params.id)[0]
+  const title = tag.name
+  const id = tag.slug
   return {
     title: title,
     description: metaData.description,
@@ -36,10 +38,11 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
 }
 
 export default function Page({ params }: Params): JSX.Element {
-  const id = decodeURI(params.id)
+  const tag = tagList.filter(tag => tag.slug === params.id)[0]
+  const title = tag.name
   const allPostsData = getAllPostsData()
   const tagsPostsData = allPostsData.filter(postData => {
-    return postData.tags.find(tag => tag === id)
+    return postData.tags.find(tag => tag === title)
   })
   if (!tagsPostsData.length) {
     notFound()
@@ -52,7 +55,7 @@ export default function Page({ params }: Params): JSX.Element {
       path: "/",
     },
     {
-      title: `${id}`,
+      title: `${title}`,
     },
   ]
 

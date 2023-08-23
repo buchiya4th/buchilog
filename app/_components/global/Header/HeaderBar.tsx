@@ -3,11 +3,12 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import SideNav from '@/app/_components/global/SideNav/SideNav'
+import { Categories, Tags } from 'lib/posts'
 import styles from './HeaderBar.module.scss'
 
 type Props = {
-  categories: string[]
-  tags: string[]
+  categories: Categories
+  tags: Tags
   isActiveSideNav?: boolean
 }
 

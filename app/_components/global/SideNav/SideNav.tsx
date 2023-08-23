@@ -1,10 +1,11 @@
 import React from 'react'
 import LinkList from '@/app/_components/molecules/LinkList'
+import { Categories, Tags } from 'lib/posts'
 import styles from './SideNav.module.scss'
 
 type Props = {
-  categories: string[]
-  tags: string[]
+  categories: Categories
+  tags: Tags
   activeStatus?: boolean
 }
 
