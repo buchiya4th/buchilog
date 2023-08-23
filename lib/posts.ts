@@ -9,6 +9,8 @@ import externalLinks from 'remark-external-links'
 import highlight from 'remark-highlight.js'
 import html from 'remark-html'
 import { notFound } from 'next/navigation'
+import categoryList from 'const/category.json'
+import tagList from 'const/tag.json'
 
 type PostData = {
   title: string
@@ -30,6 +32,17 @@ type PostsData = {
   tags: string[]
   image: string
   thumb: string
+}[]
+
+export type Categories = {
+  index: number
+  slug: string
+  name: string;
+}[]
+
+export type Tags = {
+  slug: string
+  name: string;
 }[]
 
 type MatterResultData = {
@@ -88,16 +101,41 @@ export function sortPostsData(data: PostsData): PostsData {
   })
 }
 
-export function getTags(): string[] {
+function confirmExistsList(list: 'category' | 'tags') {
   const allPostsData = getAllPostsData()
-  const tags = allPostsData.flatMap(post => post.tags)
-  return tags.filter((x, i, self) => self.indexOf(x) === i)
+  const listInAllPosts = allPostsData.flatMap(post => post[list])
+  const existingList = listInAllPosts.filter((x, i, self) => self.indexOf(x) === i)
+  const targetList: Categories | Tags = list === 'category' ? categoryList : tagList
+  const diffList = existingList.filter(tags => {
+    return !targetList.some(targetTag => targetTag.name === tags)
+  })
+  if (diffList.length) {
+    const diffStrings = diffList.join(', ')
+    throw new Error(`${diffStrings} is an unset tag.`)
+  }
 }
 
-export function getCategories(): string[] {
-  const allPostsData = getAllPostsData()
-  const category = allPostsData.flatMap(post => post.category)
-  return category.filter((x, i, self) => self.indexOf(x) === i)
+export function getCategories(): Categories {
+  confirmExistsList('category')
+
+  return categoryList
+}
+
+export function getTags(): Tags {
+  confirmExistsList('tags')
+
+  const sortTagListBySlug = tagList.sort((a, b) => {
+    const slugA = a.slug
+    const slugB = b.slug
+    if (slugA < slugB) {
+      return -1;
+    }
+    if (slugA > slugB) {
+      return 1;
+    }
+    return 0;
+  })
+  return sortTagListBySlug
 }
 
 /**

@@ -9,6 +9,8 @@ import Typography from '@/app/_components/atoms/Typography'
 import Share from '@/app/_components/molecules/Share'
 import ArticleList from '@/app/_components/organisms/ArticleList'
 import Layout from '@/app/_components/global/Layout'
+import categoryList from 'const/category.json'
+import tagList from 'const/tag.json'
 import styles from './posts.module.scss'
 
 type MetadataProps = {
@@ -43,6 +45,8 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
 export default async function Page({ params }: Params): Promise<JSX.Element> {
   const id = params.id
   const postData = await getPostData(id)
+  const category = categoryList.filter(category => category.name === postData.category)[0]
+  const tags = tagList.filter(tag => postData.tags.includes(tag.name))
   const relatedArticleData = await getRelatedArticleList(id, postData)
   const breadcrumbs = [
     {
@@ -50,8 +54,8 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
       path: "/",
     },
     {
-      title: `${postData.category}`,
-      path: `/categories/${postData.category}`,
+      title: `${category.name}`,
+      path: `/categories/${category.slug}`,
     },
     {
       title: `${postData.title}`,
@@ -65,7 +69,7 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
         <div className={styles.data}>
           <Date datestring={postData.date} />
           <LinkList
-            items={[postData.category]}
+            items={[category]}
             itemName="categories"
           />
         </div>
@@ -83,7 +87,7 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
         <LinkList
-          items={postData.tags}
+          items={tags}
           itemName="tags"
         />
         <div className={styles.shareArea}>

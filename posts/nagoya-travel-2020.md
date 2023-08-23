@@ -2,8 +2,8 @@
 title: '名古屋旅行に行ってきた。'
 description: '先日、家族で名古屋旅行に行ってきましたので、振り返りやまとめも兼ねて投稿します。名古屋旅行を検討している方の何かしらの参考になれば幸いです。'
 date: '2019-03-31'
-category: '旅行'
-tags: ['国内旅行']
+category: 'ライフスタイル'
+tags: ['旅行', '国内旅行']
 image: 'nagoya-travel-2020-featured-img.jpg'
 ---
 
