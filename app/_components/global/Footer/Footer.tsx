@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from './Footer.module.scss'
-import FooterArea from './FooterArea'
-import FooterBar from './FooterBar'
+import React from "react";
+import styles from "./Footer.module.scss";
+import FooterArea from "./FooterArea";
+import FooterBar from "./FooterBar";
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <FooterArea />
       <FooterBar />
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

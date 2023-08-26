@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Script from 'next/script'
-import React from 'react'
+import Script from "next/script";
+import React from "react";
 
-export type GoogleTagManagerId = `GTM-${string}`
+export type GoogleTagManagerId = `GTM-${string}`;
 
 type Props = {
-  googleTagManagerId: GoogleTagManagerId
-}
+  googleTagManagerId: GoogleTagManagerId;
+};
 
 const GoogleTagManager: React.FC<Props> = ({ googleTagManagerId }) => (
   <>
@@ -17,7 +17,7 @@ const GoogleTagManager: React.FC<Props> = ({ googleTagManagerId }) => (
         height="0"
         width="0"
         style={{ display: "none", visibility: "hidden" }}
-        />
+      />
     </noscript>
     <Script
       id="gtm"
@@ -33,6 +33,6 @@ const GoogleTagManager: React.FC<Props> = ({ googleTagManagerId }) => (
       }}
     />
   </>
-)
+);
 
-export default GoogleTagManager
+export default GoogleTagManager;

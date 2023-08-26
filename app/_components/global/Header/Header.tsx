@@ -1,14 +1,14 @@
-import React from 'react'
-import { Categories, Tags } from 'lib/posts'
-import HeaderBar from './HeaderBar'
-import HeaderFollow from './HeaderFollow'
-import HeaderTitle from './HeaderTitle'
+import React from "react";
+import { Categories, Tags } from "lib/posts";
+import HeaderBar from "./HeaderBar";
+import HeaderFollow from "./HeaderFollow";
+import HeaderTitle from "./HeaderTitle";
 
 type Props = {
-  categories: Categories
-  tags: Tags
-  isActiveSideNav?: boolean
-}
+  categories: Categories;
+  tags: Tags;
+  isActiveSideNav?: boolean;
+};
 
 const Header: React.FC<Props> = (props) => {
   return (
@@ -21,7 +21,7 @@ const Header: React.FC<Props> = (props) => {
       <HeaderTitle />
       <HeaderFollow />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

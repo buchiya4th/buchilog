@@ -1,56 +1,62 @@
-import { Metadata } from 'next'
-import Script from 'next/script'
-import React, { Suspense } from 'react'
-import { googleTagManagerId } from '@/utils/gtm'
-import { metaData } from '@/const/metaData'
+import { Metadata } from "next";
+import Script from "next/script";
+import React, { Suspense } from "react";
+import { googleTagManagerId } from "@/utils/gtm";
+import { metaData } from "@/const/metaData";
 import GoogleTagManager, {
   GoogleTagManagerId,
-} from '@/app/_components/GoogleTagManager'
-import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
-import '@/styles/globals.scss'
+} from "@/app/_components/GoogleTagManager";
+import { existsGaId, GA_TRACKING_ID } from "lib/gtag";
+import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
-  viewport: 'width=device-width,initial-scale=1',
+  viewport: "width=device-width,initial-scale=1",
   title: {
     default: metaData.title,
-    template: `%s | ${metaData.title}`
+    template: `%s | ${metaData.title}`,
   },
   description: metaData.description,
   openGraph: {
-    type: 'website',
+    type: "website",
     title: {
       default: metaData.title,
-      template: `%s | ${metaData.title}`
+      template: `%s | ${metaData.title}`,
     },
     description: metaData.description,
     siteName: metaData.title,
     url: process.env.NEXT_PUBLIC_DOMAIN,
-    images: [{
-      url: `${process.env.NEXT_PUBLIC_DOMAIN}${metaData.ogpImage}`
-    }],
-    locale: 'ja_JP'
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_DOMAIN}${metaData.ogpImage}`,
+      },
+    ],
+    locale: "ja_JP",
   },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_DOMAIN}`,
     types: {
-      'application/rss+xml': [
+      "application/rss+xml": [
         {
           url: `${process.env.NEXT_PUBLIC_DOMAIN}/rss/feed.xml`,
-          title: `${metaData.title}`
+          title: `${metaData.title}`,
         },
       ],
     },
   },
-  referrer: 'origin-when-cross-origin',
-  formatDetection:{
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
     email: false,
     address: false,
-    telephone: false
+    telephone: false,
   },
-  icons: ['/favicon.ico']
-}
+  icons: ["/favicon.ico"],
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   return (
     <html lang="ja">
       <head>
@@ -68,11 +74,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
       </head>
       <body>
         <Suspense>
-          {googleTagManagerId &&
-            <GoogleTagManager googleTagManagerId={googleTagManagerId as GoogleTagManagerId} />
-          }
+          {googleTagManagerId && (
+            <GoogleTagManager
+              googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
+            />
+          )}
         </Suspense>
-        {googleTagManagerId &&
+        {googleTagManagerId && (
           <noscript
             dangerouslySetInnerHTML={{
               __html: `
@@ -84,12 +92,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               />`,
             }}
           />
-        }
+        )}
         {children}
-        <Script
-          defer
-          src="https://platform.twitter.com/widgets.js"
-        />
+        <Script defer src="https://platform.twitter.com/widgets.js" />
         <Script
           defer
           crossOrigin="anonymous"
@@ -112,12 +117,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
                   gtag('config', '${GA_TRACKING_ID}', {
                     page_path: window.location.pathname,
                   });
-                `
+                `,
               }}
             />
           </>
-        ): null}
+        ) : null}
       </body>
     </html>
-  )
+  );
 }
