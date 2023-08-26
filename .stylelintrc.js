@@ -7,4 +7,8 @@ module.exports = {
     "stylelint-config-prettier",
   ],
   ignoreFiles: ["styles/vendor/**/*.scss"],
+  rules: {
+    "selector-class-pattern":
+      "^[a-z]+[0-9a-z]+(?:-[a-z]+[0-9a-z]+)*((?:__[a-z]+(?:-[a-z]+[0-9a-z]+)*)|(?:--[a-z]+(?:-[a-z]+[0-9a-z]+)*))*$",
+  },
 };
