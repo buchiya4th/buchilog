@@ -1,6 +1,6 @@
-@import "styles/mixin/typography.module.scss";
-@import "styles/mixin/list.module.scss";
-@import "styles/mixin/table.module.scss";
+@import "styles/mixin/typography.module";
+@import "styles/mixin/list.module";
+@import "styles/mixin/table.module";
 
 .title {
   @include heading1;
@@ -59,13 +59,13 @@
     font-style: italic;
 
     &::before {
+      content: "";
       position: absolute;
       top: 1.6rem;
       left: 1.6rem;
       width: 3rem;
       height: 2rem;
-      background: url(/img/icon_quote.svg);
-      content: "";
+      background: url("/img/icon_quote.svg");
     }
 
     & p {

@@ -20,7 +20,7 @@
   display: inline-block;
 
   &:not(:last-of-type)::after {
-    margin-right: 0.8rem;
     content: ",";
+    margin-right: 0.8rem;
   }
 }

@@ -11,14 +11,11 @@
 
   &::before,
   &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    margin: auto;
     content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
   }
 
   &::before {
@@ -38,15 +35,15 @@
 
 .snsFollowList {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
+  justify-content: center;
   margin: 0.6rem 0 0;
   padding-left: 0;
   list-style: none;
 
   & li {
-    overflow: hidden;
     height: 2rem;
+    overflow: hidden;
 
     &:not(:first-child) {
       margin-left: 0.4rem;
