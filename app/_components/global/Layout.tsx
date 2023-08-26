@@ -1,9 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import React from 'react'
 import { getCategories, getTags } from '@/lib/posts'
-import Header from '@/app/_components/global/Header/Header'
 import Footer from '@/app/_components/global/Footer/Footer'
+import Header from '@/app/_components/global/Header/Header'
 import styles from './Layout.module.scss'
 
 type Props = {

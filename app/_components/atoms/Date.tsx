@@ -1,5 +1,5 @@
-import React from 'react'
 import { parseISO, format } from 'date-fns'
+import React from 'react'
 import styles from './Date.module.scss'
 
 type Props = {

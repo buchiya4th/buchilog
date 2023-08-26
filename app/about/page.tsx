@@ -1,8 +1,8 @@
-import React from 'react'
 import { Metadata } from 'next'
+import React from 'react'
 import { metaData } from '@/const/metaData'
-import Typography from '@/app/_components/atoms/Typography'
 import Breadcrumbs from '@/app/_components/atoms/Breadcrumbs'
+import Typography from '@/app/_components/atoms/Typography'
 import Layout from '@/app/_components/global/Layout'
 import styles from './about.module.scss'
 

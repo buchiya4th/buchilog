@@ -1,11 +1,11 @@
 "use client";
 
-import React from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import React from 'react'
 import Typography from '@/app/_components/atoms/Typography'
-import Header from '@/app/_components/global/Header/Header'
 import Footer from '@/app/_components/global/Footer/Footer'
+import Header from '@/app/_components/global/Header/Header'
 import layoutStyles from '@/app/_components/global/Layout.module.scss'
 import '@/styles/globals.scss'
 import styles from './NotFoundPage.module.scss'

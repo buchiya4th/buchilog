@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import Typography from '@/app/_components/atoms/Typography'
 import styles from './FooterArea.module.scss'
 

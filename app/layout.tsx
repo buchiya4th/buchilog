@@ -1,12 +1,12 @@
-import React, { Suspense } from 'react'
-import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { metaData } from '@/const/metaData'
+import React, { Suspense } from 'react'
 import { googleTagManagerId } from '@/utils/gtm'
+import { metaData } from '@/const/metaData'
 import GoogleTagManager, {
   GoogleTagManagerId,
 } from '@/app/_components/GoogleTagManager'
+import { existsGaId, GA_TRACKING_ID } from 'lib/gtag'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import Date from '@/app/_components/atoms/Date'
 import styles from './ArticleList.module.scss'
 

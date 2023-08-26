@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import CategoryIcon from '@/app/_components/icon/Category'
 import TagIcon from '@/app/_components/icon/Tag'
 import { Categories, Tags } from 'lib/posts'
