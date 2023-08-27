@@ -21,29 +21,29 @@ const HeaderBar: React.FC<Props> = ({
   Router.events.on("routeChangeComplete", () => setActive(false));
 
   return (
-    <div className={styles.headerBar}>
+    <div className={styles["header-bar"]}>
       {isActiveSideNav && (
         <div
           className={
             isActive
-              ? `${styles.navMenu} ${styles.navMenuIsActive}`
-              : styles.navMenu
+              ? `${styles["nav-menu"]} ${styles["is-active"]}`
+              : styles["nav-menu"]
           }
           onClick={() => setActive(!isActive)}
         >
           <span
             className={
-              isActive ? `${styles.line} ${styles.isActive}` : styles.line
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
             }
           ></span>
           <span
             className={
-              isActive ? `${styles.line} ${styles.isActive}` : styles.line
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
             }
           ></span>
           <span
             className={
-              isActive ? `${styles.line} ${styles.isActive}` : styles.line
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
             }
           ></span>
         </div>

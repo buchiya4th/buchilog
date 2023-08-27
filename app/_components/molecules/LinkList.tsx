@@ -14,14 +14,14 @@ type Props = {
 
 const LinkList: React.FC<Props> = (props) => {
   return (
-    <div className={styles.linkList}>
-      <div className={`${styles.icon} ${props.iconStyles}`}>
+    <div className={styles["link-list"]}>
+      <div className={`${styles["link-list__icon"]} ${props.iconStyles}`}>
         {props.itemName === "categories" && <CategoryIcon />}
         {props.itemName === "tags" && <TagIcon />}
       </div>
-      <div className={`${styles.item} ${props.itemStyles}`}>
+      <div className={`${styles["link-list__item"]} ${props.itemStyles}`}>
         {props.items.map((item, index) => (
-          <div key={index} className={styles.itemText}>
+          <div key={index} className={styles["link-list__item-text"]}>
             <Link
               href={`/${props.itemName}/[id]`}
               as={`/${props.itemName}/${item.slug}`}

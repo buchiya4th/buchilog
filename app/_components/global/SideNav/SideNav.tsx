@@ -14,21 +14,21 @@ const SideNav: React.FC<Props> = (props) => {
     <div
       className={
         props.activeStatus
-          ? `${styles.sideNav} ${styles.isActive}`
-          : styles.sideNav
+          ? `${styles["side-nav"]} ${styles["is-active"]}`
+          : styles["side-nav"]
       }
     >
       <LinkList
         items={props.categories}
         itemName="categories"
-        iconStyles={styles.linkListIcon}
-        itemStyles={styles.linkListText}
+        iconStyles={styles["link-list__icon"]}
+        itemStyles={styles["link-list__text"]}
       />
       <LinkList
         items={props.tags}
         itemName="tags"
-        iconStyles={styles.linkListIcon}
-        itemStyles={styles.linkListText}
+        iconStyles={styles["link-list__icon"]}
+        itemStyles={styles["link-list__text"]}
       />
     </div>
   );

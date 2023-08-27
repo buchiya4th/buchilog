@@ -1,6 +1,6 @@
 @import "styles/mixin/typography.module";
 
-.articleList {
+.article-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -19,8 +19,8 @@
     @media screen and (width >= 66.7rem) {
       display: grid;
       grid-template:
-      "title image" auto
-       "data image" auto /
+        "title image" auto
+        "data image" auto /
         1fr 14.4rem;
     }
   }
@@ -41,15 +41,6 @@
     @media screen and (width <= 76.8rem) {
       display: inline-block;
     }
-  }
-}
-
-.titleLink {
-  font-size: 1.4rem;
-  text-decoration: none;
-
-  @media screen and (width >= 76.8rem) {
-    font-size: 2rem;
   }
 }
 

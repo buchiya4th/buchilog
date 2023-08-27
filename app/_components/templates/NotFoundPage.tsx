@@ -53,7 +53,7 @@ const NotFoundPage: React.FC = () => {
           styletype="p"
           value="ホームから記事一覧やメニューから目的の記事をお探しください。"
         />
-        <p className={styles.goTopPage}>
+        <p className={styles["go-top-home"]}>
           <Link href="/">ホーム &gt;</Link>
         </p>
         <AdsContentBottom />

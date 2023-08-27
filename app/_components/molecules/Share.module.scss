@@ -1,4 +1,4 @@
-.shareUl {
+.share__list {
   display: flex;
   margin: 0;
   padding: 0;
@@ -29,18 +29,18 @@
   }
 }
 
-.shareTwitter {
+.share__item--twitter {
   background-color: var(--bc-twitter-color);
 }
 
-.shareFacebook {
+.share__item--facebook {
   background-color: var(--bc-facebook-color);
 }
 
-.shareHatena {
+.share__item--hatena {
   background-color: var(--bc-hatena-color);
 }
 
-.shareText {
+.share-text {
   padding-right: 1rem;
 }

@@ -22,7 +22,7 @@ const Breadcrumbs: React.FC<Props> = (props) => {
         <li key={index}>
           {index === 0 ? (
             <>
-              <span className={styles.homeIcon}>
+              <span className={styles["home-icon"]}>
                 <HomeIcon styles={styles.icon} />
               </span>
               <a href={path}>{title}</a>

@@ -5,15 +5,15 @@ import styles from "./HeaderTitle.module.scss";
 
 const HeaderTitle: React.FC = () => {
   return (
-    <div className={styles.headerTitle}>
-      <p className={styles.siteLogo}>
+    <div className={styles["header-title"]}>
+      <p className={styles["site-logo"]}>
         <Link href="/">
           <img
             src="/img/logo.svg"
             width={224}
             height={51}
             alt={metaData.title}
-            className={styles.siteLogoImage}
+            className={styles["site-logo__image"]}
           />
         </Link>
       </p>

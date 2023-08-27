@@ -90,7 +90,7 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
         <LinkList items={tags} itemName="tags" />
-        <div className={styles.shareArea}>
+        <div className={styles["share-area"]}>
           <Share
             text={postData.title}
             url={`${process.env.NEXT_PUBLIC_DOMAIN}/posts/${id}`}
@@ -102,7 +102,7 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
           elementname="h2"
           styletype="heading2"
           value="関連記事"
-          styles={styles.relatedArticleHeading}
+          styles={styles["related-article-heading"]}
         />
         <ArticleList articleList={relatedArticleData} />
       </div>

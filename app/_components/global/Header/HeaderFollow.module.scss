@@ -1,9 +1,9 @@
-.headerFollow {
+.header-follow {
   padding: 0 1.6rem;
   text-align: center;
 }
 
-.snsFollow {
+.sns-follow {
   position: relative;
   max-width: 32rem;
   margin: 2.4rem auto;
@@ -33,28 +33,27 @@
   }
 }
 
-.snsFollowList {
+.sns-follow__list {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   margin: 0.6rem 0 0;
   padding-left: 0;
   list-style: none;
+}
 
-  & li {
-    height: 2rem;
-    overflow: hidden;
+.sns-follow__item {
+  height: 2rem;
+  overflow: hidden;
 
-    &:not(:first-child) {
-      margin-left: 0.4rem;
-    }
+  &:not(:first-child) {
+    margin-left: 0.4rem;
   }
 }
 
-.fbLike {
+.fb-like {
   & > span,
   & iframe {
     width: 8rem !important;
   }
 }
-

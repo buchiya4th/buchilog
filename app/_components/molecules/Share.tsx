@@ -18,23 +18,23 @@ type Props = {
 
 const Share: React.FC<Props> = (props) => {
   return (
-    <ul className={styles.shareUl}>
-      <li className={styles.shareTwitter}>
+    <ul className={styles["share__list"]}>
+      <li className={styles["share__item--twitter"]}>
         <TwitterShareButton url={props.url} title={props.text}>
           <TwitterIcon size={32} round={false} />
-          <span className={styles.shareText}>ツイート</span>
+          <span className={styles["share-text"]}>ツイート</span>
         </TwitterShareButton>
       </li>
-      <li className={styles.shareFacebook}>
+      <li className={styles["share__item--facebook"]}>
         <FacebookShareButton url={props.url}>
           <FacebookIcon size={32} round={false} />
-          <span className={styles.shareText}>シェア</span>
+          <span className={styles["share-text"]}>シェア</span>
         </FacebookShareButton>
       </li>
-      <li className={styles.shareHatena}>
+      <li className={styles["share__item--hatena"]}>
         <HatenaShareButton url={props.url}>
           <HatenaIcon size={32} round={false} />
-          <span className={styles.shareText}>はてブ</span>
+          <span className={styles["share-text"]}>はてブ</span>
         </HatenaShareButton>
       </li>
     </ul>

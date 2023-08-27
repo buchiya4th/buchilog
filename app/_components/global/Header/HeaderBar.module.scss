@@ -1,22 +1,22 @@
-.headerBar {
+.header-bar {
   height: 5.6rem;
   background: var(--bc-black-color) url("/img/headerBar_bg.png");
 }
 
-.navMenu {
+.nav-menu {
   display: inline-block;
   position: relative;
-  z-index: var(--bc-menuButton);
+  z-index: var(--bc-menu-button);
   box-sizing: border-box;
   width: 2.4rem;
   height: 2rem;
   margin: 1.6rem;
   transition: all 0.2s;
   cursor: pointer;
-}
 
-.navMenuIsActive {
-  position: fixed;
+  &.is-active {
+    position: fixed;
+  }
 }
 
 .line {
@@ -41,19 +41,19 @@
   &:nth-of-type(3) {
     bottom: 0;
   }
-}
 
-.isActive {
-  &:nth-of-type(1),
-  &:nth-of-type(3) {
-    width: 1.2rem;
-  }
+  &.is-active {
+    &:nth-of-type(1),
+    &:nth-of-type(3) {
+      width: 1.2rem;
+    }
 
-  &:nth-of-type(1) {
-    transform: translate(-0.1rem, 0.5rem) rotate(-45deg);
-  }
+    &:nth-of-type(1) {
+      transform: translate(-0.1rem, 0.5rem) rotate(-45deg);
+    }
 
-  &:nth-of-type(3) {
-    transform: translate(-0.1rem, -0.5rem) rotate(45deg);
+    &:nth-of-type(3) {
+      transform: translate(-0.1rem, -0.5rem) rotate(45deg);
+    }
   }
 }

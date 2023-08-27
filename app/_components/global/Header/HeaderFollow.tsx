@@ -25,11 +25,11 @@ const HeaderFollow: React.FC = () => {
   });
 
   return (
-    <div className={styles.headerFollow}>
-      <div className={styles.snsFollow}>
+    <div className={styles["header-follow"]}>
+      <div className={styles["sns-follow"]}>
         <div>最新情報を受け取る</div>
-        <ul className={styles.snsFollowList}>
-          <li>
+        <ul className={styles["sns-follow__list"]}>
+          <li className={styles["sns-follow__item"]}>
             <a
               href="https://twitter.com/buchiya4th"
               className="twitter-follow-button"
@@ -40,11 +40,11 @@ const HeaderFollow: React.FC = () => {
               data-show-count="false"
             />
           </li>
-          <li>
+          <li className={styles["sns-follow__item"]}>
             <div>
               <div id="fb-root"></div>
               <div
-                className={`fb-like ${styles.fbLike}`}
+                className={`fb-like ${styles["fb-like"]}`}
                 data-href="http://buchilog.com"
                 data-width=""
                 data-layout="button"

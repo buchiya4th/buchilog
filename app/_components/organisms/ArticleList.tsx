@@ -14,7 +14,7 @@ type Props = {
 
 const ArticleListItem: React.FC<Props> = (props) => {
   return (
-    <ul className={styles.articleList}>
+    <ul className={styles["article-list"]}>
       {props.articleList.map(({ id, date, title, thumb }) => (
         <li key={id}>
           <div className={styles.image}>
