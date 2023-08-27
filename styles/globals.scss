@@ -1,13 +1,6 @@
-@import "./vendor/normalize";
-@import "./vars/colors.module.scss";
-@import "./vars/fonts.module.scss";
-@import "./vars/zindex.module.scss";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box,
-}
+@use "./vars/colors.module" as *;
+@use "./vars/fonts.module" as *;
+@use "./vars/zindex.module" as *;
 
 html,
 body {
@@ -19,25 +12,22 @@ html {
 }
 
 body {
-  margin: 0;
-  font-size: 1.6rem;
-  font-family: var(--bc-font-family-base);
-  line-height: 1.6;
   color: var(--bc-gray-darker-color);
+  font-family: var(--bc-font-family-base);
+  font-size: 1.6rem;
   letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-align: justify;
   font-variant-numeric: lining-nums;
   font-feature-settings: "palt", "lnum";
-  text-align: justify;
 }
 
 a {
   padding-bottom: 0.1rem;
-  text-decoration: none;
-  color: var(--bc-link-color);
-  border-bottom-width: 0.1rem;
-  border-bottom-style: none;
-  border-bottom-color: transparent;
   transition: all 0.2s ease;
+  border-bottom: 0.1rem none transparent;
+  color: var(--bc-link-color);
+  text-decoration: none;
 
   &:hover:not(:has(img)) {
     border-bottom-style: solid;

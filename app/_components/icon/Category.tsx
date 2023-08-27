@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from './Category.module.scss'
+import React from "react";
+import styles from "./Category.module.scss";
 
 type Props = {
-  styles?: React.ReactNode
-}
+  styles?: React.ReactNode;
+};
 
 const Tag: React.FC<Props> = (props) => {
   return (
@@ -27,7 +27,7 @@ const Tag: React.FC<Props> = (props) => {
         />
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export default Tag
+export default Tag;
