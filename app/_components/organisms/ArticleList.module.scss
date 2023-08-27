@@ -1,6 +1,6 @@
-@import "styles/mixin/typography.module.scss";
+@use "styles/mixin/typography.module";
 
-.articleList {
+.article-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -16,45 +16,37 @@
     border-bottom: 0.1rem solid var(--bc-gray-lighter-color);
     letter-spacing: 0;
 
-    @media screen and (min-width: 66.7rem) {
+    @media screen and (width >= 66.7rem) {
       display: grid;
       grid-template:
-      "title image" auto
-       "data image" auto /
+        "title image" auto
+        "data image" auto /
         1fr 14.4rem;
     }
   }
 }
 
 .title {
-  overflow: hidden;
   display: -webkit-box;
   grid-area: title;
-  --webkit-line-clamp: 3;
-  --webkit-box-orient: vertical;
+  overflow: hidden;
   line-height: 1.5;
 
-  & a {
-    @include fontHeading;
+  --webkit-line-clamp: 3;
+  --webkit-box-orient: vertical;
 
-    @media screen and (max-width: 76.8rem) {
+  & a {
+    @include typography.font-heading;
+
+    @media screen and (width <= 76.8rem) {
       display: inline-block;
     }
   }
 }
 
-.titleLink {
-  font-size: 1.4rem;
-  text-decoration: none;
-
-  @media screen and (min-width: 76.8rem) {
-    font-size: 2rem;
-  }
-}
-
 .data {
-  grid-area: data;
   display: flex;
+  grid-area: data;
   align-self: end;
 
   & a {

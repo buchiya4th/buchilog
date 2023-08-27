@@ -1,9 +1,9 @@
-@import "styles/mixin/typography.module.scss";
-@import "styles/mixin/list.module.scss";
-@import "styles/mixin/table.module.scss";
+@use "styles/mixin/typography.module";
+@use "styles/mixin/list.module";
+@use "styles/mixin/table.module";
 
 .title {
-  @include heading1;
+  @include typography.heading1;
 }
 
 .data {
@@ -12,25 +12,21 @@
   margin-bottom: 0.25em;
 }
 
-.linkList {
-  margin-left: 1.6rem;
-}
-
-.shareArea {
+.share-area {
   margin-top: 3.2rem;
 }
 
 .body {
   & h2 {
-    @include heading2;
+    @include typography.heading2;
   }
 
   & h3 {
-    @include heading3;
+    @include typography.heading3;
   }
 
   & h4 {
-    @include heading4;
+    @include typography.heading4;
   }
 
   & p {
@@ -44,11 +40,11 @@
   }
 
   & ol {
-    @include ol;
+    @include list.ol;
   }
 
   & table {
-    @include table;
+    @include table.default;
   }
 
   & blockquote {
@@ -59,13 +55,13 @@
     font-style: italic;
 
     &::before {
+      content: "";
       position: absolute;
       top: 1.6rem;
       left: 1.6rem;
       width: 3rem;
       height: 2rem;
-      background: url(/img/icon_quote.svg);
-      content: "";
+      background: url("/img/icon_quote.svg");
     }
 
     & p {
@@ -75,6 +71,6 @@
   }
 }
 
-.relatedArticleHeading {
+.related-article-heading {
   margin: 4rem 0 0;
 }

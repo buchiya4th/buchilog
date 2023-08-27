@@ -1,31 +1,16 @@
 module.exports = {
-  // plugins: [
-  //   'stylelint-scss',
-  //   'stylelint-order'
-  // ],
-  processors: [
-    [ "@mapbox/stylelint-processor-arbitrary-tags", {
-        "startTag": "\\s*<style jsx>{`",
-        "endTag": "\\s*`}<\/style>"
-      }
-    ]
-  ],
+  plugins: ["stylelint-scss"],
   extends: [
-    'stylelint-config-standard',
-    'stylelint-config-css-modules'
+    "stylelint-config-standard-scss",
+    "stylelint-config-property-sort-order-smacss",
+    "stylelint-config-css-modules",
+    "stylelint-config-prettier",
   ],
+  ignoreFiles: ["styles/vendor/**/*.scss"],
   rules: {
-    'no-empty-source': null
-  //   'at-rule-no-unknown': [true, {
-  //     'ignoreAtRules':
-  //       ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return']
-  //   }],
-  //   'order/order': [
-  //     'dollar-variables',
-  //     'custom-properties',
-  //     'declarations',
-  //     'rules'
-  //   ]
+    "selector-class-pattern":
+      "^[a-z]+[0-9a-z]+(?:-[a-z]+[0-9a-z]+)*((?:__[a-z]+(?:-[a-z]+[0-9a-z]+)*)|(?:--[a-z]+(?:-[a-z]+[0-9a-z]+)*))*$",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
   },
-  // ignoreFiles: ['styles/vendor/**/*.scss']
-}
+};

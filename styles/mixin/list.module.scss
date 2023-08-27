@@ -1,19 +1,19 @@
 @mixin ol {
   display: table;
   padding-left: 0;
-  counter-reset: li;
-  list-style: none;
   line-height: 1.8;
+  list-style: none;
+  counter-reset: li;
 
   & > li {
     display: table-row;
     counter-increment: li;
 
     &::before {
+      content: counter(li) ".";
       display: table-cell;
       padding-right: 0.4em;
       text-align: right;
-      content: counter(li) ".";
     }
   }
 }

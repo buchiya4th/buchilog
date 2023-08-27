@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const AdsContentBottom: React.FC = () => {
   return (
     <>
-      <ins className="adsbygoogle"
-        style={{ display: 'block' }}
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
         data-ad-client="ca-pub-7461708163833457"
         data-ad-slot="8843948483"
         data-ad-format="auto"
@@ -14,11 +15,11 @@ const AdsContentBottom: React.FC = () => {
         dangerouslySetInnerHTML={{
           __html: `
             (adsbygoogle = window.adsbygoogle || []).push({})
-          `
+          `,
         }}
       />
     </>
-  )
-}
+  );
+};
 
-export default AdsContentBottom
+export default AdsContentBottom;

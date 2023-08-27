@@ -1,4 +1,4 @@
-.shareUl {
+.share__list {
   display: flex;
   margin: 0;
   padding: 0;
@@ -20,8 +20,8 @@
 
   & button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0.8rem 0 !important;
     border-radius: 2;
@@ -29,18 +29,18 @@
   }
 }
 
-.shareTwitter {
+.share__item--twitter {
   background-color: var(--bc-twitter-color);
 }
 
-.shareFacebook {
+.share__item--facebook {
   background-color: var(--bc-facebook-color);
 }
 
-.shareHatena {
+.share__item--hatena {
   background-color: var(--bc-hatena-color);
 }
 
-.shareText {
+.share-text {
   padding-right: 1rem;
 }

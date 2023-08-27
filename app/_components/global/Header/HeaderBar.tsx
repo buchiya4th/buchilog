@@ -1,42 +1,58 @@
 "use client";
 
-import React, { useState } from 'react'
-import Router from 'next/router'
-import SideNav from '@/app/_components/global/SideNav/SideNav'
-import { Categories, Tags } from 'lib/posts'
-import styles from './HeaderBar.module.scss'
+import Router from "next/router";
+import React, { useState } from "react";
+import SideNav from "@/app/_components/global/SideNav/SideNav";
+import { Categories, Tags } from "lib/posts";
+import styles from "./HeaderBar.module.scss";
 
 type Props = {
-  categories: Categories
-  tags: Tags
-  isActiveSideNav?: boolean
-}
+  categories: Categories;
+  tags: Tags;
+  isActiveSideNav?: boolean;
+};
 
-const HeaderBar: React.FC<Props> = ({ categories, tags, isActiveSideNav = true }) => {
-  const [isActive, setActive] = useState(false)
-  Router.events.on('routeChangeComplete', () => setActive(false))
+const HeaderBar: React.FC<Props> = ({
+  categories,
+  tags,
+  isActiveSideNav = true,
+}) => {
+  const [isActive, setActive] = useState(false);
+  Router.events.on("routeChangeComplete", () => setActive(false));
 
   return (
-    <div className={styles.headerBar}>
-      {isActiveSideNav &&
+    <div className={styles["header-bar"]}>
+      {isActiveSideNav && (
         <div
-          className={isActive ? `${styles.navMenu} ${styles.navMenuIsActive}` : styles.navMenu}
+          className={
+            isActive
+              ? `${styles["nav-menu"]} ${styles["is-active"]}`
+              : styles["nav-menu"]
+          }
           onClick={() => setActive(!isActive)}
         >
-          <span className={isActive ? `${styles.line} ${styles.isActive}` : styles.line}></span>
-          <span className={isActive ? `${styles.line} ${styles.isActive}` : styles.line}></span>
-          <span className={isActive ? `${styles.line} ${styles.isActive}` : styles.line}></span>
+          <span
+            className={
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
+            }
+          ></span>
+          <span
+            className={
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
+            }
+          ></span>
+          <span
+            className={
+              isActive ? `${styles.line} ${styles["is-active"]}` : styles.line
+            }
+          ></span>
         </div>
-      }
-      {isActiveSideNav &&
-        <SideNav
-          categories={categories}
-          tags={tags}
-          activeStatus={isActive}
-        />
-      }
+      )}
+      {isActiveSideNav && (
+        <SideNav categories={categories} tags={tags} activeStatus={isActive} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default HeaderBar
+export default HeaderBar;
