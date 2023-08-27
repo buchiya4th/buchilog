@@ -10,5 +10,7 @@ module.exports = {
   rules: {
     "selector-class-pattern":
       "^[a-z]+[0-9a-z]+(?:-[a-z]+[0-9a-z]+)*((?:__[a-z]+(?:-[a-z]+[0-9a-z]+)*)|(?:--[a-z]+(?:-[a-z]+[0-9a-z]+)*))*$",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
   },
 };
