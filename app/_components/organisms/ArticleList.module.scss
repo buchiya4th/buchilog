@@ -36,7 +36,7 @@
   --webkit-box-orient: vertical;
 
   & a {
-    @include fontHeading;
+    @include font-heading;
 
     @media screen and (width <= 76.8rem) {
       display: inline-block;

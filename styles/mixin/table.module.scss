@@ -2,20 +2,22 @@
   th,
   td {
     padding: clamp(0.8rem, 2.5vw, 1.6rem);
+    border-top: 1px solid var(--bc-gray-lighter-color);
     border-left: 1px solid var(--bc-gray-lighter-color);
     font-size: clamp(1.4rem, 4.4vw 1.6rem);
-
-    &:first-child {
-      border-left: none;
-    }
-  }
-
-  tr + tr > th,
-  tr + tr > td {
-    border-top: 1px solid var(--bc-gray-lighter-color);
   }
 
   thead > tr > th {
     border-bottom: 2px solid var(--bc-gray-lighter-color);
+  }
+
+  th:first-child,
+  td:first-child {
+    border-left: none;
+  }
+
+  tr:first-child > th,
+  tr:first-child > td {
+    border-top: none;
   }
 }
