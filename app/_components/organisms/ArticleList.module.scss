@@ -1,4 +1,4 @@
-@import "styles/mixin/typography.module";
+@use "styles/mixin/typography.module";
 
 .article-list {
   margin: 0;
@@ -36,7 +36,7 @@
   --webkit-box-orient: vertical;
 
   & a {
-    @include font-heading;
+    @include typography.font-heading;
 
     @media screen and (width <= 76.8rem) {
       display: inline-block;

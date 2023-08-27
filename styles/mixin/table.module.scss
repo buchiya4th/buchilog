@@ -1,4 +1,4 @@
-@mixin table {
+@mixin default {
   th,
   td {
     padding: clamp(0.8rem, 2.5vw, 1.6rem);

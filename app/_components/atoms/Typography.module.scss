@@ -1,19 +1,19 @@
-@import "styles/mixin/typography.module";
+@use "styles/mixin/typography.module";
 
 .heading1 {
-  @include heading1;
+  @include typography.heading1;
 }
 
 .heading2 {
-  @include heading2;
+  @include typography.heading2;
 }
 
 .heading3 {
-  @include heading3;
+  @include typography.heading3;
 }
 
 .heading4 {
-  @include heading4;
+  @include typography.heading4;
 }
 
 /* stylelint-disable */

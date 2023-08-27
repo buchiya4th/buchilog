@@ -1,13 +1,6 @@
-@import "./vendor/normalize";
-@import "./vars/colors.module";
-@import "./vars/fonts.module";
-@import "./vars/zindex.module";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box,
-}
+@use "./vars/colors.module" as *;
+@use "./vars/fonts.module" as *;
+@use "./vars/zindex.module" as *;
 
 html,
 body {
@@ -19,7 +12,6 @@ html {
 }
 
 body {
-  margin: 0;
   color: var(--bc-gray-darker-color);
   font-family: var(--bc-font-family-base);
   font-size: 1.6rem;

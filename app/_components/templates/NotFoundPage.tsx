@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
+import "sanitize.css";
 import Typography from "@/app/_components/atoms/Typography";
 import Footer from "@/app/_components/global/Footer/Footer";
 import Header from "@/app/_components/global/Header/Header";

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Script from "next/script";
 import React, { Suspense } from "react";
+import "sanitize.css";
 import { googleTagManagerId } from "@/utils/gtm";
 import { metaData } from "@/const/metaData";
 import GoogleTagManager, {

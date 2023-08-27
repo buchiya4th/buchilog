@@ -1,9 +1,9 @@
-@import "styles/mixin/typography.module";
-@import "styles/mixin/list.module";
-@import "styles/mixin/table.module";
+@use "styles/mixin/typography.module";
+@use "styles/mixin/list.module";
+@use "styles/mixin/table.module";
 
 .title {
-  @include heading1;
+  @include typography.heading1;
 }
 
 .data {
@@ -18,15 +18,15 @@
 
 .body {
   & h2 {
-    @include heading2;
+    @include typography.heading2;
   }
 
   & h3 {
-    @include heading3;
+    @include typography.heading3;
   }
 
   & h4 {
-    @include heading4;
+    @include typography.heading4;
   }
 
   & p {
@@ -40,11 +40,11 @@
   }
 
   & ol {
-    @include ol;
+    @include list.ol;
   }
 
   & table {
-    @include table;
+    @include table.default;
   }
 
   & blockquote {
