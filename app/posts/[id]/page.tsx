@@ -7,11 +7,11 @@ import Date from "@/app/_components/atoms/Date";
 import Typography from "@/app/_components/atoms/Typography";
 import Layout from "@/app/_components/global/Layout";
 import LinkList from "@/app/_components/molecules/LinkList";
-import Share from "@/app/_components/molecules/Share";
+import Share from "@/app/_components/molecules/ShareList";
 import ArticleList from "@/app/_components/organisms/ArticleList";
 import categoryList from "const/category.json";
 import tagList from "const/tag.json";
-import styles from "./posts.module.scss";
+import styles from "./PostsPage.module.scss";
 
 type MetadataProps = {
   params: { id: string };
