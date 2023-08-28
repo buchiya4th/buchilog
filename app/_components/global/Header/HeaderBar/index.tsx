@@ -2,7 +2,7 @@
 
 import Router from "next/router";
 import React, { useState } from "react";
-import SideNav from "@/app/_components/global/SideNav/SideNav";
+import SideNav from "@/app/_components/global/SideNav";
 import { Categories, Tags } from "lib/posts";
 import styles from "./HeaderBar.module.scss";
 

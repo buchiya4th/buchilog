@@ -5,15 +5,15 @@ import Link from "next/link";
 import React from "react";
 import "sanitize.css";
 import Typography from "@/app/_components/atoms/Typography";
-import Footer from "@/app/_components/global/Footer/Footer";
+import Footer from "@/app/_components/global/Footer";
 import Header from "@/app/_components/global/Header/Header";
-import layoutStyles from "@/app/_components/global/Layout.module.scss";
+import layoutStyles from "@/app/_components/global/Layout/Layout.module.scss";
 import "@/styles/globals.scss";
 import styles from "./NotFoundPage.module.scss";
 
 const NotFoundPage: React.FC = () => {
   const AdsContentBottom = dynamic(
-    () => import("@/app/_components/atoms/AdsContentBottom"),
+    () => import("@/app/_components/atoms/AdsContentBottom/"),
     { ssr: false }
   );
   const categories = [
