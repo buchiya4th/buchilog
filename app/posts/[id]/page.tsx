@@ -11,7 +11,7 @@ import Share from "@/app/_components/molecules/ShareList";
 import ArticleList from "@/app/_components/organisms/ArticleList";
 import categoryList from "const/category.json";
 import tagList from "const/tag.json";
-import styles from "./Posts.module.scss";
+import styles from "./PostsPage.module.scss";
 
 type MetadataProps = {
   params: { id: string };
