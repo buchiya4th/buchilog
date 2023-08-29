@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { getAllPostsData, sortPostsData } from "@/lib/posts";
 import { metaData } from "@/const/metaData";
-import Breadcrumbs from "@/app/_components/atoms/Breadcrumbs";
 import Layout from "@/app/_components/global/Layout";
 import ArticleList from "@/app/_components/organisms/ArticleList";
 import tagList from "const/tag.json";
@@ -64,8 +63,7 @@ export default function Page({ params }: Params): JSX.Element {
   ];
 
   return (
-    <Layout>
-      <Breadcrumbs list={breadcrumbs} />
+    <Layout breadcrumbs={breadcrumbs}>
       <ArticleList articleList={sortTagsPostsData} />
     </Layout>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import HomeIcon from "@/app/_components/icon/Home";
 import styles from "./Breadcrumbs.module.scss";
 
-type Props = {
+export type Props = {
   list: (
     | {
         title: string;
@@ -19,15 +19,15 @@ const Breadcrumbs: React.FC<Props> = (props) => {
   return (
     <ol aria-label="breadcrumb" className={styles.breadcrumbs}>
       {props.list.map(({ title, path }, index) => (
-        <li key={index}>
-          {index === 0 ? (
+        <li className={styles["breadcrumbs__item"]} key={index}>
+          {index === 0 && (
             <>
               <span className={styles["home-icon"]}>
                 <HomeIcon styles={styles.icon} />
               </span>
-              <a href={path}>{title}</a>
             </>
-          ) : props.list.length - 1 !== index ? (
+          )}
+          {path ? (
             <a href={path}>{title}</a>
           ) : (
             <span aria-current="page">{title}</span>
