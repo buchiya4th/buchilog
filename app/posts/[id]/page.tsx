@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import React from "react";
 import { getPostData, getRelatedArticleList } from "@/lib/posts";
 import "highlight.js/styles/monokai.css";
-import Breadcrumbs from "@/app/_components/atoms/Breadcrumbs";
 import Date from "@/app/_components/atoms/Date";
 import Typography from "@/app/_components/atoms/Typography";
 import Layout from "@/app/_components/global/Layout";
@@ -69,8 +68,7 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
   ];
 
   return (
-    <Layout>
-      <Breadcrumbs list={breadcrumbs} />
+    <Layout breadcrumbs={breadcrumbs}>
       <article id="article">
         <div className={styles.data}>
           <Date datestring={postData.date} />
