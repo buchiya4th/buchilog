@@ -6,9 +6,14 @@ import ArticleList from "@/app/_components/organisms/ArticleList";
 export default function Page(): JSX.Element {
   const allPostsData = getAllPostsData();
   const sortAllPostsData = sortPostsData(allPostsData);
+  const breadcrumbs = [
+    {
+      title: "トップページ",
+    },
+  ];
 
   return (
-    <Layout>
+    <Layout breadcrumbs={breadcrumbs}>
       <ArticleList articleList={sortAllPostsData} />
     </Layout>
   );
