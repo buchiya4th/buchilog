@@ -95,15 +95,17 @@ export default async function Page({ params }: Params): Promise<JSX.Element> {
           />
         </div>
       </article>
-      <div>
-        <Typography
-          elementname="h2"
-          styletype="heading2"
-          value="関連記事"
-          styles={styles["related-article-heading"]}
-        />
-        <ArticleList articleList={relatedArticleData} />
-      </div>
+      {relatedArticleData.length > 0 && (
+        <div>
+          <Typography
+            elementname="h2"
+            styletype="heading2"
+            value="関連記事"
+            styles={styles["related-article-heading"]}
+          />
+          <ArticleList articleList={relatedArticleData} />
+        </div>
+      )}
     </Layout>
   );
 }
