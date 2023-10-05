@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2023-10-05T14:24:40.764Z</updated>
+    <updated>2023-10-05T14:26:22.035Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -17,8 +17,8 @@
     <rights>© 2015 buchilog.com.</rights>
     <entry>
         <title type="html"><![CDATA[書籍「読書術」を読んで本の読み方を整理してみた]]></title>
-        <id>https://buchilog.com/posts/read-book-of-reading-skills</id>
-        <link href="https://buchilog.com/posts/read-book-of-reading-skills"/>
+        <id>https://buchilog.com/posts/read-book-the-reading-skills</id>
+        <link href="https://buchilog.com/posts/read-book-the-reading-skills"/>
         <updated>2023-10-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></summary>
         <content type="html"><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></content>
