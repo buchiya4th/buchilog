@@ -1,10 +1,10 @@
 ---
-title: "学び方の学び方を読んで自分の学び方"
+title: "書籍「学び方の学び方」を読んで学んだ学び方を紹介します"
 description: "書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。"
 date: "2023-07-12"
 category: "学び"
 tags: ["書籍", "学習方法", "読書", "試験"]
-image: "lead-learn-like-a-pro.png"
+image: "read-book-the-learn-like-a-pro.png"
 ---
 
 こんにちは、ぶちやです。
