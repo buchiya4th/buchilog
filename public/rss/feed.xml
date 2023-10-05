@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、学びと共に生きる人の提供でお送りします。</description>
-        <lastBuildDate>Thu, 05 Oct 2023 13:51:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Oct 2023 14:30:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -15,17 +15,17 @@
         <copyright>© 2015 buchilog.com.</copyright>
         <item>
             <title><![CDATA[書籍「読書術」を読んで本の読み方を整理してみた]]></title>
-            <link>https://buchilog.com/posts/read-book-of-reading-skills</link>
-            <guid>https://buchilog.com/posts/read-book-of-reading-skills</guid>
+            <link>https://buchilog.com/posts/read-book-the-reading-skills</link>
+            <guid>https://buchilog.com/posts/read-book-the-reading-skills</guid>
             <pubDate>Thu, 05 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></description>
             <content:encoded><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></content:encoded>
             <author>buchiya4th@gmail.com (buchiya4th)</author>
         </item>
         <item>
-            <title><![CDATA[学び方の学び方を読んで自分の学び方]]></title>
-            <link>https://buchilog.com/posts/lead-learn-like-a-pro</link>
-            <guid>https://buchilog.com/posts/lead-learn-like-a-pro</guid>
+            <title><![CDATA[書籍「学び方の学び方」を読んで学んだ学び方を紹介します]]></title>
+            <link>https://buchilog.com/posts/read-book-the-learn-like-a-pro</link>
+            <guid>https://buchilog.com/posts/read-book-the-learn-like-a-pro</guid>
             <pubDate>Wed, 12 Jul 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。]]></description>
             <content:encoded><![CDATA[書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。]]></content:encoded>
@@ -204,8 +204,8 @@
         </item>
         <item>
             <title><![CDATA[書籍「Wabi-Sabi わびさびを読み解く」を読んでみた]]></title>
-            <link>https://buchilog.com/posts/wabisabi-book</link>
-            <guid>https://buchilog.com/posts/wabisabi-book</guid>
+            <link>https://buchilog.com/posts/read-book-the-wabisabi</link>
+            <guid>https://buchilog.com/posts/read-book-the-wabisabi</guid>
             <pubDate>Sun, 15 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></description>
             <content:encoded><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></content:encoded>

@@ -4,7 +4,7 @@ description: "「読書術」で紹介されている方法と自分の本の読
 date: "2023-10-05"
 category: "学び"
 tags: ["書籍", "読書"]
-image: "read-book-of-reading-skills.jpg"
+image: "read-book-the-reading-skills.jpg"
 ---
 
 こんにちは、ぶちやです。
@@ -94,7 +94,7 @@ image: "read-book-of-reading-skills.jpg"
 
 本に書かれていた読書術をもとに本の読み方をまとめてみました。
 
-![](/img/posts/read-book-of-reading-skills-figure1.png)
+![](/img/posts/read-book-the-reading-skills-figure1.png)
 
 - 読む前に読む本をしっかりと選定する
 - 読む時は全体像を意識しながら読む場所を限定してはやく読む
