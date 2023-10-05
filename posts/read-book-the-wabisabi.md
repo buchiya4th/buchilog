@@ -2,7 +2,7 @@
 title: "書籍「Wabi-Sabi わびさびを読み解く」を読んでみた"
 description: "日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。"
 date: "2017-01-15"
-category: "趣味"
+category: "学び"
 tags: ["書籍", "日本"]
 image: "read-book-the-wabisabi-img.jpg"
 ---
