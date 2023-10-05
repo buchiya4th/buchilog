@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2023-10-05T13:51:56.594Z</updated>
+    <updated>2023-10-05T14:17:29.741Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -34,9 +34,9 @@
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[学び方の学び方を読んで自分の学び方]]></title>
-        <id>https://buchilog.com/posts/lead-learn-like-a-pro</id>
-        <link href="https://buchilog.com/posts/lead-learn-like-a-pro"/>
+        <title type="html"><![CDATA[書籍「学び方の学び方」を読んで学んだ学び方を紹介します]]></title>
+        <id>https://buchilog.com/posts/read-book-the-learn-like-a-pro</id>
+        <link href="https://buchilog.com/posts/read-book-the-learn-like-a-pro"/>
         <updated>2023-07-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。]]></summary>
         <content type="html"><![CDATA[書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。]]></content>
