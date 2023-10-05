@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2023-10-05T14:17:29.741Z</updated>
+    <updated>2023-10-05T14:24:40.764Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -395,8 +395,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[書籍「Wabi-Sabi わびさびを読み解く」を読んでみた]]></title>
-        <id>https://buchilog.com/posts/wabisabi-book</id>
-        <link href="https://buchilog.com/posts/wabisabi-book"/>
+        <id>https://buchilog.com/posts/read-book-the-wabisabi</id>
+        <link href="https://buchilog.com/posts/read-book-the-wabisabi"/>
         <updated>2017-01-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></summary>
         <content type="html"><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></content>

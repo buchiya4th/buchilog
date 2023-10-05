@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、学びと共に生きる人の提供でお送りします。</description>
-        <lastBuildDate>Thu, 05 Oct 2023 14:17:29 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Oct 2023 14:24:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -204,8 +204,8 @@
         </item>
         <item>
             <title><![CDATA[書籍「Wabi-Sabi わびさびを読み解く」を読んでみた]]></title>
-            <link>https://buchilog.com/posts/wabisabi-book</link>
-            <guid>https://buchilog.com/posts/wabisabi-book</guid>
+            <link>https://buchilog.com/posts/read-book-the-wabisabi</link>
+            <guid>https://buchilog.com/posts/read-book-the-wabisabi</guid>
             <pubDate>Sun, 15 Jan 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></description>
             <content:encoded><![CDATA[日本の魅力の一つ、侘び寂びについてまとめられた書籍「Wabi-Sabi わびさびを読み解く for Artists, Designers, Poets & Philosophers」を読んだので紹介します。]]></content:encoded>
