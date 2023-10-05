@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、学びと共に生きる人の提供でお送りします。</description>
-        <lastBuildDate>Tue, 29 Aug 2023 21:30:31 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Oct 2023 13:51:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>https://buchilog.com</link>
         </image>
         <copyright>© 2015 buchilog.com.</copyright>
+        <item>
+            <title><![CDATA[書籍「読書術」を読んで本の読み方を整理してみた]]></title>
+            <link>https://buchilog.com/posts/read-book-of-reading-skills</link>
+            <guid>https://buchilog.com/posts/read-book-of-reading-skills</guid>
+            <pubDate>Thu, 05 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></description>
+            <content:encoded><![CDATA[「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。]]></content:encoded>
+            <author>buchiya4th@gmail.com (buchiya4th)</author>
+        </item>
         <item>
             <title><![CDATA[学び方の学び方を読んで自分の学び方]]></title>
             <link>https://buchilog.com/posts/lead-learn-like-a-pro</link>
