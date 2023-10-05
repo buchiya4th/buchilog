@@ -11,6 +11,18 @@
     },
     "items": [
         {
+            "id": "https://buchilog.com/posts/read-book-of-reading-skills",
+            "content_html": "「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。",
+            "url": "https://buchilog.com/posts/read-book-of-reading-skills",
+            "title": "書籍「読書術」を読んで本の読み方を整理してみた",
+            "summary": "「読書術」で紹介されている方法と自分の本の読み方を改めて整理しました。",
+            "date_modified": "2023-10-05T00:00:00.000Z",
+            "author": {
+                "name": "buchiya4th",
+                "url": "https://twitter.com/buchiya4th"
+            }
+        },
+        {
             "id": "https://buchilog.com/posts/lead-learn-like-a-pro",
             "content_html": "書籍「学び方の学び方」をもとに学びを効率化させる方法を紹介します。",
             "url": "https://buchilog.com/posts/lead-learn-like-a-pro",
