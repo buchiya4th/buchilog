@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buchilog.com</id>
     <title>ぶちろぐ</title>
-    <updated>2023-10-05T14:30:47.676Z</updated>
+    <updated>2023-10-19T13:55:43.023Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>buchiya4th</name>
@@ -88,7 +88,7 @@
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
+        <title type="html"><![CDATA[【広告】 アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
         <id>https://buchilog.com/posts/iruma-season2</id>
         <link href="https://buchilog.com/posts/iruma-season2"/>
         <updated>2021-05-23T00:00:00.000Z</updated>

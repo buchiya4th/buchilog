@@ -4,7 +4,7 @@
         <title>ぶちろぐ</title>
         <link>https://buchilog.com</link>
         <description>このサイトは、学びと共に生きる人の提供でお送りします。</description>
-        <lastBuildDate>Thu, 05 Oct 2023 14:30:47 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Oct 2023 13:55:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -50,7 +50,7 @@
             <author>buchiya4th@gmail.com (buchiya4th)</author>
         </item>
         <item>
-            <title><![CDATA[アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
+            <title><![CDATA[【広告】 アニメ「魔入りました！入間くん」2期がさらにおもしろい]]></title>
             <link>https://buchilog.com/posts/iruma-season2</link>
             <guid>https://buchilog.com/posts/iruma-season2</guid>
             <pubDate>Sun, 23 May 2021 00:00:00 GMT</pubDate>
