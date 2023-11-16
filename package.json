@@ -67,7 +67,7 @@
     "remark-toc": "7.0.0",
     "sanitize.css": "13.0.0",
     "sass": "1.26.10",
-    "sharp": "0.32.1",
+    "sharp": "0.32.6",
     "styled-jsx-plugin-sass": "1.0.0",
     "stylelint": "15.10.1",
     "stylelint-config-css-modules": "2.2.0",
