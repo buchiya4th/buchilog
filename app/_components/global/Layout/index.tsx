@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
 import { getCategories, getTags } from "@/lib/posts";
+import AdsContentBottom from "@/app/_components/atoms/AdsContentBottom";
 import Breadcrumbs, {
   Props as BreadcrumbsProps,
 } from "@/app/_components/atoms/Breadcrumbs";
@@ -18,10 +18,6 @@ type Props = {
 const Layout: React.FC<Props> = (props) => {
   const categories = getCategories();
   const tags = getTags();
-  const AdsContentBottom = dynamic(
-    () => import("app/_components/atoms/AdsContentBottom/"),
-    { ssr: false }
-  );
 
   return (
     <div className={styles.wrap}>
