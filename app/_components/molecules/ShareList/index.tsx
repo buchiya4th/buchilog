@@ -4,7 +4,7 @@ import React from "react";
 import {
   FacebookIcon,
   FacebookShareButton,
-  TwitterIcon,
+  XIcon,
   TwitterShareButton,
   HatenaIcon,
   HatenaShareButton,
@@ -21,8 +21,8 @@ const Share: React.FC<Props> = (props) => {
     <ul className={styles["share__list"]}>
       <li className={styles["share__item--twitter"]}>
         <TwitterShareButton url={props.url} title={props.text}>
-          <TwitterIcon size={32} round={false} />
-          <span className={styles["share-text"]}>ツイート</span>
+          <XIcon size={32} round={false} />
+          <span className={styles["share-text"]}>ポスト</span>
         </TwitterShareButton>
       </li>
       <li className={styles["share__item--facebook"]}>

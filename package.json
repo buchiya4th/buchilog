@@ -35,7 +35,7 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-scripts": "4.0.3",
-    "react-share": "4.4.0",
+    "react-share": "5.1.1",
     "remark-highlight.js": "6.0.0"
   },
   "devDependencies": {
