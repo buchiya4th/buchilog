@@ -8,18 +8,19 @@ import ArticleList from "@/app/_components/organisms/ArticleList";
 import tagList from "const/tag.json";
 
 type MetadataProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 type Params = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: MetadataProps
+): Promise<Metadata> {
+  const params = await props.params;
   const tag = tagList.filter((tag) => tag.slug === params.id)[0];
   const title = tag.name;
   const id = tag.slug;
@@ -40,7 +41,8 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({ params }: Params): JSX.Element {
+export default async function Page(props: Params): Promise<JSX.Element> {
+  const params = await props.params;
   const tag = tagList.filter((tag) => tag.slug === params.id)[0];
   const title = tag.name;
   const allPostsData = getAllPostsData();
