@@ -17,7 +17,9 @@ type Params = {
   }>;
 };
 
-export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: MetadataProps
+): Promise<Metadata> {
   const params = await props.params;
   const tag = tagList.filter((tag) => tag.slug === params.id)[0];
   const title = tag.name;

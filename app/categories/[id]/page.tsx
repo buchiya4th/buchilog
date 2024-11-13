@@ -17,7 +17,9 @@ type Params = {
   }>;
 };
 
-export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: MetadataProps
+): Promise<Metadata> {
   const params = await props.params;
   const category = categoryList.filter(
     (category) => category.slug === params.id

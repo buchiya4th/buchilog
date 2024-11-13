@@ -22,7 +22,9 @@ type Params = {
   }>;
 };
 
-export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: MetadataProps
+): Promise<Metadata> {
   const params = await props.params;
   const id = params.id;
   const postData = await getPostData(id);
