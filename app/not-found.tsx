@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import NotFoundPage from "@/app/_components/templates/NotFoundPage";
 
