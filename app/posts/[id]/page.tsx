@@ -13,18 +13,17 @@ import tagList from "const/tag.json";
 import styles from "./PostsPage.module.scss";
 
 type MetadataProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 type Params = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
+export async function generateMetadata(props: MetadataProps): Promise<Metadata> {
+  const params = await props.params;
   const id = params.id;
   const postData = await getPostData(id);
   const { title, description, image } = postData;
@@ -45,7 +44,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: Params): Promise<JSX.Element> {
+export default async function Page(props: Params): Promise<JSX.Element> {
+  const params = await props.params;
   const id = params.id;
   const postData = await getPostData(id);
   const category = categoryList.filter(
