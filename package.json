@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run dev:generateRssFeed & npm run dev:generateResizeImage & npm run dev:next",
+    "dev": "npm run dev:generateRssFeed & npm run dev:generateResizeImage & npm run dev:next --turbopack",
     "dev:generateResizeImage": "node utils/generateResizeImage",
     "dev:generateRssFeed": "node utils/generateRssFeed",
     "dev:next": "next dev",
